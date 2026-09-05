@@ -10,6 +10,7 @@
 
 ## Safety rules
 
+- Perform all remote Minecraft server inspection and operations for this project through the SSH alias `kagoya-minecraft`. Do not substitute the raw IP address or another SSH destination unless the user explicitly changes the server mapping.
 - Treat the Prism instance as administrator input. Do not delete or rewrite files in it.
 - Run `scripts/sync-from-prism.ps1` to copy selected pack content into `pack`.
 - Do not publish worlds, logs, screenshots, caches, player data, `options.txt`, `servers.dat`, or authentication data.

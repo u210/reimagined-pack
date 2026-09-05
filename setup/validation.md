@@ -1,5 +1,13 @@
 # 構築・検証記録（2026-09-05 JST）
 
+## 既定サーバー一覧追加（2026-09-06 02:18 JST）
+
+- 管理用PrismにDesired Servers 1.6.0（CurseForge project 397292 / file 6013349）を追加した。公式配布JARと配置後JARのSHA-1は `4b669511628a866b147a4f32c972f0602352f1f2` で一致。NeoForge 21.0.143以上・Minecraft 1.21以上1.22未満の依存定義とクライアント初期化処理をJAR内で確認し、packwizと `distribution.toml` でclient専用に分類した。
+- `config/desiredservers/desiredservers.json` で「Unko Chat サーバー」 / `133.18.166.158:25565` / リソースパック強制なしを設定。`servers.dat`は配布せず、既存のユーザー登録を保持する。管理用Prismの元の `servers.dat` と `servers.dat_old` は `codex-backups/20260906-021608-desired-servers` へ退避した。
+- packwiz検証は有効Mod 269個、メタファイル287個、indexed files 2930個、raw local Mod 0個で成功。client専用メタファイルは70個。
+- 公開コミット `563dbb6`、Pages実行 `33980609926` が成功。pack/index、Desired Servers設定、メタファイルの公開バイト列がローカルと同じSHA-256であることを確認した。
+- クライアント専用のためVPSへのデプロイと再起動は実施していない。`reimagined.service` は同一PID 43091、02:06:06 JSTからactiveを維持。管理用PrismはMod追加後に未起動のため、初期化ログと実際の一覧表示は次回起動時に確認する。
+
 ## CNM安全化・MPIログ抑制・キーバインド同期（2026-09-06 02:08 JST）
 
 - 公開コミット `6fb0210`。色違い・チェストの変換解除と木材増殖対策を含む `cnm-no-color-aliases.zip`、Clutter No More局所修正版、Multiplayer Isolationのデバッグ出力抑制版を配布・VPSへ反映した。パッチの範囲とハッシュは `scripts/local-mod-patches.md` に記録。

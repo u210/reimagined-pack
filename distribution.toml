@@ -77,6 +77,7 @@ paths = [
 
 [metafiles.server]
 paths = [
+  "mods/chunky.pw.toml",
 ]
 
 [metafiles.both]
@@ -176,6 +177,7 @@ paths = [
   "mods/gazebos.pw.toml",
   "mods/geckolib.pw.toml",
   "mods/get-it-together-drops.pw.toml",
+  "mods/gliders.pw.toml",
   "mods/goblin-traders.pw.toml",
   "mods/grind-enchantments.pw.toml",
   "mods/hearths.pw.toml",
@@ -221,7 +223,6 @@ paths = [
   "mods/only-hammers-and-excavators.pw.toml",
   "mods/owo-lib.pw.toml",
   "mods/paladins-and-priests.pw.toml",
-  "mods/paragliders.pw.toml",
   "mods/paxi-neoforge.pw.toml",
   "mods/plasmo-voice.pw.toml",
   "mods/playeranimator.pw.toml",

@@ -10,7 +10,7 @@ bootstrap_url="https://github.com/packwiz/packwiz-installer-bootstrap/releases/d
 bootstrap_sha256="a8fbb24dc604278e97f4688e82d3d91a318b98efc08d5dbfcbcbcab6443d116c"
 sawmill_original_sha256="7a685707b9393868e2a55affd5ebedfd80665f8c3f4c82310bf1d697c94ccdbe"
 sawmill_patched_sha256="85eebbec566b9322a4a70223e3b9f53399d606f7a9b763ccced4f7d4a73844f8"
-expected_server_mods=213
+expected_server_mods=214
 force_players=0
 
 if [[ "${1:-}" == "--force" ]]; then

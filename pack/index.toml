@@ -522,7 +522,7 @@ hash = "dee286337f4d870b63bb0a4c8d9add6385b363f1edd04209e6a74ff9fd7d9d6e"
 
 [[files]]
 file = "config/asyncparticles/asyncparticles-mixin.properties"
-hash = "a1134c73df93b3dfd3edcc46c75f020f45ba2f1d8b1dd52c0483938ef1c83525"
+hash = "345b6222e48fac0aea9c07cf98152e4aed9e07dbaf3f6d94b8e7ec7cfc3ab66f"
 
 [[files]]
 file = "config/asyncparticles/asyncparticles.json"
@@ -779,6 +779,10 @@ hash = "09bdbd61be14608dc6ac5e9abc607dfc964c6c590b53f6d70c95e79c4f9d7cf4"
 [[files]]
 file = "config/chloride-client.toml_backup2"
 hash = "1b5059ed01f965efbf26bb284e9e4b16d9a9b7423fc0dc2b30ddd56edc64fda7"
+
+[[files]]
+file = "config/chunky/config.json"
+hash = "c7384a22595488f79f3125b22cc175eb729267267807a084479419349797abc8"
 
 [[files]]
 file = "config/citadelup-common.toml"
@@ -1070,7 +1074,7 @@ hash = "a16a545ec077f5df7701421285e9ea2bfccd3f026b69624248a729f05228b5d9"
 
 [[files]]
 file = "config/dynamicvillagertrades.properties"
-hash = "03daa6d7284d5d8d36730000711ace9efc45c92fea5816b3ab00c88fe4e353ec"
+hash = "356a3283afa5ede072fd6c65876d23a341ca9e6af1f65856eef75074475b5308"
 
 [[files]]
 file = "config/e4mc/e4mc.toml"
@@ -1166,7 +1170,7 @@ hash = "13dbc96f13757679e9723a28f1e6a287468514249fd876fc2de4745e2d9cb5bb"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "60b7a0a4bcb33c05894c462b8383107599df3c6ef271c124f02b9fc53bad29da"
+hash = "97194ecd7db6f55fbdd3b6ff7e96bbbd842ad0e08832b1651cd910ab12457d38"
 
 [[files]]
 file = "config/fallingtree.json"
@@ -1486,7 +1490,7 @@ hash = "4d3264b58c502afaeca3f44e8d2db0843c54b8ba957afd21a2d450fe10dafefb"
 
 [[files]]
 file = "config/iris.properties"
-hash = "8504c35485953b2e62531e2f41024aba82b0d35201235bcc60fab97b2da718f9"
+hash = "46c1e916b5a8030b5078f65674a63909179951d4131d6a5e076a62a5cde5eb79"
 
 [[files]]
 file = "config/iris_shader_folder.properties"
@@ -2434,7 +2438,7 @@ hash = "e26b00784bb6239988759ed1a64551b9f301dc33c5a855d91e976ee4bf40ac8a"
 
 [[files]]
 file = "config/sound_physics_remastered/sound_rates.properties"
-hash = "c9f3d1a170808d1f1d13d0ce91cb077100e3bbff0b9d80ed043f09940eabc90b"
+hash = "f4f001f460716f005aa2b18f37d759d2cab5a857f08429c8946c4bcdc7a8153a"
 
 [[files]]
 file = "config/sound_physics_remastered/soundphysics.properties"
@@ -3198,6 +3202,11 @@ hash = "7d885274400fb6f59e64b9fdabf05d2efc4a608427b26da6c2c45190321589d3"
 metafile = true
 
 [[files]]
+file = "mods/chunky.pw.toml"
+hash = "80240b55fbe48d6bc1125ec1d80920d95f06c8a47782d78f56cfa802f8cae0a1"
+metafile = true
+
+[[files]]
 file = "mods/citadel-up.pw.toml"
 hash = "02b84af41ea7d4ff972269e0db8c769d4198a33829f95bf6262bb8e2f8d75da9"
 metafile = true
@@ -3558,6 +3567,11 @@ hash = "2b527d9cc1b1b919deae4a829f39c71b447a5012332809ade812971eae06bf7d"
 metafile = true
 
 [[files]]
+file = "mods/gliders.pw.toml"
+hash = "b6fb1aa9fc328ec7713087a12bee954886109f4c0bf2fca4005b916b998fccf9"
+metafile = true
+
+[[files]]
 file = "mods/goblin-traders.pw.toml"
 hash = "29abe36be13fe414e13125140f1c4fe373f7daf79a11ba511e0f77a47ea7f946"
 metafile = true
@@ -3870,11 +3884,6 @@ metafile = true
 [[files]]
 file = "mods/paladins-and-priests.pw.toml"
 hash = "29a9a4a098f85d3d45b66cac5fbaecd3696c4541925b6416755add499b46bd98"
-metafile = true
-
-[[files]]
-file = "mods/paragliders.pw.toml"
-hash = "abfaa1603e21bbcd94e8464c460ccb29a465f8b0ced64abdc661c79c03bab395"
 metafile = true
 
 [[files]]
@@ -4401,7 +4410,7 @@ metafile = true
 
 [[files]]
 file = "shaderpacks/complementaryreimagined_r5.8.1 + euphoriapatches_1.9.3.txt"
-hash = "a3554581dfbe40035d7c9b97e9e15183dc5cbaf5f475e297d2e9d7b5ce5f6c3c"
+hash = "b72db1d223a1b05a6c998f4329aecd08506b3892f1b53e9e0575bda93e8ed0fc"
 
 [[files]]
 file = "shaderpacks/complementaryreimagined_r5.8.1 + euphoriapatches_1.9.3/addedmods.md"

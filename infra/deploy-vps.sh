@@ -265,12 +265,14 @@ for _ in $(seq 1 150); do
         journalctl -u "$service_name" --since "$start_marker" --no-pager -n 120 >&2
         false
     fi
-    if journalctl -u "$service_name" --since "$start_marker" --no-pager -o cat | grep -Fq 'Done ('; then
+    # With pipefail, grep -q closes the pipe early and journalctl exits with
+    # SIGPIPE, making a successful match look like a failed pipeline.
+    if journalctl -u "$service_name" --since "$start_marker" --no-pager -o cat | grep -F 'Done (' >/dev/null; then
         break
     fi
     sleep 2
 done
-if ! journalctl -u "$service_name" --since "$start_marker" --no-pager -o cat | grep -Fq 'Done ('; then
+if ! journalctl -u "$service_name" --since "$start_marker" --no-pager -o cat | grep -F 'Done (' >/dev/null; then
     echo "Timed out waiting for Minecraft startup." >&2
     journalctl -u "$service_name" --since "$start_marker" --no-pager -n 120 >&2
     false

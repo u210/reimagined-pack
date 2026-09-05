@@ -1,6 +1,6 @@
 name = "Distant Horizons: A Level of Detail mod"
 filename = "DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar"
-side = "client"
+side = "both"
 
 [download]
 hash-format = "sha1"

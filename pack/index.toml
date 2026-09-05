@@ -1054,7 +1054,7 @@ hash = "de7f8baae064448a11160d97e7fdbc8449ca979f1a7477ff9117527d0ced5c77"
 
 [[files]]
 file = "config/distanthorizons.toml"
-hash = "bb4431fafbc36b363dffb0282181e40a78087ed32672a02db0f2f20984ce2bf6"
+hash = "ef2275cf8605a003dc689339949087278e06c77268c92ad2048c91bc868050a2"
 
 [[files]]
 file = "config/does_it_tick-common.toml"
@@ -3383,7 +3383,7 @@ metafile = true
 
 [[files]]
 file = "mods/distant-horizons.pw.toml"
-hash = "486e6bdf214665392f1583c9f1f70129932a7eca767c75f6cb6854491e53855d"
+hash = "1bbe182b3a43c998b702e565e7f061125a491c5ee385fd9b050de0faaf28647f"
 metafile = true
 
 [[files]]

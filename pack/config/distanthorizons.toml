@@ -248,7 +248,7 @@ _version = 4
 		# but may cause server/simulation lag. 
 		# Note: unlike other modes this option DOES save generated chunks to 
 		# Minecraft's region files.
-		distantGeneratorMode = "FEATURES"
+		distantGeneratorMode = "PRE_EXISTING_ONLY"
 		#
 		# How should distant generator progress be displayed? 
 		# 
@@ -376,7 +376,7 @@ _version = 4
 				# NOTE: There WILL be performance hit! 
 				#    Additionally, only stuff that's loaded after you enable this 
 				#    will render their debug wireframes.
-				enableRendering = false
+				enableRendering = true
 
 			[client.advanced.debugging.openGl]
 				#

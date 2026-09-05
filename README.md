@@ -32,8 +32,14 @@ Prism側を直接の配布元にはせず、Modや共有設定を変更した後
 `distribution.toml`がclient/server/both分類の監査用レジストリです。packwizメタファイル自身にも同じ`side`を設定しています。
 現在の分類は、稼働確認済みサーバーを作成した際の`setup/mod-manifest.csv`を基準にしています。
 
-GitHub Pagesなどの公開先URL、Prismの起動前コマンド、VPS自動デプロイはまだ未設定です。
-公開先を決めるまでは管理用Prismインスタンスにpackwiz起動コマンドを設定しないでください。
+GitHub Pagesのpack URLは `https://u210.github.io/reimagined-pack/pack.toml` です。
+Prismの起動前コマンドは次を使用します。
+
+```text
+"$INST_JAVA" -jar packwiz-installer-bootstrap.jar https://u210.github.io/reimagined-pack/pack.toml
+```
+
+VPS自動デプロイはまだ未設定です。管理用Prismインスタンスへの起動前コマンド設定は、初回配布テスト後に行います。
 
 `.github/workflows/pages.yml`は、`main`へpushされた`pack`ディレクトリだけをGitHub Pagesへ公開します。
 リポジトリ作成後、GitHubの`Settings` → `Pages` → `Build and deployment`でSourceを`GitHub Actions`に設定します。

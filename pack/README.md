@@ -18,6 +18,18 @@ When a newly added JAR is hosted on CurseForge, this optional detection pass can
 
 Review side classification and `git diff` after every sync. Publishing URL and the Prism pre-launch command are intentionally not configured until a hosting repository/URL is chosen.
 
+Published pack entry point:
+
+```text
+https://u210.github.io/reimagined-pack/pack.toml
+```
+
+Prism/MultiMC pre-launch command:
+
+```text
+"$INST_JAVA" -jar packwiz-installer-bootstrap.jar https://u210.github.io/reimagined-pack/pack.toml
+```
+
 Validate the pack and its coverage of the administrator instance with:
 
 ```powershell

@@ -1,5 +1,17 @@
 # 構築・検証記録（2026-09-05 JST）
 
+## packwiz自動デプロイ確認（15:42 JST）
+
+- `scripts/deploy-vps.ps1`からVPSの`/usr/local/sbin/reimagined-deploy`を実行する更新経路を構築。
+- 本番稼働中に別候補環境へserver/bothを同期し、213個のMod、既知のSawmill上流ハッシュ、サーバー専用パッチ、Plasmo Voice UDP 25566、`sort_recipes=false`を検証。
+- Local Mod Translatorは生JARではsideフィルタが効かなかったため、client専用の直接ダウンロードメタファイルへ変更。VPSへ入っていないことを確認。
+- 接続中プレイヤーがいる場合は停止前に中断するガードを追加。
+- 停止前のライブワールド退避と、正常停止後の整合バックアップを実施。保持先は`/opt/reimagined-backups/20260905-153956`、容量917MB。バックアップ内`world/level.dat`のSHA-256検証に成功。
+- 15:40:36に新構成を起動し、15:42:03に`Done (28.575s)!`を確認。systemdの再起動回数は0。
+- Modは213個、Sawmill SHA-256は`85eebbec566b9322a4a70223e3b9f53399d606f7a9b763ccced4f7d4a73844f8`、TCP/UDP 25565とUDP 25566の待受を確認。
+- 外部PCからMinecraft status問い合わせに成功。1.21.1 / protocol 767 / 0 of 10 players / 正しいMOTDを確認。
+- 起動ログのERRORは既知のCurios、Integrated API、Reliable Remover、存在しないサンプルdata mapのみで、新しい致命エラーやSawmillのログイン時例外はなし。
+
 ## 最新の接続確認
 
 Sawmillのログイン時例外を回避する局所修正を適用後、13:55:59にJellyfish14がワールドへ参加し、13:56:11に音声Modの接続も確認しました。status応答はオンライン1人です。修正の詳細は `setup/sawmill-fix.md` を参照してください。以下の未検証・停止状態の記載は初回構築時の履歴です。

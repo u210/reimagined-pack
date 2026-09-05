@@ -8,8 +8,8 @@ any_context = true
 category = "hidden"
 
 [[key_bindings.keys]]
-code = 3
-type = "MOUSE"
+code = 86
+type = "KEYSYM"
 
 [addons.pv-addon-soundphysics]
 enabled = true

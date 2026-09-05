@@ -1962,7 +1962,7 @@ hash = "14870f7731fe7381871e17a10d3cb962a041f31ae613cf6872e9debd20775a8c"
 
 [[files]]
 file = "config/plasmovoice/client.toml"
-hash = "7df1d4151fbd00dd42b0efff3c0c277d0b7f89454e33a04f52e4426bc23eb2ee"
+hash = "c83b5ceb4df0d846f39ed79a044c4edf554aed4004ba44a73708585f8ab96e8b"
 
 [[files]]
 file = "config/plasmovoice/meta_cache.json"
@@ -2926,11 +2926,15 @@ hash = "ea1fa91de03d8f6f3c36b0c6cef77375a8365790ac0acb63fd558643d54d677f"
 
 [[files]]
 file = "configureddefaults/options.txt"
-hash = "7a34cd8aec9f4c5a4070acd9afd584eca1d80572835b412acf4d9ff909c9d797"
+hash = "6cc512dc6bd3e6b6dbe0e27f16e4c63272a8e7e12aa7157fc5bcb4ed75a68cfb"
 
 [[files]]
 file = "configureddefaults/readme.md"
 hash = "7d856d3f9655abc661ac67b450a0c956bbf80323786b407301fbdca02d2c5b8b"
+
+[[files]]
+file = "datapacks/cnm-no-color-aliases.zip"
+hash = "a8c9880241da9b474950e2e274e132499b145274693f0b25159286ead2cd5d26"
 
 [[files]]
 file = "datapacks/cnmtweaks.zip"
@@ -3236,7 +3240,7 @@ metafile = true
 
 [[files]]
 file = "mods/clutter-no-more.pw.toml"
-hash = "888f8605ec4e6067f2f3644e9590743438d806c25a1385b72e8c5b61baa7d3ff"
+hash = "01c4c9cb97cc12bcb57fe267c1b6d331043cab21f105f0c551ea75cb882364a4"
 metafile = true
 
 [[files]]
@@ -3821,7 +3825,7 @@ metafile = true
 
 [[files]]
 file = "mods/multiplayer-isolation.pw.toml"
-hash = "7590797a257ae1c5041a3bf9102b083004d1afdd6598adff2fc4f4288424c5fa"
+hash = "9616ab14d88052312fe1a52b0efd24e58ef6aef832a20a096c9a72602abb575f"
 metafile = true
 
 [[files]]

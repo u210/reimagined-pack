@@ -3,11 +3,7 @@ filename = "Multiplayer-Isolation-2.1.jar"
 side = "server"
 
 [download]
-hash-format = "sha512"
-hash = "bc2d6d39d810ec92c4fe8afb08e3322ec8d19976f5baab50e8ed99dafcff9b8d7a6096b0611c0809ebb71dffa42c0883230001731f4d8e6e2e63881e2b96acec"
+hash-format = "sha256"
+hash = "d75039cbdbae5e24f565822b200d44a43d785087c320cfea3b2c785e00e52149"
 mode = "url"
-url = "https://cdn.modrinth.com/data/IWxINyBR/versions/MACIAlqV/Multiplayer-Isolation-2.1.jar"
-
-[update.modrinth]
-mod-id = "IWxINyBR"
-version = "MACIAlqV"
+url = "https://u210.github.io/reimagined-pack/downloads/files/Multiplayer-Isolation-2.1-reimagined-1.jar"

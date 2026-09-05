@@ -1,5 +1,17 @@
 # 構築・検証記録（2026-09-05 JST）
 
+## CNM安全化・MPIログ抑制・キーバインド同期（2026-09-06 02:08 JST）
+
+- 公開コミット `6fb0210`。色違い・チェストの変換解除と木材増殖対策を含む `cnm-no-color-aliases.zip`、Clutter No More局所修正版、Multiplayer Isolationのデバッグ出力抑制版を配布・VPSへ反映した。パッチの範囲とハッシュは `scripts/local-mod-patches.md` に記録。
+- キーバインドを `configureddefaults/options.txt` とPlasmo Voice設定へ同期した。Minecraftの画面・言語・音量など無関係な初期値は維持し、既存クライアントのoptions.txtを強制上書きする仕組みは追加していない。
+- packwiz検証は有効Mod 268個、メタファイル286個、indexed files 2928個、raw local Mod 0個で成功。Pages実行 `33979824494` が成功し、pack/index、変更設定、データパック、両メタファイルと両JARの公開バイト列がローカルと同じSHA-256であることを確認。
+- 217個の候補Modと保護設定を検証し、プレイヤー接続なしでライブコピー・正常停止後バックアップを実施。本番は02:07:33に `Done (28.830s)!`、PID 43091で稼働。新しいデータパックの自動ロードを起動ログで確認。
+- 本番JARはCNM SHA-256 `6dd42a55d04965c3e37c93bb94ed1fa2ceaf63903bb61588b7ee15913c907394`、MPI `d75039cbdbae5e24f565822b200d44a43d785087c320cfea3b2c785e00e52149`。データパックは `a8c9880241da9b474950e2e274e132499b145274693f0b25159286ead2cd5d26` で配布物と一致。
+- Sawmill SHA-256 `85eebbec566b9322a4a70223e3b9f53399d606f7a9b763ccced4f7d4a73844f8`、`sort_recipes=false`、TCP 25565・UDP 25566の待受を維持。
+- 保持バックアップは `/opt/reimagined-backups/20260906-020547`。world/level.datのチェックサム検証が成功し、候補ディレクトリは正常に片付けられた。
+- リモート操作先をSSH aliasに限定するAGENTS.mdに従い、`kagoya-minecraft` の一時SSH転送を介してローカルPCからMinecraft statusを検証した。1.21.1 / protocol 767 / 0 of 10 players / 正しいMOTDを確認。公開TCPポートへの直接疎通テストは今回は実施していない。
+- 起動ログには既知のReliable Remover・Integrated API・サンプルdata map等のエラーが残る。今回の修正はこれらを対象にしていない。木材増殖の解消は管理用Prismでユーザー確認済みだが、配備後の実ログイン・クラフト・MPIのプレイヤー一覧操作は未検証。
+
 ## クライアント既定設定・チャットMod同期（23:29 JST）
 
 - 管理用Prismの`options.txt`を`configureddefaults/options.txt`へ同期し、新規クライアントでは画面・音量・言語・キーバインド等の全設定を初期値として適用、既存クライアントでは未登録項目だけを追加する運用へ変更した。設定のみの同期用に`scripts/sync-from-prism.ps1 -OptionsOnly`を追加。

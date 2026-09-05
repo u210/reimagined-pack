@@ -1,5 +1,16 @@
 # 構築・検証記録（2026-09-05 JST）
 
+## クライアント既定設定・チャットMod同期（23:29 JST）
+
+- 管理用Prismの`options.txt`を`configureddefaults/options.txt`へ同期し、新規クライアントでは画面・音量・言語・キーバインド等の全設定を初期値として適用、既存クライアントでは未登録項目だけを追加する運用へ変更した。設定のみの同期用に`scripts/sync-from-prism.ps1 -OptionsOnly`を追加。
+- Chat Bubbles 1.1.1をclient/server両用、Multiplayer Isolation 2.1をserver専用として追加。CurseForgeまたはModrinthの配布物とローカルJARのハッシュ一致、Minecraft 1.21.1対応、依存関係、sideを確認した。
+- packwiz検証は有効Mod 268個、メタファイル286個、indexed files 2927個、raw local Mod 0個で成功。GitHub Pagesの`pack.toml`、index、設定、両メタファイルがローカルと同じSHA-256で公開されたことを確認。
+- 初回配備は217個の候補検証と起動には成功したが、WindowsとLinuxの大小文字差によりMultiplayer Isolationが要求する`config/MPI.json`を読めず、`config/mpi.json`から既定値を生成していた。配布ファイル名を`MPI.json`へ修正して再公開・再配備し、旧小文字ファイルの削除、設定SHA-256 `6ce18798cc18d72a2b301883cca18c349c02de7b212510d2adcd0bbea0b31fbe`、起動ログに同エラーがないことを確認した。
+- 本番は217個のサーバーModで23:29:43に`Done (29.900s)!`。Chat BubblesとMultiplayer Isolationの両JARおよびMod検出ログを確認。
+- 最終保持バックアップは`/opt/reimagined-backups/20260905-232759`。バックアップ内`world/level.dat`のSHA-256検証に成功し、失敗候補ディレクトリは残っていない。
+- SawmillパッチSHA-256 `85eebbec566b9322a4a70223e3b9f53399d606f7a9b763ccced4f7d4a73844f8`、`sort_recipes=false`、TCP 25565、UDP 25566を再確認。
+- 外部PCからMinecraft status問い合わせに成功。1.21.1 / protocol 767 / 0 of 10 players / 正しいMOTDを確認。
+
 ## 管理用インスタンス同期（16:43 JST）
 
 - 管理用Prismインスタンスとの差分からGliders 1.1.8をclient/server両用、Chunky 1.4.23をserver専用として追加し、Paragliders 21.1.5を削除。

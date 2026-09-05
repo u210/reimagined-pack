@@ -522,7 +522,7 @@ hash = "dee286337f4d870b63bb0a4c8d9add6385b363f1edd04209e6a74ff9fd7d9d6e"
 
 [[files]]
 file = "config/asyncparticles/asyncparticles-mixin.properties"
-hash = "345b6222e48fac0aea9c07cf98152e4aed9e07dbaf3f6d94b8e7ec7cfc3ab66f"
+hash = "a1134c73df93b3dfd3edcc46c75f020f45ba2f1d8b1dd52c0483938ef1c83525"
 
 [[files]]
 file = "config/asyncparticles/asyncparticles.json"
@@ -1074,7 +1074,7 @@ hash = "a16a545ec077f5df7701421285e9ea2bfccd3f026b69624248a729f05228b5d9"
 
 [[files]]
 file = "config/dynamicvillagertrades.properties"
-hash = "356a3283afa5ede072fd6c65876d23a341ca9e6af1f65856eef75074475b5308"
+hash = "03daa6d7284d5d8d36730000711ace9efc45c92fea5816b3ab00c88fe4e353ec"
 
 [[files]]
 file = "config/e4mc/e4mc.toml"
@@ -1170,7 +1170,7 @@ hash = "13dbc96f13757679e9723a28f1e6a287468514249fd876fc2de4745e2d9cb5bb"
 
 [[files]]
 file = "config/fabric/indigo-renderer.properties"
-hash = "97194ecd7db6f55fbdd3b6ff7e96bbbd842ad0e08832b1651cd910ab12457d38"
+hash = "60b7a0a4bcb33c05894c462b8383107599df3c6ef271c124f02b9fc53bad29da"
 
 [[files]]
 file = "config/fallingtree.json"
@@ -1490,7 +1490,7 @@ hash = "4d3264b58c502afaeca3f44e8d2db0843c54b8ba957afd21a2d450fe10dafefb"
 
 [[files]]
 file = "config/iris.properties"
-hash = "46c1e916b5a8030b5078f65674a63909179951d4131d6a5e076a62a5cde5eb79"
+hash = "8504c35485953b2e62531e2f41024aba82b0d35201235bcc60fab97b2da718f9"
 
 [[files]]
 file = "config/iris_shader_folder.properties"
@@ -4410,7 +4410,7 @@ metafile = true
 
 [[files]]
 file = "shaderpacks/complementaryreimagined_r5.8.1 + euphoriapatches_1.9.3.txt"
-hash = "b72db1d223a1b05a6c998f4329aecd08506b3892f1b53e9e0575bda93e8ed0fc"
+hash = "a3554581dfbe40035d7c9b97e9e15183dc5cbaf5f475e297d2e9d7b5ce5f6c3c"
 
 [[files]]
 file = "shaderpacks/complementaryreimagined_r5.8.1 + euphoriapatches_1.9.3/addedmods.md"

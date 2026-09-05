@@ -77,6 +77,7 @@ paths = [
 [metafiles.server]
 paths = [
   "mods/chunky.pw.toml",
+  "mods/multiplayer-isolation.pw.toml",
 ]
 
 [metafiles.both]
@@ -119,6 +120,7 @@ paths = [
   "mods/caveore.pw.toml",
   "mods/caverns-and-chasms.pw.toml",
   "mods/cerbons-api.pw.toml",
+  "mods/chat-bubbles-neoforge.pw.toml",
   "mods/citadel-up.pw.toml",
   "mods/clayworks.pw.toml",
   "mods/cloth-config.pw.toml",

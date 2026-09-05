@@ -1,7 +1,8 @@
 [CmdletBinding()]
 param(
     [string]$InstancePath = 'C:\Users\emb20\AppData\Roaming\PrismLauncher\instances\Reimagined',
-    [switch]$DetectCurseForge
+    [switch]$DetectCurseForge,
+    [switch]$OptionsOnly
 )
 
 $ErrorActionPreference = 'Stop'
@@ -35,6 +36,47 @@ function Test-ExcludedSourcePath {
     return $p -match '(^|/)(\.ds_store|thumbs\.db)$' -or
         $p -match '(^|/)(cache|logs?|screenshots?|saves?|backups?)(/|$)' -or
         $p -match '\.(bak|log|tmp)$'
+}
+
+function Copy-AdministratorOptionsDefault {
+    $sourceOptions = Join-Path $gameRoot 'options.txt'
+    $targetDirectory = [IO.Path]::GetFullPath((Join-Path $packRoot 'configureddefaults'))
+    $targetOptions = [IO.Path]::GetFullPath((Join-Path $targetDirectory 'options.txt'))
+
+    if (-not (Test-Path -LiteralPath $sourceOptions -PathType Leaf)) {
+        throw "Administrator options file not found: $sourceOptions"
+    }
+    if (-not $targetOptions.StartsWith($packRoot + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) {
+        throw "Unsafe options default target: $targetOptions"
+    }
+
+    # Configured Defaults merges missing entries without replacing user values.
+    New-Item -ItemType Directory -Path $targetDirectory -Force | Out-Null
+    Copy-Item -LiteralPath $sourceOptions -Destination $targetOptions -Force
+}
+
+function Invoke-PackwizRefresh {
+    Push-Location $packRoot
+    try {
+        if ($DetectCurseForge) {
+            & $packwiz -y curseforge detect
+            if ($LASTEXITCODE -ne 0) { throw "packwiz curseforge detect failed with exit code $LASTEXITCODE" }
+        }
+        & $packwiz refresh
+        if ($LASTEXITCODE -ne 0) { throw "packwiz refresh failed with exit code $LASTEXITCODE" }
+    }
+    finally {
+        Pop-Location
+    }
+}
+
+if ($OptionsOnly) {
+    Copy-AdministratorOptionsDefault
+    Invoke-PackwizRefresh
+    Write-Output 'Options defaults sync complete: copied=1 removed=0'
+    Write-Output "Source: $gameRoot\options.txt"
+    Write-Output "Pack:   $packRoot\configureddefaults\options.txt"
+    return
 }
 
 $managedDestinations = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
@@ -128,18 +170,12 @@ Get-ChildItem -LiteralPath $modsTarget -File -Filter '*.jar' | ForEach-Object {
     }
 }
 
-Push-Location $packRoot
-try {
-    if ($DetectCurseForge) {
-        & $packwiz -y curseforge detect
-        if ($LASTEXITCODE -ne 0) { throw "packwiz curseforge detect failed with exit code $LASTEXITCODE" }
-    }
-    & $packwiz refresh
-    if ($LASTEXITCODE -ne 0) { throw "packwiz refresh failed with exit code $LASTEXITCODE" }
-}
-finally {
-    Pop-Location
-}
+# The administrator's root options file is only a client default template. It
+# is never distributed as the live options.txt that users own and modify.
+Copy-AdministratorOptionsDefault
+$copied++
+
+Invoke-PackwizRefresh
 
 Write-Output "Pack sync complete: copied=$copied removed=$removed"
 Write-Output "Source: $gameRoot"

@@ -765,6 +765,10 @@ file = "config/cerulean.yml"
 hash = "d9b33f8022bfa4b9818b3abcc197414c1e88272d21b0df4a01db016c7887d5d2"
 
 [[files]]
+file = "config/chatbubbles-server.toml"
+hash = "06ec94d80f2a8202d6d42f43cb3bf37ef4ae54f1e477ffef4d72423f9e6ac9b1"
+
+[[files]]
 file = "config/chatimpressiveanimation.json"
 hash = "13fac7ab2025bc4ada007db2a05822bfefa1bcc4b685505ad528e981ad31525c"
 
@@ -1711,6 +1715,10 @@ hash = "a22a8cf21927e7031e9860c3df89526aaf3db9183c439be217e0578ee5e98c0d"
 [[files]]
 file = "config/mowziesmobs-common.toml"
 hash = "55984be8a03604dd95446a84769854c5a42b064146db05dafa16c2ecba7a0971"
+
+[[files]]
+file = "config/mpi.json"
+hash = "6ce18798cc18d72a2b301883cca18c349c02de7b212510d2adcd0bbea0b31fbe"
 
 [[files]]
 file = "config/muhc-common.toml"
@@ -2918,7 +2926,7 @@ hash = "ea1fa91de03d8f6f3c36b0c6cef77375a8365790ac0acb63fd558643d54d677f"
 
 [[files]]
 file = "configureddefaults/options.txt"
-hash = "91820cc3126a7d0c78fde7ecec362782ea8e06efe66879621b070d39c9cf01d0"
+hash = "7a34cd8aec9f4c5a4070acd9afd584eca1d80572835b412acf4d9ff909c9d797"
 
 [[files]]
 file = "configureddefaults/readme.md"
@@ -3189,6 +3197,11 @@ metafile = true
 [[files]]
 file = "mods/cerbons-api.pw.toml"
 hash = "1cb3db95dbf424de74a4572994d7b32fc8560dc31e0495d10825f195b2103462"
+metafile = true
+
+[[files]]
+file = "mods/chat-bubbles-neoforge.pw.toml"
+hash = "ba2980bb9aa6f8db311f12b4f933c46a322d0f6e38abd8a828a5e00b599d649c"
 metafile = true
 
 [[files]]
@@ -3804,6 +3817,11 @@ metafile = true
 [[files]]
 file = "mods/mowzies-mobs.pw.toml"
 hash = "ef5e19ba6a664e7d2b3d54723e3d3f05c0d9e987d807ecb899c1c2ba1a509519"
+metafile = true
+
+[[files]]
+file = "mods/multiplayer-isolation.pw.toml"
+hash = "7590797a257ae1c5041a3bf9102b083004d1afdd6598adff2fc4f4288424c5fa"
 metafile = true
 
 [[files]]

@@ -45,10 +45,27 @@ jobs:
           cp -a pack/. _site/
           cp dist/Reimagined-Packwiz.zip _site/downloads/
 
+      - name: Audit hidden pack files
+        shell: bash
+        run: |
+          unexpected_hidden="$(find _site -type f -path '*/.*' \
+            ! -path '_site/config/plasmovoice/.crowdin/*' \
+            ! -path '_site/config/plasmovoice/server/languages/.crowdin/*' \
+            ! -path '_site/config/pv-addon-priority/languages/.crowdin/*' \
+            ! -path '_site/shaderpacks/complementaryreimagined_r5.8.1 + euphoriapatches_1.9.3/.gitignore')"
+          if [ -n "$unexpected_hidden" ]; then
+            echo "Unexpected hidden files:" >&2
+            echo "$unexpected_hidden" >&2
+            exit 1
+          fi
+          test -f _site/config/plasmovoice/.crowdin/ja_jp.json
+          test -f _site/config/plasmovoice/server/languages/.crowdin/ja_jp.toml
+
       - name: Upload pack and bootstrap
         uses: actions/upload-pages-artifact@v4
         with:
           path: _site
+          include-hidden-files: true
 
       - name: Deploy
         id: deployment

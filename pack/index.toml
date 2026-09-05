@@ -1057,6 +1057,10 @@ file = "config/defaultworldtype/client-config.toml"
 hash = "eb85aedf20f4bac1486084d0dc543a7db8e886f81c9e35039be1cc85bc1b20f4"
 
 [[files]]
+file = "config/desiredservers/desiredservers.json"
+hash = "6619f8ae13669984cd288c99be7bf729ffdb9a1115803e90001e18f8e7ac7a41"
+
+[[files]]
 file = "config/despawntweaks-common.toml"
 hash = "de7f8baae064448a11160d97e7fdbc8449ca979f1a7477ff9117527d0ced5c77"
 
@@ -3391,6 +3395,11 @@ metafile = true
 [[files]]
 file = "mods/deep-aether.pw.toml"
 hash = "183f4532b3c853915ec256a6dd57ef582cb6dd1b08cf593101d99ff6dd75be0b"
+metafile = true
+
+[[files]]
+file = "mods/desired-servers.pw.toml"
+hash = "af5fac6dd081cce428d2286857055a6f97a81b93abcb3025affd9c8708fca24b"
 metafile = true
 
 [[files]]

@@ -15,6 +15,7 @@ paths = [
   "mods/controllable.pw.toml",
   "mods/controlling.pw.toml",
   "mods/create-nowheel.pw.toml",
+  "mods/desired-servers.pw.toml",
   "mods/entity-model-features.pw.toml",
   "mods/entity-texture-features-fabric.pw.toml",
   "mods/entityculling.pw.toml",

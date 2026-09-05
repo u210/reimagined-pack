@@ -103,6 +103,8 @@ Paxi設定により、ルートの `datapacks` 内のデータパックも読み
 
 管理用インスタンスの `options.txt` は、配布時に `configureddefaults/options.txt` として扱います。新規クライアントには管理用の画面・音量・言語・キーバインド設定を初期値として適用し、既存クライアントには未登録の項目だけを追加するため、ユーザーが変更した既存値は上書きしません。設定だけを同期する場合は `scripts/sync-from-prism.ps1 -OptionsOnly` を使用します。
 
+「Unko Chat サーバー」はDesired Serversが `config/desiredservers/desiredservers.json` から初回起動時のサーバー一覧に追加します。`servers.dat`自体は配布せず、ユーザーが追加した他のサーバーは保持します。
+
 `setup/prepare.ps1` は初回コピーの記録用です。既存サーバーへの同期用ではありません。
 ワールド・設定・Modなどをバックアップしてから更新してください。
 

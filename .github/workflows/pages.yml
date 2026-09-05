@@ -61,11 +61,24 @@ jobs:
           test -f _site/config/plasmovoice/.crowdin/ja_jp.json
           test -f _site/config/plasmovoice/server/languages/.crowdin/ja_jp.toml
 
+      - name: Archive Pages artifact with hidden pack files
+        shell: bash
+        run: |
+          tar \
+            --dereference --hard-dereference \
+            --directory _site \
+            --exclude=.git \
+            --exclude=.github \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            .
+
       - name: Upload pack and bootstrap
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
-          path: _site
-          include-hidden-files: true
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
 
       - name: Deploy
         id: deployment

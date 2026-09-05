@@ -44,6 +44,7 @@ jobs:
           mkdir -p _site/downloads/files
           cp -a pack/. _site/
           cp dist/Reimagined-Packwiz.zip _site/downloads/
+          cp dist/Reimagined-Guide.html _site/guide.html
           cp -a dist/files/. _site/downloads/files/
 
       - name: Audit hidden pack files

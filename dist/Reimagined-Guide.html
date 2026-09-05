@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UnkoChatサーバー 導入・操作ガイド</title>
+<style>
+:root{--paper:#f4f2e9;--ink:#20352d;--muted:#596960;--green:#265f47;--line:#d4dbcf;--gold:#f3d481}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Yu Gothic UI","Meiryo",sans-serif;line-height:1.85}a{color:var(--green);text-underline-offset:4px}a:hover{color:#8b521b}a:focus-visible,summary:focus-visible{outline:3px solid #b67c20;outline-offset:5px}.wrap{max-width:1080px;margin:auto;padding:0 28px}.top{background:#20352d;color:#edf3e9;padding:15px 0;font-size:13px;letter-spacing:.13em}.top .wrap{display:flex;justify-content:space-between;gap:20px}.hero{padding:30px 0 22px;border-bottom:1px solid var(--line)}.eyebrow{font-size:12px;letter-spacing:.17em;font-weight:700;color:var(--green)}h1{font-size:clamp(25px,4vw,34px);line-height:1.5;margin:0 0 12px}h1 span{color:var(--green)}.lead{max-width:760px;font-size:15px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}.tag{padding:0 14px 0 0;font-size:13px}.button{display:inline-block;background:var(--green);color:white;padding:11px 22px;border-radius:6px;text-decoration:none;font-weight:700}.button:hover{background:#1d4936;color:white}.small{font-size:13px;color:var(--muted)}nav{position:sticky;top:0;z-index:5;background:#f4f2e9f5;border-bottom:1px solid var(--line)}nav .wrap{display:flex;gap:25px;overflow-x:auto;padding-top:13px;padding-bottom:13px}nav a{white-space:nowrap;font-size:13px;text-decoration:none;font-weight:700}main{padding-bottom:60px}section{margin-top:40px}h2{font-size:28px;letter-spacing:-.03em;margin:8px 0 23px;line-height:1.5}h3{font-size:18px;margin:0 0 10px}p{margin:8px 0 15px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:23px;border:1px solid var(--line);border-radius:10px;background:#fffdf7}.card p:last-child{margin-bottom:0}.quick kbd{font-size:20px}.quick h3{margin-top:13px}.note{padding:18px 22px;border-left:4px solid #ba8a37;background:#f5ead0;border-radius:0 7px 7px 0;margin:22px 0}.note p:last-child{margin-bottom:0}.steps{list-style:none;padding:0;counter-reset:step}.steps>li{counter-increment:step;position:relative;padding:25px 26px 25px 80px;background:#fffdf7;border:1px solid var(--line);border-radius:9px;margin:13px 0}.steps>li:before{content:counter(step,decimal-leading-zero);position:absolute;left:23px;top:25px;color:var(--green);font-size:24px;font-weight:800}kbd{display:inline-block;font-family:inherit;font-size:.9em;font-weight:700;line-height:1.5;background:#fff;padding:2px 8px;border:1px solid #b9c5b7;border-bottom:3px solid #b9c5b7;border-radius:5px;white-space:nowrap}code{overflow-wrap:anywhere;background:#e9eddf;padding:2px 5px;border-radius:4px}table{border-collapse:collapse;width:100%;background:#fffdf7;font-size:14px}th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#e1e9dc;font-size:12px;letter-spacing:.05em}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}.flow{display:flex;align-items:center;justify-content:center;gap:22px;padding:26px;background:#e4eddf;border-radius:8px;margin:20px 0;text-align:center}.flow b{font-size:19px}.two{grid-template-columns:1fr 1fr}ul{padding-left:22px}li{margin:6px 0}details{background:#fffdf7;border:1px solid var(--line);border-radius:8px;padding:17px 21px;margin:10px 0}summary{font-weight:700;cursor:pointer}details p{margin:15px 0 3px}footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:12px}.sources{font-size:12px;color:var(--muted)}@media(max-width:700px){.wrap{padding:0 19px}.hero{padding:24px 0}.grid,.two{grid-template-columns:1fr}section{margin-top:43px}.top .wrap{font-size:11px;letter-spacing:.05em}.steps>li{padding:22px 18px 22px 61px}.steps>li:before{left:16px;font-size:21px}.flow{gap:12px;padding:20px 10px}.flow b{font-size:16px}h2{font-size:24px}th,td{padding:12px 10px}.table-wrap table{min-width:520px}}@media print{nav{display:none}.button{background:none;color:inherit;padding:0;text-decoration:underline}body{background:white;font-size:10pt}.hero{padding:15px 0}section{margin-top:26px}.card,.steps>li,details{break-inside:avoid}h1{font-size:32pt}h2{font-size:20pt}a{color:inherit}.wrap{max-width:none}details::details-content{content-visibility:visible}footer{padding-bottom:0}}
+</style>
+</head>
+<body>
+
+<div class="hero"><div class="wrap"><h1>UnkoChatサーバー 導入・操作ガイド</h1><p class="lead">Prism Launcherのインストール、サーバーへの接続方法、追加Modの操作を説明します。</p><div class="tags"><span class="tag">Minecraft Java 1.21.1</span><span class="tag">NeoForge 21.1.244</span><span class="tag">Windows向け導入手順</span><span class="tag">2026.09.06版</span></div></div></div>
+<nav aria-label="目次"><div class="wrap"><a href="#install">01 導入方法</a><a href="#first">02 バニラとの違い</a><a href="#keys">03 キー早見表</a><a href="#clutter">04 ブロックの形変更</a><a href="#translation">05 自動翻訳</a><a href="#help">06 困ったとき</a></div></nav>
+<main class="wrap">
+
+<section id="install"><h2>導入方法</h2>
+<p>必要なもの：<strong>Java版Minecraftを遊べるMicrosoftアカウント</strong>と、インターネット接続。</p>
+<ol class="steps">
+<li><h3>Prismをダウンロード</h3><p><a href="https://prismlauncher.org/download/windows/">Prism公式ダウンロードページ</a>で <strong>Installer (.exe)</strong> を選びます。</p></li>
+<li><h3>Prismをインストール</h3><p>ダウンロードしたexeを開き、画面の案内に沿って進めます。</p></li>
+<li><h3>Microsoftアカウントでログイン</h3><p>Prismを開く →「アカウント」→「アカウントを管理」→「Microsoftを追加」。</p><p>ブラウザーの案内に沿ってログインします。</p></li>
+<li><h3>Javaの自動設定を有効にする</h3><p>Prismの「設定」→「Java」で、次の2つにチェックを入れます。</p><ul><li>Autodetect Java version</li><li>Auto-download Mojang Java</li></ul></li>
+<li><h3>配布ZIPをダウンロード</h3><p><a class="button" href="https://u210.github.io/reimagined-pack/downloads/Reimagined-Packwiz.zip">Reimagined-Packwiz.zip をダウンロード</a></p><p><strong>解凍しないでください。</strong></p></li>
+<li><h3>ZIPをPrismに読み込む</h3><p>左上の「起動構成を追加」→「インポート」→ ダウンロードしたZIPを選択 → 作成。</p><p>一覧に <strong>Reimagined-Packwiz</strong> が追加されます。</p></li>
+<li><h3>Minecraftを起動</h3><p><strong>Reimagined-Packwiz</strong> を選び、「起動」を押します。</p><p>初回はModをダウンロードします。タイトル画面が出るまで待ちます。</p></li>
+<li><h3>サーバーに接続</h3><p>「マルチプレイ」→「Unko Chat サーバー」→ 接続。</p><p>一覧にない場合は、<a href="#connection-help">手動で追加</a>してください。</p></li>
+</ol>
+<p><strong>次回：</strong>Prismで同じインスタンスを起動します。更新は起動時に自動で取得します。</p>
+<details><summary>起動前にメモリ設定を確認したい場合</summary><p>配布値は最小4096MiB・最大10240MiB（10GB）です。PCのメモリに余裕がない場合は、インスタンスを右クリック →「編集」→「設定」で割り当てを変更します。<a href="#memory-help">メモリ不足の対処</a>を参照してください。</p></details>
+</section>
+<section aria-labelledby="remember"><h2 id="remember">主な操作</h2><div class="grid quick"><article class="card"><kbd>Tab</kbd><h3>地図を開く</h3><p>周囲や探索した場所を確認できます。</p></article><article class="card"><kbd>L</kbd><h3>クエストを見る</h3><p>パックの遊び方や目標を確認できます。</p></article><article class="card"><kbd>F8</kbd><h3>原文表示</h3><p>押している間は原文を表示し、離すと翻訳表示に戻ります。</p></article></div></section>
+<section id="first"><h2>バニラとの違い</h2><div class="grid two"><article class="card"><h3>チャット・参加退出表示</h3><p>ゲーム内チャットや、プレイヤーの参加・退出メッセージは、意図的に非表示にしています。不具合ではありません。</p></article><article class="card"><h3>レシピ検索（JEI）</h3><p><kbd>E</kbd> でインベントリを開くと、JEIのアイテム一覧と検索欄が使えます。アイテムにカーソルを合わせて <kbd>R</kbd> で作り方、<kbd>U</kbd> で使い道。バニラの知識と違ったら、このパック内の表示を確認してください。</p></article><article class="card"><h3>クエスト（FTB Quests）</h3><p><kbd>L</kbd> でクエスト画面へ。探索、農業、Create、魔法などの章があります。各章で関連するModの説明や課題を確認できます。</p></article><article class="card"><h3>戦闘・ロール</h3><p>Better CombatやCombat Rollが入っています。武器によって攻撃の動きが変わり、<kbd>R</kbd> でロールできます。操作は安全な場所で確認してください。</p></article><article class="card"><h3>バックパック・アクセサリー</h3><p>Sophisticated Backpacksのバックパックや、Accessoriesの装備画面が使えます。バックパックは入手・装備などの条件を満たしてから <kbd>B</kbd>、アクセサリー画面は <kbd>H</kbd>。バックパックは別途入手する必要があります。</p></article><article class="card"><h3>死亡時の荷物回収（Corpse）</h3><p>Corpseが導入されており、死亡時の荷物を遺体から回収する仕組みがあります。死亡位置を確認し、装備を整えて回収に向かってください。地形や死亡状況によって回収の難しさは変わります。</p></article><article class="card"><h3>ボイスチャット（Plasmo Voice）</h3><p><kbd>G</kbd> でPlasmo Voiceの設定を開き、自分のマイクと出力先を選びます。配布されるプッシュ・トゥ・トークのキーは <kbd>V</kbd>。押して話す操作を確認し、音量や入力方式も設定画面で調整してください。</p></article></div></section>
+<section id="keys"><h2>キーバインド早見表</h2><div class="table-wrap"><table><thead><tr><th scope="col">キー</th><th scope="col">操作</th><th scope="col">使う場面・補足</th></tr></thead><tbody>
+<tr><td><kbd>W A S D</kbd> / <kbd>Space</kbd></td><td>移動 / ジャンプ</td><td>基本操作はバニラと同じ。左Shiftでしゃがみ、左Ctrlでダッシュ。</td></tr>
+<tr><td><kbd>E</kbd></td><td>インベントリ</td><td>持ち物・JEIの検索を開く。</td></tr>
+<tr><td><kbd>Tab</kbd></td><td>ワールドマップ</td><td>探索した場所を確認する。</td></tr>
+
+<tr><td><kbd>L</kbd></td><td>クエスト</td><td>FTB Questsを開く。</td></tr>
+<tr><td><kbd>F8</kbd> 長押し</td><td>翻訳の原文を表示</td><td>離すと翻訳へ戻る。下の説明も参照。</td></tr>
+<tr><td><kbd>左Alt</kbd> ＋ ホイール</td><td>ブロックの形を変更</td><td>形変更に対応するブロックで使用。</td></tr>
+<tr><td><kbd>R</kbd> / <kbd>U</kbd></td><td>レシピ / 使い道</td><td>インベントリなどでアイテムにカーソルを合わせる。</td></tr>
+<tr><td><kbd>A</kbd></td><td>JEIのブックマーク</td><td>アイテムにカーソルを合わせる。</td></tr>
+<tr><td><kbd>Ctrl</kbd> ＋ <kbd>F</kbd></td><td>JEI検索欄へ</td><td>インベントリなど、JEIが表示される画面内。</td></tr>
+<tr><td><kbd>Ctrl</kbd> ＋ <kbd>O</kbd></td><td>JEI一覧の表示切替</td><td>アイテム一覧が消えたときにも確認。</td></tr>
+<tr><td><kbd>R</kbd></td><td>ロール</td><td>ワールド内。レシピ表示とは場面が違う。</td></tr>
+<tr><td><kbd>B</kbd> / <kbd>H</kbd></td><td>バックパック / アクセサリー画面</td><td>バックパックは所持・装備などの条件あり。</td></tr>
+<tr><td><kbd>N</kbd></td><td>Tom’s Storageのターミナルを開く</td><td>対応する端末や接続条件を満たす必要あり。</td></tr>
+<tr><td><kbd>G</kbd> / <kbd>V</kbd></td><td>音声設定 / 押して話す</td><td>Vの音声キーはPlasmo Voice内で設定。</td></tr>
+<tr><td>ホイールクリック</td><td>対応する収納の整理</td><td>Sophisticated系の整理キー。全画面共通ではない。</td></tr>
+<tr><td><kbd>F2</kbd> / <kbd>F5</kbd> / <kbd>F11</kbd></td><td>スクリーンショット / 視点 / 全画面</td><td>バニラ同様。</td></tr>
+</tbody></table></div><div class="note"><strong>キーが重複している場合</strong><p>配布設定には、B（バックパック・建築系など）、V（音声・装備やメイド系など）、F8（原文表示・SeeU設定）といった重複が残っています。場面によって同じキーを使い分けますが、支障がある場合は使わない側を未割り当てにするか別キーへ変更してください。原文表示にF8を使う場合は、重複する側を変更してください。</p><p>ノートPCでFキーが音量などの操作になる場合は、<kbd>Fn</kbd> ＋ <kbd>F8</kbd> なども確認してください。</p></div></section>
+<section id="clutter"><h2>ブロックの形変更</h2>
+<p>階段やハーフなど、同じ素材の形違いはある程度まとめて扱われます。使うときに形を切り替えられます。</p>
+<ol><li>ブロックを手に持つか、インベントリでブロックにカーソルを合わせます。</li><li><kbd>左Alt</kbd> を押したまま、マウスホイールで形を選びます。</li><li>Altを離して、選んだ形で使います。</li></ol>
+<p>階段・ハーフ・縦ハーフなどに切り替えられます。選べる形は素材によって異なります。</p>
+<p>拾ったり整理したりして形が変わった場合も、同じ操作で選び直せます。すべてのブロックが対象ではなく、別の色への変更はできません。</p>
+</section>
+<section id="translation"><h2>英語テキストの自動翻訳</h2>
+<p><strong>大体の英語テキストは、自動で日本語に翻訳されます。</strong>アイテム名や説明、クエストの文章などが対象です。</p>
+<p>初めて表示する文章は、翻訳されるまで少し時間がかかることがあります。一部は英語のまま残る場合もあります。</p>
+<h3>原文を確認したいとき</h3><p><kbd>F8</kbd> を押している間は原文を表示します。離すと翻訳表示に戻ります。訳が分かりにくいときや、英語のアイテム名を調べたいときに使えます。</p>
+<p class="small">翻訳のためにChromeが最小化状態で起動することがあります。</p>
+</section>
+<section id="help"><h2>トラブル対処</h2>
+<details><summary>ZIPを開いてもインストールが始まらない</summary><p>エクスプローラーでZIPを開くだけでは導入できません。Prismの「インスタンスを追加」→「インポート」からZIPを選びます。中のJARを直接実行する必要はありません。</p></details>
+<details><summary>初回起動が長い／ダウンロードが止まった</summary><p>初回は多くのファイルを取得します。Prismのログやダウンロード進捗を確認し、動いていれば待ちます。エラー終了したら接続状況を確認して再起動。それでも失敗する場合は、エラー画面と失敗したファイル名を管理者へ伝えてください。起動前の更新コマンドは削除しないでください。</p></details>
+<details><summary>Javaのエラーで起動できない</summary><p>PrismのJava自動検出・自動ダウンロードを確認します。インスタンスの「編集」→「設定」→「Java」で古いJavaを指定している場合は、Java 21を選び直してください。このパックはJava 8や17では起動できません。</p></details>
+<details id="memory-help"><summary>メモリ不足／カクつく</summary><p>まず他のアプリを閉じ、PCの空きメモリを確認します。配布値の最大10GBが大きすぎるPCでは割り当てを下げてください。ゲーム側では描画距離を下げ、シェーダーが有効ならオフにして比較します。Minecraftへの割り当て不足が原因のエラーなら、PCに余裕がある範囲で増やします。OSまで重い場合、むやみに増やすと逆効果です。</p></details>
+<details id="connection-help"><summary>サーバーが出ない／接続できない</summary><p>「サーバーを追加」で <code>133.18.166.158:25565</code> を登録してください。「Modが一致しない」などの表示なら、一度ゲームを終了して同じPrismインスタンスを起動し直し、更新完了を確認します。タイムアウトやメンテナンス表示が続く場合は管理者に状況を確認してください。</p></details>
+<details><summary>ガイドのキーを押しても違う動作になる</summary><p>既存のキー設定は、配布初期値に強制的には置き換わりません。「設定」→「操作設定」→「キー割り当て」で対象機能と重複を確認してください。検索欄などに入力中は、画面を閉じてから試します。音声のVキーはGで開くPlasmo Voice設定も確認してください。</p></details>
+<details><summary>ボイスチャットで声が入らない</summary><p>Gで設定を開き、入力デバイスに自分のマイクを指定します。ミュート、入力方式、Vのプッシュ・トゥ・トーク割り当て、Windows側のマイク許可を確認してください。ゲーム接続と音声通信は別なので、全員が聞こえない場合は管理者へ連絡してください。</p></details>
+<details><summary>Modを自分で更新してもいい？</summary><p>この環境は起動時に管理者の配布構成へ更新されます。Prismの一括Mod更新や手動の追加・削除を行うと、独自修正版が外れたり、サーバーと構成が合わなくなったりすることがあります。変更したいときは、先に管理者へ相談してください。</p></details>
+<div class="note"><strong>問い合わせ時に伝える情報</strong><p>「どの手順で起きたか」「エラー文や画面のスクリーンショット」「PCの搭載メモリ」。ログを共有する場合は、アカウント情報や認証コードなどが写っていないか確認してください。</p></div></section>
+</main><footer><div class="wrap"><strong>UnkoChatサーバー 導入・操作ガイド</strong><p>2026年9月6日時点の配布ZIP・共有設定をもとに作成。更新後はゲーム内の表示と管理者からの案内を優先してください。初期値は既存の個人設定と異なる場合があります。</p><p>参照：Prism Launcher公式ドキュメント／Clutter No More公式配布ページ／このパックのキーバインド・翻訳・音声設定および独自修正記録。</p><a href="#install">導入方法へ戻る</a></div></footer>
+</body></html>

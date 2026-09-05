@@ -1,0 +1,8 @@
+name = "Local Mod Translator"
+filename = "localmodtranslator-2.0.16.jar"
+side = "client"
+
+[download]
+hash-format = "sha256"
+hash = "72607744f233d2d29a371427a5640679057528ea52050d6593920d44b481442c"
+url = "https://u210.github.io/reimagined-pack/downloads/files/localmodtranslator-2.0.16.jar"

@@ -39,7 +39,7 @@ Prismの起動前コマンドは次を使用します。
 "$INST_JAVA" -jar packwiz-installer-bootstrap.jar https://u210.github.io/reimagined-pack/pack.toml
 ```
 
-VPS自動デプロイはまだ未設定です。管理用Prismインスタンスへの起動前コマンド設定は、初回配布テスト後に行います。
+VPSへの反映は、候補環境の検証・ワールドと管理対象ファイルのバックアップ・再起動確認・失敗時ロールバックを行うデプロイスクリプトで管理します。
 
 `.github/workflows/pages.yml`は、`main`へpushされた`pack`ディレクトリだけをGitHub Pagesへ公開します。
 リポジトリ作成後、GitHubの`Settings` → `Pages` → `Build and deployment`でSourceを`GitHub Actions`に設定します。
@@ -67,6 +67,16 @@ ssh kagoya-minecraft 'systemctl restart reimagined'
 ssh kagoya-minecraft 'systemctl stop reimagined'
 ssh kagoya-minecraft 'systemctl start reimagined'
 ```
+
+packwizの公開後、VPSへデプロイするコマンド:
+
+```powershell
+.\scripts\deploy-vps.ps1
+```
+
+このコマンドは本番を動かしたまま候補を構築し、server/bothのMod数、Sawmillパッチ、Plasmo Voice UDP 25566、`sort_recipes=false`を検証します。接続中プレイヤーがいる場合は停止せず中断します。検証後にサービスを停止し、`/opt/reimagined-backups/<timestamp>`へバックアップしてから切り替えます。起動完了またはTCP 25565の確認に失敗した場合は管理対象ファイルを自動で戻します。
+
+Sawmillの修正JARは公開リポジトリへ置かず、ローカルの`setup/sawmill-fix/sawmill-patched.jar`からVPSの`/opt/reimagined-deploy/assets`へ安全なハッシュ検証付きで転送します。上流Sawmillのハッシュが変わった場合、デプロイは自動適用せずレビュー要求で停止します。
 
 OS起動時の自動起動は有効です。Java 21を使用し、サーバーファイルは専用の`minecraft`ユーザーが所有します。
 UbuntuのUFWは無効で、外部からTCP 25565のMinecraft status応答を確認済みです。

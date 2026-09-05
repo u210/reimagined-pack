@@ -18,6 +18,8 @@
 !pack/**
 !scripts/
 !scripts/**
+!infra/
+!infra/**
 !setup/
 setup/*
 !setup/prepare.ps1

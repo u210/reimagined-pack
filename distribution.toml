@@ -33,6 +33,7 @@ paths = [
   "mods/itemphysic-lite.pw.toml",
   "mods/ixeris.pw.toml",
   "mods/lambdynamiclights.pw.toml",
+  "mods/localmodtranslator.pw.toml",
   "mods/melody.pw.toml",
   "mods/mod-tabs.pw.toml",
   "mods/moreculling.pw.toml",
@@ -296,9 +297,7 @@ paths = [
 ]
 
 [files.client]
-paths = [
-  "mods/localmodtranslator-2.0.16.jar",
-]
+paths = []
 
 [files.server]
 paths = []

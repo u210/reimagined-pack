@@ -3713,8 +3713,9 @@ hash = "d48948d8dbdf7ca96c4bc34be4aed08313d3a7707acab9ed12fb894b470bce58"
 metafile = true
 
 [[files]]
-file = "mods/localmodtranslator-2.0.16.jar"
-hash = "72607744f233d2d29a371427a5640679057528ea52050d6593920d44b481442c"
+file = "mods/localmodtranslator.pw.toml"
+hash = "c3a71986cd30aac6efaf7d7e4b6455f3506c98e3f8a3d25236154c1fe7e956e6"
+metafile = true
 
 [[files]]
 file = "mods/lootr.pw.toml"

@@ -1,5 +1,16 @@
 # 構築・検証記録（2026-09-05 JST）
 
+## 管理用インスタンス同期（16:43 JST）
+
+- 管理用Prismインスタンスとの差分からGliders 1.1.8をclient/server両用、Chunky 1.4.23をserver専用として追加し、Paragliders 21.1.5を削除。
+- Modrinthの完全一致ハッシュとNeoForge 1.21.1対応、追加依存なしを確認。packwiz検証は有効Mod 266個、メタファイル284個、indexed files 2923個で成功。
+- GitHub Pages公開後に新規メタファイルのHTTP 200と削除済みメタファイルのHTTP 404を確認。
+- 初回試行で起動完了ログを`pipefail`と`grep -q`の組み合わせにより誤検知し、安全ロールバックが作動。完了判定を修正後に再デプロイした。
+- 本番は214個のサーバーModで16:43:20に`Done (28.881s)!`。ChunkyとGlidersの存在、Paraglidersの不在を確認。
+- 保持バックアップは`/opt/reimagined-backups/20260905-164144`、容量948MB。バックアップ内`world/level.dat`のSHA-256検証に成功。
+- SawmillパッチのSHA-256、Plasmo Voice UDP 25566、`sort_recipes=false`を再確認。TCP 25565とUDP 25566が待受中。
+- 外部PCからMinecraft status問い合わせに成功。1.21.1 / protocol 767 / 0 of 10 players / 正しいMOTDを確認。
+
 ## packwiz自動デプロイ確認（15:42 JST）
 
 - `scripts/deploy-vps.ps1`からVPSの`/usr/local/sbin/reimagined-deploy`を実行する更新経路を構築。

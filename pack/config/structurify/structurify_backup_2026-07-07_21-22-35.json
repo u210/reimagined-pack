@@ -1,0 +1,457 @@
+{
+  "config_version": "2.0.28",
+  "config_datetime": "2026-07-07_21-22-25",
+  "general": {
+    "disable_all_structures": false,
+    "prevent_structure_overlap": false,
+    "enable_global_spacing_and_separation_modifier": true,
+    "global_spacing_and_separation_modifier": 1.5
+  },
+  "structure_namespaces": [],
+  "structures": [
+    {
+      "name": "cataclysm:abandoned_village",
+      "is_disabled": true
+    },
+    {
+      "name": "cataclysm:acropolis",
+      "whitelisted_biomes": [
+        "betterend:ice_starfield"
+      ],
+      "blacklisted_biomes": [
+        "minecraft:warm_ocean"
+      ]
+    },
+    {
+      "name": "cataclysm:ancient_factory",
+      "whitelisted_biomes": [
+        "#deeperdarker:has_structure/gloomaze",
+        "#deeperdarker:has_structure/ancient_temple",
+        "deeperdarker:overcast_columns",
+        "deeperdarker:echoing_forest",
+        "deeperdarker:deeplands",
+        "deeperdarker:blooming_caverns"
+      ],
+      "blacklisted_biomes": [
+        "minecraft:lush_caves",
+        "minecraft:dripstone_caves",
+        "minecraft:deep_dark",
+        "galosphere:crystal_canyons",
+        "galosphere:lichen_caves",
+        "galosphere:pink_salt_caves",
+        "terralith:cave/andesite_caves",
+        "terralith:cave/diorite_caves",
+        "terralith:cave/fungal_caves",
+        "terralith:cave/granite_caves",
+        "terralith:cave/infested_caves",
+        "terralith:cave/thermal_caves",
+        "terralith:cave/underground_jungle",
+        "terralith:cave/deep_caves",
+        "terralith:cave/frostfire_caves",
+        "terralith:cave/mantle_caves",
+        "terralith:cave/tuff_caves",
+        "quark:glimmering_weald"
+      ]
+    },
+    {
+      "name": "cataclysm:desert_occupied_village",
+      "is_disabled": true
+    },
+    {
+      "name": "cataclysm:desert_site",
+      "is_disabled": true
+    },
+    {
+      "name": "cataclysm:kobolediator_shrine",
+      "is_disabled": true
+    },
+    {
+      "name": "dungeons_arise:bathhouse",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:abandoned_lighthouse",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:abandoned_vineyard",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:abandonedhouse",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:ancient_portal/ancient_portal",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:ancient_portal/nether_ancient_portal",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:ancient_statue/ancient_statue_desert",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:ancient_statue/ancient_statue_jungle",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:ancient_statue/ancient_statue_plains",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:animal_den/forest_den",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:animal_den/foxhound_den",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:animal_den/polar_bear_den",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:apothecary_abode",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:ars_nouveau/archmages_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:bazaar",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:bearclaw_inn",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:beekeepers_house",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:botanist",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:brickhouse",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:cottage",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:desert_camp/desert_camp",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:desert_camp/desert_camp_bygwindswept",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:desert_camp/desert_camp_orange",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:desert_camp/desert_camp_red",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:desert_market/desert_market",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:desert_market/desert_market_orange",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:desert_market/desert_market_red",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:desert_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:dig_site/dig_site",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:enchantingtower",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:farmhouse",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:fishermans_lodge",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:hermits_hollow",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:hunters_cabin",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:iceandfire/dread_citadel",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:iceandfire/sirens_cove",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:lumber_camp/lumber_camp_acacia",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:lumber_camp/lumber_camp_birch",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:lumber_camp/lumber_camp_bopmahogany",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:lumber_camp/lumber_camp_bopredwood",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:lumber_camp/lumber_camp_bygmahogany",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:lumber_camp/lumber_camp_bygredwood",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:lumber_camp/lumber_camp_dark_oak",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:lumber_camp/lumber_camp_jungle",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:lumber_camp/lumber_camp_oak",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:lumber_camp/lumber_camp_spruce",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:mason_house",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:pillager_camp",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:pumpkin_cafe",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:redhorn_guild",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:ruined_church",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:ruined_fort",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:ruined_well",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:snifferhenge",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:the_log",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:tinkers_citadel",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:tinkers_workshop",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:train_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:tree_of_wisdom",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:treetop_tavern",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:tudor_pub",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:wacky_wares",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:washing_camp",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:windswept_shrine",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:winter_wagon",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:witches_treestump",
+      "is_disabled": true
+    },
+    {
+      "name": "idas:wizard_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "nova_structures:illager_camp",
+      "blacklisted_biomes": [
+        "minecraft:river"
+      ]
+    },
+    {
+      "name": "supplementaries:road_sign",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:desert_outpost",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:fortified_desert_village",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:fortified_village",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:glacial_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:igloo",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:mage_complex",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:mage_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:mage_tower_autumn",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:mage_tower_spring",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:mage_tower_summer",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:mage_tower_winter",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rubble_desert",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rubble_forest",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rubble_jungle",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rubble_mesa",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rubble_mountain",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:rubble_taiga",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:spire",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/frosted_dungeon",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/giant_bee_hive",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/mining_outpost",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/oak_cabin",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/old_refinery",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/sunken_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:underground/witch_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:valley_lodge",
+      "is_disabled": true
+    },
+    {
+      "name": "terralith:witch_hut",
+      "is_disabled": true
+    }
+  ],
+  "structure_sets": [],
+  "structure_template_pools": []
+}

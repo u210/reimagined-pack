@@ -1,0 +1,13 @@
+name = "Luki's Woodland Mansions"
+filename = "lukis-woodland-mansions-v1.0-1.21-1.21.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "10b592fd66a2d347448e9a0e0df48df6f6a1a209"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7227735
+project-id = 1385782

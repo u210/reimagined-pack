@@ -1,0 +1,16 @@
+{
+	"music_rebalance": true,
+	"jukebox_fading": true,
+	"fade_speed": 0.009999999776482582,
+	"pool_weight_fix": true,
+	"button_placement": "TOP",
+	"automatic_discs": true,
+	"allow_events": true,
+	"vanilla_music": true,
+	"discord_button": true,
+	"kofi_button": true,
+	"remote_downloads": true,
+	"remote_repositories": [
+		"https://github.com/Rebel459/music-and-melody-remote"
+	]
+}

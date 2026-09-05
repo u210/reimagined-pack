@@ -1,0 +1,13 @@
+name = "Hide Tab"
+filename = "hidetab-1.0.0.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "f65d6a4f31aa2f20e7d132de678d8b94f11ae313"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7239833
+project-id = 1387979

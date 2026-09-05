@@ -1,0 +1,13 @@
+name = "Clutter No More"
+filename = "clutternomore-2.0.6+1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "581e13e65a2cffb192dcc2993516282be04f8755"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8324203
+project-id = 1339454

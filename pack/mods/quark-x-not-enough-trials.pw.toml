@@ -1,0 +1,13 @@
+name = "Quark X Not Enough Trials"
+filename = "QuarkXNET-1.21-v1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b5d9f0ecbee200439978b878d0238b996250cc28"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8142526
+project-id = 1543677

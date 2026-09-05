@@ -1,0 +1,13 @@
+name = "ScalingMobs"
+filename = "scalingmobs-1.0-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "897b7faa4b6f8caa70e188c862de7670a4df2e52"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7908499
+project-id = 1497017

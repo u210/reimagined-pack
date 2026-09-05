@@ -1,0 +1,26 @@
+[general]
+	#Enable Protection Rebalance gameplay.
+	enabled = true
+	#Apply the same protection curve to non-player living entities that wear enchanted equipment.
+	affectNonPlayerEntities = true
+
+[curve]
+	#Raw enchantment protection points at which the second efficiency tier begins.
+	# Default: 20.0
+	# Range: 0.0 ~ 1024.0
+	threshold = 20.0
+	#Damage-reduction fraction contributed by each raw point at or below the threshold.
+	#0.025 means 2.5% damage reduction per raw point. Vanilla is effectively 0.04.
+	# Default: 0.025
+	# Range: 0.0 ~ 1.0
+	reductionPerPointBelowThreshold = 0.025
+	#Damage-reduction fraction contributed by each raw point above the threshold.
+	#0.01 means 1% damage reduction per raw point.
+	# Default: 0.01
+	# Range: 0.0 ~ 1.0
+	reductionPerPointAboveThreshold = 0.01
+
+[debug]
+	#Send a calculation summary to protected players whenever enchantments reduce incoming damage.
+	#This can be noisy and is intended only for testing.
+	showDebugMessages = false

@@ -1,0 +1,13 @@
+name = "Critters and Companions"
+filename = "crittersandcompanions-neoforge-1.21.1-2.6.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2470c3235c5af25a67751e1a9221e8c840f4d095"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8488969
+project-id = 574913

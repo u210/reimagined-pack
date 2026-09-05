@@ -1,0 +1,13 @@
+name = "Multiplayer Spawners"
+filename = "Multiplayer Spawners - Neoforge - 1.21.1 - 1.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e0860adb271b7496fd47730b24cc864dc69c2945"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7465142
+project-id = 1333296

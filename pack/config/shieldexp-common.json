@@ -1,0 +1,21 @@
+{
+  "shieldList": [],
+  "shieldBlacklist": [],
+  "itemOnlyMode": false,
+  "stashingCooldown": false,
+  "generalCooldown": true,
+  "speedModification": true,
+  "advancedExplosions": false,
+  "lenientParry": true,
+  "lenientStamina": true,
+  "tooltips": true,
+  "tooltipCooldown": true,
+  "tooltipStamina": true,
+  "tooltipSpeed": true,
+  "tooltipParryDamage": true,
+  "tooltipParryWindow": true,
+  "tooltipBlastResistance": false,
+  "hudIndicator": true,
+  "hudXOffset": 0,
+  "hudYOffset": 0
+}

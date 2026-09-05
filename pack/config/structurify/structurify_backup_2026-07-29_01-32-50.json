@@ -1,0 +1,38 @@
+{
+  "config_version": "2.0.28",
+  "config_datetime": "2026-07-24_19-48-37",
+  "general": {
+    "disable_all_structures": false,
+    "prevent_structure_overlap": true,
+    "enable_global_spacing_and_separation_modifier": true,
+    "global_spacing_and_separation_modifier": 1.5
+  },
+  "structure_namespaces": [],
+  "structures": [
+    {
+      "name": "cataclysm:acropolis",
+      "whitelisted_biomes": [
+        "betterend:ice_starfield"
+      ],
+      "blacklisted_biomes": [
+        "minecraft:warm_ocean"
+      ]
+    },
+    {
+      "name": "netherman:nether_geyser",
+      "is_disabled": true
+    },
+    {
+      "name": "netherman:pipes",
+      "is_disabled": true
+    },
+    {
+      "name": "nova_structures:illager_camp",
+      "blacklisted_biomes": [
+        "minecraft:river"
+      ]
+    }
+  ],
+  "structure_sets": [],
+  "structure_template_pools": []
+}

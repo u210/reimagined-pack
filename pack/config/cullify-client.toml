@@ -1,0 +1,39 @@
+#Cullify general configuration options
+[general]
+	#Enable or disable vegetation culling globally.
+	enabled = true
+	#Shape of the culling boundary around the player (SPHERE, CYLINDER, BOX).
+	#Allowed Values: SPHERE, CYLINDER, BOX, TRIANGLE, HEXAGON, STAR, SQUARE, CIRCLE
+	cullingShape = "SPHERE"
+	#Enable culling of grass, ferns, and short grass.
+	cullGrass = true
+	#Enable culling of flowers and double-height flowers.
+	cullFlowers = true
+	#Enable culling of other decorative plants (dead bushes, kelp, seagrass, etc.).
+	cullOtherPlants = true
+	#Maximum distance in blocks to render grass, ferns, and tall grass.
+	# Default: 48
+	# Range: 0 ~ 512
+	grassCullDistance = 96
+	#Maximum distance in blocks to render flowers and double-height flowers.
+	# Default: 48
+	# Range: 0 ~ 512
+	flowerCullDistance = 96
+	#Maximum distance in blocks to render other decorative plants (dead bushes, kelp, seagrass, etc.).
+	# Default: 32
+	# Range: 0 ~ 512
+	otherPlantCullDistance = 96
+	#Enable debug overlay HUD to show culling stats and configuration status.
+	debugMode = false
+	#LOD density filter (0-100). 100 = keep all plants (disabled). Lower values thin out plants near the culling boundary using a deterministic hash — no flickering. 50 = keep 50% of plants in the outer zone. Saves CPU at medium distances.
+	# Default: 100
+	# Range: 0 ~ 100
+	lodDensity = 100
+	#When enabled, automatically reduces culling distances when FPS drops below TARGET_FPS, and slowly restores them when FPS recovers. Keeps frame rate stable in dense biomes.
+	smartScale = false
+	#Target frames per second for the Smart Scale system. If current FPS falls below this, culling distances shrink to recover performance.
+	# Default: 60
+	# Range: 30 ~ 240
+	targetFps = 60
+	#When enabled, culling distances shrink in dark areas (forests, caves, night) proportionally to the ambient light level. Vegetation invisible in the dark is culled much sooner, saving CPU and GPU with no visual impact.
+	lightAwareCulling = false

@@ -1,0 +1,13 @@
+name = "No Music Pause"
+filename = "nomusicpause-1.21.1-1.0.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "6b2ee389eb78c63580398d9b4c9a7c70a8491f52"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7835624
+project-id = 1446167

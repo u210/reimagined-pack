@@ -1,0 +1,4 @@
+#Client-side Configuration
+[client]
+	#Enable detailed debug logging for troubleshooting visual issues.
+	enableDebugLogging = false

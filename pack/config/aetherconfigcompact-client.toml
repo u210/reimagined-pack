@@ -1,0 +1,5 @@
+[Altar]
+	#Add extra Altar repair recipes ("<namespace:item>/<time>")
+	Extra_Altar_Recipes = ["modid:itemid/600"]
+	#Disable built in Altar repair recipes ("<namespace:item>").
+	Disable_Altar_Recipes = ["modid:itemid"]

@@ -1,0 +1,13 @@
+name = "Fancy Sand | Wavy Dunes"
+filename = "Fancy Sand 1.13+ v1.0.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "686c635d2d058cecacd09cac4565ad80368651d9"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6810711
+project-id = 1314022

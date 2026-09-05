@@ -1,0 +1,13 @@
+name = "Coquet"
+filename = "coquet-0-9-1.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "ceff084573f490ae2765e4e2b3c04c27b8894862"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5031883
+project-id = 821727

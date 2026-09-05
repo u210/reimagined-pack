@@ -1,0 +1,13 @@
+name = "Too Many Entities"
+filename = "Too Many Entities 1.21.1 NeoForge v1.2.0.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "8973ed346c217b1cb0eaab191e1a69c5e999afe6"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6698283
+project-id = 1061284

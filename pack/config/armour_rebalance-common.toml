@@ -1,0 +1,26 @@
+#To see how all of these values are used and the impact of any adjustments, check the interactable graph here (all config names match their Desmos counterpart): https://www.desmos.com/calculator/98516vuxmp
+info = ""
+#Armour base div
+adiv = 9.0
+#Modifier applied to the square root of armour
+arootmod = 1.0
+#The amount of % bonus each level of protection gives you
+pa = 4.0
+#A modifier used on the level of any enchants that match the damage type
+pla = 2.0
+#The % of armour NOT lost per level of feather falling when fall damage attempts to set armour to 0, this can go over 100% and act as a multiplier. i.e ffretain = 20, your boots have FF III and you have 15 armour: 15 * (20 * 3 / 100) or 9
+ffretain = 20.0
+#A modifier used on damage when calculating armour reduction
+dmod = 0.5
+#A modifier used on toughness when calculating armour reduction
+tmod = 0.85
+#Resistance either applies it's percentage or raw bonus per level, depending on which would be greater. Also note it is iterative so the first two levels may apply their raw bonus and the 3rd could apply it's percent bonus
+raperc = 20.0
+#See above
+raraw = 10.0
+#See above but toughness is iterated separately so a raw armour bonus but percentile toughness bonus could be applied
+rtperc = 15.0
+#See above
+rtraw = 3.0
+#Wardens have a uniquely high melee damage for a vanilla mob so this allows maxed out diamond or netherite to not get one-shot. I highly recommend disabling this if there are any ways in the modpack to get your armour/prot levels/health/toughness above vanilla levels
+wardenPatch = true

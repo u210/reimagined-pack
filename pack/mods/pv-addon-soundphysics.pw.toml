@@ -1,0 +1,13 @@
+name = "pv-addon-soundphysics"
+filename = "pv-addon-soundphysics-1.1.2.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "0ae889cc772b52446a4db96254db2e73f3688bb3"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7369292
+project-id = 1411815

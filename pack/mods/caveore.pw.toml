@@ -1,0 +1,13 @@
+name = "Cave Spelunking"
+filename = "caveore-1.21.1-4.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e5a7bbd808023ea98c8bc2ec8bb2a9700e165ef1"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6445027
+project-id = 468643

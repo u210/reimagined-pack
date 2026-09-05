@@ -1,0 +1,13 @@
+name = "Mandalize"
+filename = "mandalize-1.12-1.21.1.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "97d7791cc36495952f113a97781970c18ba8001f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7977868
+project-id = 1347016

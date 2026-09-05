@@ -1,0 +1,13 @@
+name = "Shader Panorama For Tricky Trials"
+filename = "ShaderPanoramaFor1.21.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "60415365b06fd709ab3d4ab95176ff1d458813af"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6098053
+project-id = 1181701

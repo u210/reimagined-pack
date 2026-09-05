@@ -1,0 +1,24 @@
+[misc]
+	self_rescue = true
+
+[functions]
+	logging = true
+	revive = true
+	locate = true
+
+[revive]
+	aggro = false
+	totem = true
+	passive = true
+
+	[revive.passive_priority]
+		1 = ["touhou_little_maid:idle"]
+		2 = []
+		4 = ["touhou_little_maid:attack", "touhou_little_maid:ranged_attack", "touhou_little_maid:crossbow_attack", "touhou_little_maid:danmaku_attack", "touhou_little_maid:trident_attack"]
+
+[logging]
+	disable_blockup = false
+
+[vehicle_control]
+	full = true
+	rotate = true

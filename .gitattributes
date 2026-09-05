@@ -1,0 +1,2 @@
+# packwiz hashes exact file bytes; never rewrite line endings on checkout.
+* -text whitespace=cr-at-eol

@@ -1,0 +1,13 @@
+name = "The Rename Compat Project [Over 300 Mods Supported!]"
+filename = "The-RCP.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "e9f13f3406785e8bd5481c9f7b5b5469af378842"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8409227
+project-id = 1242659

@@ -1,0 +1,13 @@
+name = "Supplementaries X Not Enough Trials"
+filename = "SupplementariesXNET-1.21-v1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "1d9343009f0332fcfde07e7d87810ebfaef7e04d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8162778
+project-id = 1557203

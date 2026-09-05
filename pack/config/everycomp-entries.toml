@@ -1,0 +1,386 @@
+		[types.stone_type.natures_spirit]
+			white_kaolin = true
+			light_gray_kaolin = true
+			gray_kaolin = true
+			black_kaolin = true
+			brown_kaolin = true
+			red_kaolin = true
+			orange_kaolin = true
+			yellow_kaolin = true
+			lime_kaolin = true
+			green_kaolin = true
+			cyan_kaolin = true
+			light_blue_kaolin = true
+			blue_kaolin = true
+			purple_kaolin = true
+			magenta_kaolin = true
+			pink_kaolin = true
+			pink_sandstone = true
+			white_chalk = true
+			light_gray_chalk = true
+			gray_chalk = true
+			black_chalk = true
+			brown_chalk = true
+			red_chalk = true
+			orange_chalk = true
+			yellow_chalk = true
+			lime_chalk = true
+			green_chalk = true
+			cyan_chalk = true
+			light_blue_chalk = true
+			blue_chalk = true
+			purple_chalk = true
+			magenta_chalk = true
+			pink_chalk = true
+			travertine = true
+			chert = true
+			kaolin = true
+
+		[types.stone_type.galosphere]
+			pink_salt = true
+			rose_pink_salt = true
+			pastel_pink_salt = true
+
+		[types.stone_type.betterend]
+			azure_jadestone = true
+			sandy_jadestone = true
+			virid_jadestone = true
+			sulphuric_rock = true
+			flavolite = true
+			umbralith = true
+			violecite = true
+
+		[types.stone_type.create]
+			limestone = true
+			asurine = true
+			crimsite = true
+			ochrum = true
+			veridium = true
+			scoria = true
+			scorchia = true
+
+		[types.stone_type.deep_aether]
+			clorite = true
+			raw_clorite = true
+			aseterite = true
+
+		[types.stone_type.quark]
+			soul_sandstone = true
+			limestone = true
+			jasper = true
+			shale = true
+			myalite = true
+			permafrost = true
+
+		[types.stone_type.aether]
+			holystone = true
+
+		[types.stone_type.caverns_and_chasms]
+			sugilite = true
+			cylindrite = true
+			cassiterite = true
+			rhyolite = true
+
+		[types.stone_type.infernalexp]
+			shimmer_stone = true
+			dimstone = true
+			dullstone = true
+
+		[types.stone_type.supplementaries]
+			brittlestone = true
+
+		[types.stone_type.nomansland]
+			silt = true
+			siltstone = true
+
+		[types.mud_type.deep_aether]
+			aether_mud = true
+
+		[types.wood_type.caverns_and_chasms]
+			azalea = true
+
+		[types.wood_type.quark]
+			azalea = true
+			ancient = true
+			blossom = true
+
+		[types.wood_type.betterend]
+			dragon_tree = true
+			end_lotus = true
+			helix_tree = true
+			jellyshroom = true
+			lacugrove = true
+			lucernia = true
+			mossy_glowshroom = true
+			pythadendron = true
+			tenanea = true
+			umbrella_tree = true
+
+		[types.wood_type.betternether]
+			anchor_tree = true
+			mushroom_fir = true
+			nether_mushroom = true
+			nether_reed = true
+			nether_sakura = true
+			rubeus = true
+			stalagnate = true
+			wart = true
+			willow = true
+
+		[types.wood_type.aether]
+			skyroot = true
+
+		[types.wood_type.deep_aether]
+			roseroot = true
+			yagroot = true
+			cruderoot = true
+			conberry = true
+			sunroot = true
+
+		[types.wood_type.natures_spirit]
+			redwood = true
+			sugi = true
+			wisteria = true
+			fir = true
+			willow = true
+			aspen = true
+			maple = true
+			cypress = true
+			olive = true
+			joshua = true
+			ghaf = true
+			palo_verde = true
+			coconut = true
+			cedar = true
+			larch = true
+			mahogany = true
+			saxaul = true
+
+		[types.wood_type.cataclysm]
+			chorus = true
+
+		[types.wood_type.upgrade_aquatic]
+			driftwood = true
+			river = true
+
+		[types.wood_type.infernalexp]
+			luminous = true
+
+		[types.wood_type.mynethersdelight]
+			powdery = true
+
+		[types.wood_type.nomansland]
+			pine = true
+			maple = true
+			walnut = true
+			willow = true
+
+		[types.leaves_type.betterend]
+			dragon_tree = true
+			lacugrove = true
+			lucernia = true
+			pythadendron = true
+			tenanea = true
+
+		[types.leaves_type.betternether]
+			anchor_tree = true
+			nether_sakura = true
+			rubeus = true
+			willow = true
+
+		[types.leaves_type.aether]
+			skyroot = true
+			golden_oak = true
+			crystal = true
+			crystal_fruit = true
+			holiday = true
+			decorated_holiday = true
+
+		[types.leaves_type.deep_aether]
+			roseroot = true
+			flowering_roseroot = true
+			blue_roseroot = true
+			flowering_blue_roseroot = true
+			yagroot = true
+			cruderoot = true
+			conberry = true
+			sunroot = true
+
+		[types.leaves_type.galosphere]
+			opal = true
+
+		[types.leaves_type.natures_spirit]
+			frosty_redwood = true
+			redwood = true
+			sugi = true
+			wisteria = true
+			white_wisteria = true
+			part_white_wisteria = true
+			blue_wisteria = true
+			part_blue_wisteria = true
+			pink_wisteria = true
+			part_pink_wisteria = true
+			purple_wisteria = true
+			part_purple_wisteria = true
+			frosty_fir = true
+			fir = true
+			willow = true
+			aspen = true
+			yellow_aspen = true
+			red_maple = true
+			orange_maple = true
+			yellow_maple = true
+			cypress = true
+			olive = true
+			joshua = true
+			ghaf = true
+			palo_verde = true
+			coconut = true
+			cedar = true
+			larch = true
+			mahogany = true
+			saxaul = true
+
+		[types.leaves_type.upgrade_aquatic]
+			river = true
+
+		[types.leaves_type.quark]
+			ancient = true
+			blue_blossom = true
+			lavender_blossom = true
+			orange_blossom = true
+			yellow_blossom = true
+			red_blossom = true
+
+		[types.leaves_type.nomansland]
+			yellow_birch = true
+			autumnal_oak = true
+			pale_cherry = true
+			frosted = true
+			pine = true
+			maple = true
+			red_maple = true
+			walnut = true
+			willow = true
+			apple_fruit = true
+			pear_fruit = true
+
+		[types.cake.natures_spirit]
+			cheese_block = true
+
+		[types.cake.nomansland]
+			fruit_cake = true
+
+		[types.lantern.infernalexp]
+			glowlight_lantern = true
+
+		[types.lantern.deep_aether]
+			skyjade_lantern = true
+
+		[types.lantern.natures_spirit]
+			paper_lantern = true
+			white_paper_lantern = true
+			light_gray_paper_lantern = true
+			gray_paper_lantern = true
+			black_paper_lantern = true
+			brown_paper_lantern = true
+			red_paper_lantern = true
+			orange_paper_lantern = true
+			yellow_paper_lantern = true
+			lime_paper_lantern = true
+			green_paper_lantern = true
+			blue_paper_lantern = true
+			light_blue_paper_lantern = true
+			cyan_paper_lantern = true
+			purple_paper_lantern = true
+			magenta_paper_lantern = true
+			pink_paper_lantern = true
+
+		[types.lantern.caverns_and_chasms]
+			cupric_lantern = true
+			copper_lantern = true
+			exposed_copper_lantern = true
+			weathered_copper_lantern = true
+			oxidized_copper_lantern = true
+			waxed_copper_lantern = true
+			waxed_exposed_copper_lantern = true
+			waxed_weathered_copper_lantern = true
+			waxed_oxidized_copper_lantern = true
+
+		[entries.stone_type.quark]
+			pillar = false
+			polished_vertical_slab = false
+			vertical_slab = false
+
+		[entries.stone_type.waystones]
+			waystone = false
+
+		[entries.stone_type.create]
+			small_brick_wall = true
+			cut_wall = true
+			small_bricks = true
+			cut_brick_slab = true
+			polished_cut_slab = true
+			small_brick_stairs = true
+			cut_bricks = true
+			cut = true
+			polished_cut = true
+			small_brick_slab = true
+			layered = true
+			polished_cut_stairs = true
+			cut_brick_wall = true
+			pillar = true
+			cut_stairs = true
+			cut_brick_stairs = true
+			polished_cut_wall = true
+			cut_slab = true
+
+		[entries.mud_type.quark]
+			carved_bricks = false
+			pillar = false
+			brick_lattice = false
+
+		[entries.wood_type.boatload]
+			large_boat = true
+			furnace_boat = true
+
+		[entries.wood_type.another_furniture]
+			flower_box = true
+			shelf = true
+			shutter = true
+			bench = true
+			table = true
+			drawer = true
+			chair = true
+
+		[entries.wood_type.decorative_blocks]
+			beam = true
+			support = true
+			seat = false
+			palisade = true
+
+		[entries.wood_type.create]
+			window = true
+			window_pane = true
+
+		[entries.wood_type.farmersdelight]
+			cabinet = true
+
+		[entries.wood_type.quark]
+			hollow_log = true
+			vertical_planks = false
+			post = false
+			trapped_chest = false
+			bookshelf = true
+			chest = true
+			stripped_post = false
+			ladder = true
+			vertical_slab = false
+
+		[entries.wood_type.nomansland]
+			bookshelf = false
+			trimmed_planks = true
+
+		[entries.leaves_type.quark]
+			hedge = true
+			leaf_carpet = true

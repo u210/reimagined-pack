@@ -1,0 +1,13 @@
+name = "Tolerable Creepers"
+filename = "tolerable_creepers-neoforge-1.21.1-2.2.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "407a4acd9f67980d1f5b9db0c5312515cccf0bd7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8429355
+project-id = 542678

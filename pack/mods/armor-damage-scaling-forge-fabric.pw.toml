@@ -1,0 +1,13 @@
+name = "Armor & damage scaling"
+filename = "armordamagescale-1.21.1-3.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "9b001dca16f0f0e0b3921f9043092c4b0a22b119"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8217954
+project-id = 824936

@@ -1,0 +1,13 @@
+name = "Aether: Regenerated"
+filename = "Aether Regenerated v1.3.1.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "aefd4d9853a0ce51db14fd8fb060e0346d00ac6a"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8501440
+project-id = 864002

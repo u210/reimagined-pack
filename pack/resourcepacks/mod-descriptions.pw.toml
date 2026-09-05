@@ -1,0 +1,13 @@
+name = "Mod Descriptions"
+filename = "mod-descriptions-v11.1.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "318abc446cff7548bf9eeb810f66b4d622d4a2df"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7845904
+project-id = 1475421

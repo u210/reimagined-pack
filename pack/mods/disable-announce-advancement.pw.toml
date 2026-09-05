@@ -1,0 +1,13 @@
+name = "Disable Announce Advancement"
+filename = "DisableAnnounceAdvancements-0.0.1-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "c504c114949dce96de0e63f43586b9c28e32c35a"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7391901
+project-id = 1415756

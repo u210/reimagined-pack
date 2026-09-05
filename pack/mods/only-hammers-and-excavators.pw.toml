@@ -1,0 +1,13 @@
+name = "Only Hammers And Excavators"
+filename = "onlyhammersandexcavators-1.21.1-1.0.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "dc24da1f35f5f10d565b1c99bc4135ca194f3f22"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8314315
+project-id = 939215

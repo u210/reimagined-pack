@@ -1,0 +1,67 @@
+[
+  {
+    "user": {
+      "type": "player",
+      "name": "SherpaScotty",
+      "uniqueId": "a840f701-7ebf-4e03-9968-fd4671705118"
+    },
+    "time": 1783709837792,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/1411nYcOkE"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "SherpaScotty",
+      "uniqueId": "a840f701-7ebf-4e03-9968-fd4671705118"
+    },
+    "time": 1783709825911,
+    "type": "Profiler (live)",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/wE1Gd989Vx"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "SherpaScotty",
+      "uniqueId": "a840f701-7ebf-4e03-9968-fd4671705118"
+    },
+    "time": 1783541507756,
+    "type": "Profiler",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/qIivn4EWPR"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "SherpaScotty",
+      "uniqueId": "a840f701-7ebf-4e03-9968-fd4671705118"
+    },
+    "time": 1783541502638,
+    "type": "Profiler (live)",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/TzBEoEp3h9"
+    }
+  },
+  {
+    "user": {
+      "type": "player",
+      "name": "SherpaScotty",
+      "uniqueId": "a840f701-7ebf-4e03-9968-fd4671705118"
+    },
+    "time": 1783540725190,
+    "type": "Profiler (live)",
+    "data": {
+      "type": "url",
+      "value": "https://spark.lucko.me/Dg3HJvoDWb"
+    }
+  }
+]

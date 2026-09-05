@@ -1,0 +1,13 @@
+name = "pv-addon-priority"
+filename = "pv-addon-priority-1.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2cd7ec35c39c70b9756941db92a593c48793b358"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7374213
+project-id = 1412721

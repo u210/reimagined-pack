@@ -1,0 +1,13 @@
+name = "A Better Fishing"
+filename = "better_fishing-1.0.0-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "99a30c1462e935b7675a7222862b1b4ba84002ae"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8383990
+project-id = 1599175

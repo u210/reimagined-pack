@@ -1,0 +1,26 @@
+[remodels]
+	#If the pig remodel and texture variants are enabled
+	pigRemodel = false
+	#If the cow remodel and texture variants are enabled
+	cowRemodel = false
+	#Config changes require a restart to take effect
+	#If the chicken remodel and texture variants are enabled
+	chickenRemodel = false
+	#If the rabbit remodel and texture variants are enabled
+	rabbitRemodel = false
+	#If the squid remodel and texture variants are enabled
+	squidRemodel = false
+	#If the sheep remodel and texture variants are enabled
+	sheepRemodel = false
+	#Entities that should use the chicken remodel
+	chickens = ["minecraft:chicken"]
+	#Entities that should use the cow remodel
+	cows = ["minecraft:cow", "minecraft:mooshroom", "buzzier_bees:moobloom"]
+	#Entities that should use the pig remodel
+	pigs = ["minecraft:pig"]
+	#Entities that should use the rabbit remodel
+	rabbits = ["minecraft:rabbit"]
+	#Entities that should use the sheep remodel
+	sheep = ["minecraft:sheep"]
+	#Entities that should use the squid remodel
+	squids = ["minecraft:squid", "minecraft:glow_squid"]

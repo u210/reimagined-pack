@@ -1,0 +1,13 @@
+name = "SeeU"
+filename = "seeu-neoforge-1.21.1-0.9.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a4790872b57e2b1f16d1c034def9bb7ddbc22c3f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8752061
+project-id = 1512427

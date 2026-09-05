@@ -1,0 +1,13 @@
+name = "Sensible Survival (RPG Tweaks)"
+filename = "durability_tweaks-neoforge-1.0.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ef24c6c058cb767f3558a8d9fb10fb7224eb149e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6836307
+project-id = 1266889

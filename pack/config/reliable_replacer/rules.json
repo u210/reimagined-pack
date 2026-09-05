@@ -1,0 +1,35 @@
+[
+  {
+    "inputs": [
+      "galosphere:palladium_ore"
+    ],
+    "output": "caverns_and_chasms:silver_ore",
+    "keep_states": true,
+    "retrogen": false,
+    "player_blocks": false,
+    "keep_nbt": true,
+    "probability": 1
+  },
+  {
+    "inputs": [
+      "galosphere:deepslate_palladium_ore"
+    ],
+    "output": "caverns_and_chasms:deepslate_silver_ore",
+    "keep_states": true,
+    "retrogen": false,
+    "player_blocks": false,
+    "keep_nbt": true,
+    "probability": 1
+  },
+  {
+    "inputs": [
+      "betterend:end_stone_smelter"
+    ],
+    "output": "minecraft:air",
+    "keep_states": true,
+    "retrogen": false,
+    "player_blocks": false,
+    "keep_nbt": true,
+    "probability": 1
+  }
+]

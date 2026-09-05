@@ -1,0 +1,13 @@
+name = "Touhou Maid: Affection"
+filename = "touhou-maid-affection-1.7.2.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "18011228817f7444586231ad4bd71870f61cc2ee"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8034035
+project-id = 1484836

@@ -1,0 +1,13 @@
+name = "Auto Third Person"
+filename = "auto_third_person-neo-1.21.1-2.2.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "5b66b1c3ca8d32d06327d9564abf5a364296af3c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6557337
+project-id = 297818

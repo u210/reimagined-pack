@@ -1,0 +1,13 @@
+name = "ITM's Protection Rebalance"
+filename = "protection-rebalance-1.0.0+mc1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a960e61f53124fd541222add117e155be751eade"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8492748
+project-id = 1621944

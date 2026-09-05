@@ -1,0 +1,17 @@
+{
+  "config_version": "1.0.4",
+  "config_datetime": "2026-07-07_21-31-08",
+  "global": {
+    "disable_all_placed_features": false
+  },
+  "placed_features": [
+    {
+      "name": "create:striated_ores_nether",
+      "is_disabled": true
+    },
+    {
+      "name": "create:striated_ores_overworld",
+      "is_disabled": true
+    }
+  ]
+}

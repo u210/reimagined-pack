@@ -1,0 +1,8 @@
+{
+  "equipment_takes_damage_chance": 1.0,
+  "equipment_damage_cap": 2,
+  "equipment_damage_multiplier": 0.5,
+  "shield_takes_damage_chance": 1.0,
+  "shield_damage_cap": 4,
+  "shield_damage_multiplier": 0.5
+}

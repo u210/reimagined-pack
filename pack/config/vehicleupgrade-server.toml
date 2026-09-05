@@ -1,0 +1,68 @@
+#When the player enters any vehicle like a boat, set the player rotation to the vehicle instead of the other way around.
+#Default Value: true
+rotate_vehicle_with_player = true
+#Open the inventory screen for mobs wearing equipment by sneak + right-clicking.
+#The entities this applies to are defined by a corresponding tag.
+#Default Value: true
+open_mob_inventory_by_interacting = true
+#When determining collisions for a vehicle, passengers are no longer ignored and are now properly taken into account.
+#Due to Minecraft's quirky physics engine this behavior will still break when moving quickly or purposefully glitching into corners.
+#Default Value: true
+correct_passenger_collisions = true
+#Prevent saddled mounts from strolling away from the position they are left at.
+#The entities this applies to are defined by a corresponding tag.
+#Default Value: true
+#Requires Restart: World
+saddled_mounts_do_not_wander = true
+#Remove entities from ridden vehicles by sneak + right-clicking with an empty hand.
+#Does not apply to other players.
+#Default Value: true
+manually_dismount_passengers = true
+#Allow the player to sprint while riding any mount.
+#The entities this applies to are defined by a corresponding tag.
+#Default Value: true
+sprint_while_riding = true
+#Allow the player to reach further than normal for interacting with blocks and entities while riding any vehicle.
+#Default Value: true
+increase_passenger_interaction_range = true
+#Allows ridden mobs to pass though leaves with a slight slowdown and some fancy particles.
+#Optionally still allows for walking on ground leaves while making leaves at and above eye height passable (with some unfortunate quirks).
+#The blocks and entities this applies to are defined by corresponding tags.
+#Default Value: ABOVE_FEET
+#Allowed Values: ALWAYS, ABOVE_FEET, VANILLA
+mounts_pass_through_leaves = "ABOVE_FEET"
+#Mobs that would otherwise throw off their rider when sinking in water are now able to swim while allowing the rider to stay mounted.
+#Additionally increases the swim speed of horses.
+#Default Value: true
+mounts_swim_in_water = true
+#When the player is riding any vehicle that vehicle will not be able to become a passenger of another vehicle.
+#E.g. a pig and walking over an empty boat will prevent the pig from entering the boat as long as it is controlled by the player.
+#Default Value: true
+prevent_vehicle_collisions_while_riding = true
+
+[horse]
+	#Increase the horse head pitch offset while riding to improve visibility.
+	#Default Value: 0.5
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	lower_horse_head_amount = 0.5
+	#Using shears on a donkey, mule or llama allows for removing the equipped chest.
+	#Default Value: true
+	shears_remove_chests = true
+	#Update horse behavior, like making grazing less disruptive to other actions, and preventing bucking while riding.
+	#Default Value: true
+	#Requires Restart: World
+	smarter_horse_behavior = true
+
+[boat]
+	#Increase the boat step height just enough to be able to row up carpets, path blocks, soul sand, etc.
+	#Default Value: true
+	increase_boat_step_height = true
+	#Allow large mobs like horses, spiders and polar bears to enter boats by shrinking them to an acceptable size when in the boat.
+	#The entities this applies to are defined by a corresponding tag.
+	#Default Value: true
+	shrink_over_sized_boat_passengers = true
+	#Allow boats to use jumping behaviour similar to horses for navigating on land.
+	#Default Value: ON_LAND
+	#Allowed Values: NEVER, ON_LAND, ALWAYS
+	jump_in_boats = "ON_LAND"

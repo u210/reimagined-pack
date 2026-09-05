@@ -1,0 +1,13 @@
+name = "Tooltip Overhaul"
+filename = "tooltipoverhaul-neoforge-1.21.1-1.5.1.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "a2dd6ad90ba8648c87f4a8b049bf50dd6f52c39f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8376246
+project-id = 1327508

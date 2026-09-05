@@ -1,0 +1,13 @@
+name = "Dynamic Villager Trades Neoforge"
+filename = "dynamicvillagertrades-1.0.0+1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a6fd97e5973790fcf0739497afae532f55e9365b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8182160
+project-id = 1557683

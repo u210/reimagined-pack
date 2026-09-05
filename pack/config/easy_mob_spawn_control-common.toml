@@ -1,0 +1,21 @@
+[misc]
+	#CREATURE-type mobs NATURAL spawn gets checked every 400 ticks (20s). Which is very long time compared to MONSTERs 1 tick spawn check.
+	#NATURAL spawn is a random spawn type. You can decrease tick value to make creatures spawn faster.
+	#-1 = Default value (400).
+	# Default: -1
+	# Range: -1 ~ 4000
+	creatureNaturalSpawnCheckTicks = -1
+
+[config_v1]
+	bannedMobs = []
+	spawnRates = []
+	naturalSpawnRates = []
+	worldGenSpawnRates = []
+	dimensionBannedMobs = []
+	disabledMobSpawnTypes = []
+	biomeBannedMobs = []
+	biomeSpawns = []
+	biomeSpawnAssignments = []
+	spawnRules = []
+	spawnRuleAssignments = []
+	spawnCaps = []

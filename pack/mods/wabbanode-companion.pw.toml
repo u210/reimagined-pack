@@ -1,0 +1,13 @@
+name = "Wabbanode Companion"
+filename = "wabbanode-companion-neoforge-1.21.1-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "637fd047dc95fadda4b851b47e86aed91286f9c5"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7735541
+project-id = 1300459

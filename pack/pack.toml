@@ -1,0 +1,12 @@
+name = "Reimagined"
+version = "1.21.50"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "bd805903cb1f0b22f95be6e72fbcb54e6fe326f8fb9844004ced7318e3ba6882"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.244"

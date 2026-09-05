@@ -1,0 +1,12 @@
+{
+  "disable_vanilla_jump_criticals": true,
+  "enable_melee_criticals": true,
+  "enable_ranged_criticals": true,
+  "enable_critical_strike_batching": false,
+  "sound_melee_crit_volume": 0.6,
+  "sound_ranged_crit_volume": 0.8,
+  "attribute_crit_chance_innate_bonus": 0.05,
+  "attribute_crit_damage_innate_bonus": 0.5,
+  "effect_crit_chance_per_level": 0.05,
+  "effect_crit_damage_per_level": 0.1
+}

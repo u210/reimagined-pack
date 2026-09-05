@@ -1,0 +1,13 @@
+{
+  "config_version": "1.0.4",
+  "config_datetime": "2026-07-09_14-06-49",
+  "global": {
+    "disable_all_placed_features": false
+  },
+  "placed_features": [
+    {
+      "name": "hearthandharvest:nest",
+      "is_disabled": true
+    }
+  ]
+}

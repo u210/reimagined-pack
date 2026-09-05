@@ -1,0 +1,13 @@
+name = "Creatures and Beasts: Continued"
+filename = "CNB-1.21.1-neoforge-1.7.17.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e83c333834abcb99fda5d6a79badee6729f5cb3f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8178196
+project-id = 1197295

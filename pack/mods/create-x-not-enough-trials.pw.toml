@@ -1,0 +1,13 @@
+name = "Create X Not Enough Trials"
+filename = "CreateXNET-1.21-v1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ffac6ad145a9e37cf28693263b7d7b3ccf468d9c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8142454
+project-id = 1543673

@@ -1,0 +1,13 @@
+name = "Integrated Dungeons Arise"
+filename = "IDA v2.1.1-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "41717df6bc033f9c55f359ad0cb04f6c8088642f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8283181
+project-id = 1325457

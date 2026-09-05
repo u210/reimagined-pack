@@ -1,0 +1,13 @@
+name = "Shield Expansion"
+filename = "shieldexp-neoforge-1.21.1-1.4.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2b67d77f60e51cc811cee903972c14d6ad3b2f74"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8054624
+project-id = 583318

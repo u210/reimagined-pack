@@ -1,0 +1,13 @@
+name = "Touhou Little Maid: Spell"
+filename = "touhou_little_maid_spell-1.21.1-1.8.4-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "f64c21066a25672a871447597d87b7394b093d56"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8458251
+project-id = 1290017

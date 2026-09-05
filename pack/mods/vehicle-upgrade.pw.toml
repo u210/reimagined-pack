@@ -1,0 +1,13 @@
+name = "Vehicle Upgrade"
+filename = "VehicleUpgrade-v21.1.0-mc1.21.1-NeoForge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "eda411423ffd79c22826036024d74421f53deef3"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8122241
+project-id = 1369699

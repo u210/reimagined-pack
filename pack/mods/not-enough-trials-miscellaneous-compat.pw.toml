@@ -1,0 +1,13 @@
+name = "Not Enough Trials Miscellaneous Compat"
+filename = "NETMiscCompat-1.21-v1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "930d5922655bff4419e293993f5b9d5786652530"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8168410
+project-id = 1558298

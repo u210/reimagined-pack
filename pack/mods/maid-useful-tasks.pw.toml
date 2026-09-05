@@ -1,0 +1,13 @@
+name = "Maid Useful Tasks"
+filename = "1.21.1-maid_useful_task-1.4.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "4dfae9a42c19797457ac3426ddda1011be418d25"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7909120
+project-id = 1255424

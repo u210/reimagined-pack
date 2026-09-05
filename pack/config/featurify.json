@@ -1,0 +1,17 @@
+{
+  "config_version": "1.0.4",
+  "config_datetime": "2026-07-24_20-42-54",
+  "global": {
+    "disable_all_placed_features": false
+  },
+  "placed_features": [
+    {
+      "name": "hearthandharvest:nest",
+      "is_disabled": true
+    },
+    {
+      "name": "hearthandharvest:salt_cave",
+      "is_disabled": true
+    }
+  ]
+}

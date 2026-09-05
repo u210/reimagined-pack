@@ -1,0 +1,13 @@
+name = "Music and Melody"
+filename = "music-and-melody-21.1-r3.6-neoforge-cf.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "4b393f28569a06bd19937127f4e0d01891692713"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8498197
+project-id = 1544814

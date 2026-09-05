@@ -1,0 +1,6 @@
+[Misc]
+	hideMobPreview = false
+
+[Notifications]
+	hasSeenSpawnRateWarning = false
+	hasSeenCategoryMismatchWarning = false

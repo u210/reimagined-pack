@@ -1,0 +1,13 @@
+name = "DnT Ocean Monument Overhaul"
+filename = "DnT-ocean-monument-replacement-v1.2 [NeoForge].jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2f10fbffa319a2f47e12d137a6a2368ee9bf77d1"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5724461
+project-id = 1053227

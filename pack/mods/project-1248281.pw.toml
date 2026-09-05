@@ -1,0 +1,13 @@
+name = "project-1248281"
+filename = "world-host-0.5.2+1.21.1-neoforge.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "1bd229afd4e39bdc25a5400706c16052db1861f6"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6447565
+project-id = 1248281

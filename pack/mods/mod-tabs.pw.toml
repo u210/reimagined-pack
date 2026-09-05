@@ -1,0 +1,13 @@
+name = "Mod Tabs"
+filename = "modtabs-1.21.1-2.5.9-Neoforge.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "e7f243cbe36d5dc8e7b3000c35fd986c56722e06"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8408271
+project-id = 1313300

@@ -1,0 +1,13 @@
+name = "Fancy Gear | Reshaded Equipment"
+filename = "FancyGear_1.13-1.21.1.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "41675c475a3e73d64ddb7ba787617f5510ea8bc0"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6640019
+project-id = 1284620

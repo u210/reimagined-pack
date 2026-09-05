@@ -1,0 +1,13 @@
+name = "Stay True"
+filename = "Stay True 1.21.5.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "b752181fa17cf99a67bc46a2c1569be621021493"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6534716
+project-id = 353554

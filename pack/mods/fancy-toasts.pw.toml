@@ -1,0 +1,13 @@
+name = "Fancy Toasts | Better Advancements"
+filename = "fancytoasts-neoforge-1.21.1-1.4.7.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "f484d2aa960475fddd2c15a276c3328ea8feb62e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7985488
+project-id = 1326436

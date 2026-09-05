@@ -1,0 +1,17 @@
+[translation]
+	#Enable runtime mod text translation
+	enabled = true
+	#Start the dedicated Google Chrome page when needed
+	autoLaunchChrome = true
+	#Translate every missing entry, including text that has not been displayed yet
+	backgroundTranslation = false
+	#Show queue and translated counts briefly in the game HUD
+	showTranslationOverlay = false
+	#Include source and translated text in debug logs
+	debugTextLogging = false
+	#Mod namespaces excluded from automatic language translation
+	excludedNamespaces = []
+	#Translate language keys identified as configuration screens or UI controls
+	translateUiText = true
+	#Dedicated Chrome display mode: window, minimized, or headless
+	chromeDisplayMode = "minimized"

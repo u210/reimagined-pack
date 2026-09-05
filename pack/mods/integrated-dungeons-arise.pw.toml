@@ -3,11 +3,11 @@ filename = "IDA v2.1.1-1.21.1.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "41717df6bc033f9c55f359ad0cb04f6c8088642f"
-mode = "metadata:curseforge"
+hash-format = "sha512"
+hash = "c33b1f575136494585ce3eed956f129841d4a012b004b5821e771d340a6a68996abb41ff4b16841c48ae222571100a04bdae8c643bf9ca92a7455a270c99f472"
+url = "https://cdn.modrinth.com/data/uG4njWFR/versions/mUchb4lO/IDA%20v2.1.1-1.21.1.jar"
 
 [update]
-[update.curseforge]
-file-id = 8283181
-project-id = 1325457
+[update.modrinth]
+mod-id = "uG4njWFR"
+version = "mUchb4lO"

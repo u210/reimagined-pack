@@ -8,6 +8,10 @@
 !run.bat
 !user_jvm_args.txt
 !distribution.toml
+!client-template/
+!client-template/**
+!dist/
+!dist/**
 !.github/
 !.github/**
 !pack/

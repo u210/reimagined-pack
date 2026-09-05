@@ -2974,7 +2974,7 @@ hash = "5c4659e7bb368960801ccfce24ac3493fa14aae88a7e17b2a9cdfe1931985ffe"
 
 [[files]]
 file = "mods/a-better-fishing.pw.toml"
-hash = "55c82bcb486e183f0a8498b6f85b2739e6bcc06ad3993ae4534738d98111f355"
+hash = "114e61c21b1e39c823bb09947f954da9c53d1aa4f85cd9f538c4c21bead5a62d"
 metafile = true
 
 [[files]]
@@ -3279,7 +3279,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-aeronautics.pw.toml"
-hash = "efc9a3f8d4d0098687667f5ce7be29262202bcba23b0cec29811dcac1b0799fc"
+hash = "44c1ea9fb297f3fea5f90b792c6bb4e611d5994e78b28e294436e93b3c51bb6e"
 metafile = true
 
 [[files]]
@@ -3379,12 +3379,12 @@ metafile = true
 
 [[files]]
 file = "mods/dnt-nether-fortress-overhaul.pw.toml"
-hash = "25d0d7bb1e7d5999402150afd965e6f5f8b6b9e5a94e2fadd95d5bc581a7ab11"
+hash = "efa87dde0bcd36adfe4e9327e46d7c71dcd5b1c5cacf7773e3c8ce7989a81972"
 metafile = true
 
 [[files]]
 file = "mods/dnt-ocean-monument-overhaul.pw.toml"
-hash = "0c45d8d12fe993224ea37b11e5ef2fbdf4b6560aaca7938217db0392a028ad3f"
+hash = "7a4d5cea4f86165f2cb32913eee529c578f097bf15990f5c844950c6d8ee6470"
 metafile = true
 
 [[files]]
@@ -3429,7 +3429,7 @@ metafile = true
 
 [[files]]
 file = "mods/entityculling.pw.toml"
-hash = "f17b239b9bbf7ba084f33d71699082f112ffdb77a3bd39af877c6a0da961ede1"
+hash = "65431744ebcd7ffa46d006a9a61d4e5be60ea2737e4199f9e44f3c05d0bea199"
 metafile = true
 
 [[files]]
@@ -3444,7 +3444,7 @@ metafile = true
 
 [[files]]
 file = "mods/explore-ruins-aether.pw.toml"
-hash = "2970e06f402a3987008e3c90c7bed5bf330a3ddc10a3c73825b2aa3cad0dc8de"
+hash = "8e6d1d7fea5431ff5f3db2b3a81cc802c5f9f44afd51a5971d0c9529871340b1"
 metafile = true
 
 [[files]]
@@ -3614,7 +3614,7 @@ metafile = true
 
 [[files]]
 file = "mods/integrated-dungeons-arise.pw.toml"
-hash = "890339a7eb449082ba71db9922d5a963755517cf15c50a2a37bdd3436dce9ae1"
+hash = "3caa181fce96372eb33fe9f3e544512320b4dec49622a909c93311a90171dde6"
 metafile = true
 
 [[files]]
@@ -3828,7 +3828,7 @@ metafile = true
 
 [[files]]
 file = "mods/not-enough-animations.pw.toml"
-hash = "d9054c3a348ce8c3582cc525433288777d5293232ca91684cf69f6eb939375b5"
+hash = "f28f9049c8556fc9fdc1e62e716b57707287c9d133addb093df0ce5366a08993"
 metafile = true
 
 [[files]]
@@ -3853,7 +3853,7 @@ metafile = true
 
 [[files]]
 file = "mods/only-hammers-and-excavators.pw.toml"
-hash = "6661c6aa852aaef1ca2b0ca5556a38e41c5760c824da25955816075e247b7c69"
+hash = "85e09ed81d42f673e1f02cdae5ee8f9d3f41ce78c8fba9f5ade28748eafa7ef0"
 metafile = true
 
 [[files]]
@@ -3958,7 +3958,7 @@ metafile = true
 
 [[files]]
 file = "mods/realistic-nametag.pw.toml"
-hash = "6b230a82ed8c6d84db40d1365aea89b859de71111a9a6878cdb7150d13cf0207"
+hash = "2fed4034cee0662ba0291952cf935bbddd4428372d45a0b23139560578b072aa"
 metafile = true
 
 [[files]]
@@ -4018,7 +4018,7 @@ metafile = true
 
 [[files]]
 file = "mods/scalingmobs.pw.toml"
-hash = "0ee38291783ae6141c3df435caffbe51dec56b9c3719de65a6c3a078ae476220"
+hash = "3d0f550a95ff7acf4b443f957b71dcb6cfd98455637a97ac62baf564c5f74813"
 metafile = true
 
 [[files]]
@@ -4188,7 +4188,7 @@ metafile = true
 
 [[files]]
 file = "mods/towers-of-the-wild-modded.pw.toml"
-hash = "aa0462e7d2e6b0e71e777362178a488577d2d0f2d4ab61ed705718fbb7b41607"
+hash = "5acab8c66056366b3e85143f3628aa90ddaa6957b8b7be66982023508961ad53"
 metafile = true
 
 [[files]]
@@ -4323,12 +4323,12 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/fresh-animations-details.pw.toml"
-hash = "60519f5f381b914c6c730c8ef67b91d2787bd6f3da26de94b3a8ac76b8f41faf"
+hash = "67212c5dab5bfda697663d066a3a86b94160e5a616c4241e82bfaaf29fed0f81"
 metafile = true
 
 [[files]]
 file = "resourcepacks/fresh-animations.pw.toml"
-hash = "9ec67e88b2aff3720a27dde232274a00e65b7ddc5e302a495d18bc41a42028a4"
+hash = "d08b9816b6cdcac2491f2883aea0f8da2f027f3bc781ed9d16c704bad5b238fc"
 metafile = true
 
 [[files]]
@@ -4390,7 +4390,7 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/the-rcp.pw.toml"
-hash = "7634c648b4befb2acd67b0873eec1a8bff0ca7580d0797be6cb4620ab31c4577"
+hash = "bef59c5a5ae47ed84564b5a4ecbd2dd0d398820f6609ef5ec6765e1e1c636589"
 metafile = true
 
 [[files]]

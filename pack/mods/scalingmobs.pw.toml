@@ -3,11 +3,11 @@ filename = "scalingmobs-1.0-neoforge.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "897b7faa4b6f8caa70e188c862de7670a4df2e52"
-mode = "metadata:curseforge"
+hash-format = "sha512"
+hash = "af8809d691fd41863ce0278a2e19e77518ea6c1f7192c0d15aef6a1f5734e4b5f38186016dadd42cb9396cd77634f6946ca3c104b85da5d98113598e252fb0af"
+url = "https://cdn.modrinth.com/data/H0sbpW1o/versions/iyud3CvM/scalingmobs-1.0-neoforge.jar"
 
 [update]
-[update.curseforge]
-file-id = 7908499
-project-id = 1497017
+[update.modrinth]
+mod-id = "H0sbpW1o"
+version = "iyud3CvM"

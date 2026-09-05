@@ -3,11 +3,11 @@ filename = "explore_ruins_aether-1.0.0-neoforge-1.21.1.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "c4de6d0104090df656634afc03f3b1b05c6b33e1"
-mode = "metadata:curseforge"
+hash-format = "sha512"
+hash = "02da0a1689689f0817043c1f42f7264f0446292cfba5d9428630d9cbf8ea24f509e74015b339a0e4cc211680b21bed19401736772d38cab8bfbaccb34fede569"
+url = "https://cdn.modrinth.com/data/spwhkPqk/versions/hXttxA3w/explore_ruins_aether-1.0.0-neoforge-1.21.1.jar"
 
 [update]
-[update.curseforge]
-file-id = 6889560
-project-id = 1327133
+[update.modrinth]
+mod-id = "spwhkPqk"
+version = "hXttxA3w"

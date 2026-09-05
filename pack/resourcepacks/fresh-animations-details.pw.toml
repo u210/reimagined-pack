@@ -3,11 +3,11 @@ filename = "FA+Details-v2.2.1.zip"
 side = "client"
 
 [download]
-hash-format = "sha1"
-hash = "456243af4db5e0b575b1f31c0ba5edfac24ec346"
-mode = "metadata:curseforge"
+hash-format = "sha512"
+hash = "f5f84645c2665e772d6db80a201e7dda0feb570a82445b72e7012665b6df238357a8b62e6d2655a43146fd309c36125ed18d9512ee924f89587ef627c6f3c753"
+url = "https://cdn.modrinth.com/data/lctgpCsu/versions/tGydmcT3/FA%2BDetails-v2.2.1.zip"
 
 [update]
-[update.curseforge]
-file-id = 7953810
-project-id = 1346132
+[update.modrinth]
+mod-id = "lctgpCsu"
+version = "tGydmcT3"

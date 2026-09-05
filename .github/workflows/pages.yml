@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'pack/**'
+      - 'dist/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -37,10 +38,17 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload pack
+      - name: Assemble site
+        shell: bash
+        run: |
+          mkdir -p _site/downloads
+          cp -a pack/. _site/
+          cp dist/Reimagined-Packwiz.zip _site/downloads/
+
+      - name: Upload pack and bootstrap
         uses: actions/upload-pages-artifact@v4
         with:
-          path: pack
+          path: _site
 
       - name: Deploy
         id: deployment

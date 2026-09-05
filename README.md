@@ -44,6 +44,15 @@ VPS自動デプロイはまだ未設定です。管理用Prismインスタンス
 `.github/workflows/pages.yml`は、`main`へpushされた`pack`ディレクトリだけをGitHub Pagesへ公開します。
 リポジトリ作成後、GitHubの`Settings` → `Pages` → `Build and deployment`でSourceを`GitHub Actions`に設定します。
 
+配布用Prism ZIPは次で再生成できます。
+
+```powershell
+.\scripts\build-client-bootstrap.ps1
+```
+
+生成物は`dist/Reimagined-Packwiz.zip`、公開URLは `https://u210.github.io/reimagined-pack/downloads/Reimagined-Packwiz.zip` です。
+このZIPは管理用インスタンスとは独立しており、初回起動時にpackwizからclient/bothファイルを取得します。
+
 ## KAGOYAへのデプロイ
 
 `ssh kagoya-minecraft` の `/opt/reimagined` に配置し、systemdの `reimagined.service` として稼働します。

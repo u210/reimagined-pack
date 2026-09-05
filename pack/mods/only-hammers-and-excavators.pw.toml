@@ -3,11 +3,11 @@ filename = "onlyhammersandexcavators-1.21.1-1.0.2.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "dc24da1f35f5f10d565b1c99bc4135ca194f3f22"
-mode = "metadata:curseforge"
+hash-format = "sha512"
+hash = "23d1928a0e502bac1231022d2ffc18bd0e64ca1656d9896135ae2fa1168beee117bd5817bd1f270db86f7d11430f62b9407cb976c912eeda2102964f41af978a"
+url = "https://cdn.modrinth.com/data/OwtcCsNI/versions/5gLdEqaZ/onlyhammersandexcavators-1.21.1-1.0.2.jar"
 
 [update]
-[update.curseforge]
-file-id = 8314315
-project-id = 939215
+[update.modrinth]
+mod-id = "OwtcCsNI"
+version = "5gLdEqaZ"

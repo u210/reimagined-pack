@@ -3,11 +3,11 @@ filename = "The-RCP.zip"
 side = "client"
 
 [download]
-hash-format = "sha1"
-hash = "e9f13f3406785e8bd5481c9f7b5b5469af378842"
-mode = "metadata:curseforge"
+hash-format = "sha512"
+hash = "069069fa28e7edcc82f89a711e2785f6f4dd4b8f755bec718a664d2f9d5a3047352176ee57e44e6559def82e37835eea71b6593ccd569492ce0015f5f68a9ce0"
+url = "https://cdn.modrinth.com/data/CKEXt2kF/versions/qLBBXZGg/The-RCP.zip"
 
 [update]
-[update.curseforge]
-file-id = 8409227
-project-id = 1242659
+[update.modrinth]
+mod-id = "CKEXt2kF"
+version = "qLBBXZGg"

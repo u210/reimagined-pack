@@ -5,6 +5,10 @@ file = "README.md"
 hash = "83d52de5aeb555fc2b6c4f1c92eaeca4775fca2a21ac8c9de05c94ea22e4d014"
 
 [[files]]
+file = "config/MPI.json"
+hash = "6ce18798cc18d72a2b301883cca18c349c02de7b212510d2adcd0bbea0b31fbe"
+
+[[files]]
 file = "config/abridged.json"
 hash = "52c1aa85c25997e0a1e2e62d916269d93df4fbd4def36e5e22187a4d02061e33"
 
@@ -1715,10 +1719,6 @@ hash = "a22a8cf21927e7031e9860c3df89526aaf3db9183c439be217e0578ee5e98c0d"
 [[files]]
 file = "config/mowziesmobs-common.toml"
 hash = "55984be8a03604dd95446a84769854c5a42b064146db05dafa16c2ecba7a0971"
-
-[[files]]
-file = "config/mpi.json"
-hash = "6ce18798cc18d72a2b301883cca18c349c02de7b212510d2adcd0bbea0b31fbe"
 
 [[files]]
 file = "config/muhc-common.toml"

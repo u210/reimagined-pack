@@ -5,11 +5,13 @@
 <title>UnkoChatサーバー 導入・操作ガイド</title>
 <style>
 :root{--paper:#f4f2e9;--ink:#20352d;--muted:#596960;--green:#265f47;--line:#d4dbcf;--gold:#f3d481}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Yu Gothic UI","Meiryo",sans-serif;line-height:1.85}a{color:var(--green);text-underline-offset:4px}a:hover{color:#8b521b}a:focus-visible,summary:focus-visible{outline:3px solid #b67c20;outline-offset:5px}.wrap{max-width:1080px;margin:auto;padding:0 28px}.top{background:#20352d;color:#edf3e9;padding:15px 0;font-size:13px;letter-spacing:.13em}.top .wrap{display:flex;justify-content:space-between;gap:20px}.hero{padding:30px 0 22px;border-bottom:1px solid var(--line)}.eyebrow{font-size:12px;letter-spacing:.17em;font-weight:700;color:var(--green)}h1{font-size:clamp(25px,4vw,34px);line-height:1.5;margin:0 0 12px}h1 span{color:var(--green)}.lead{max-width:760px;font-size:15px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}.tag{padding:0 14px 0 0;font-size:13px}.button{display:inline-block;background:var(--green);color:white;padding:11px 22px;border-radius:6px;text-decoration:none;font-weight:700}.button:hover{background:#1d4936;color:white}.small{font-size:13px;color:var(--muted)}nav{position:sticky;top:0;z-index:5;background:#f4f2e9f5;border-bottom:1px solid var(--line)}nav .wrap{display:flex;gap:25px;overflow-x:auto;padding-top:13px;padding-bottom:13px}nav a{white-space:nowrap;font-size:13px;text-decoration:none;font-weight:700}main{padding-bottom:60px}section{margin-top:40px}h2{font-size:28px;letter-spacing:-.03em;margin:8px 0 23px;line-height:1.5}h3{font-size:18px;margin:0 0 10px}p{margin:8px 0 15px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:23px;border:1px solid var(--line);border-radius:10px;background:#fffdf7}.card p:last-child{margin-bottom:0}.quick kbd{font-size:20px}.quick h3{margin-top:13px}.note{padding:18px 22px;border-left:4px solid #ba8a37;background:#f5ead0;border-radius:0 7px 7px 0;margin:22px 0}.note p:last-child{margin-bottom:0}.steps{list-style:none;padding:0;counter-reset:step}.steps>li{counter-increment:step;position:relative;padding:25px 26px 25px 80px;background:#fffdf7;border:1px solid var(--line);border-radius:9px;margin:13px 0}.steps>li:before{content:counter(step,decimal-leading-zero);position:absolute;left:23px;top:25px;color:var(--green);font-size:24px;font-weight:800}kbd{display:inline-block;font-family:inherit;font-size:.9em;font-weight:700;line-height:1.5;background:#fff;padding:2px 8px;border:1px solid #b9c5b7;border-bottom:3px solid #b9c5b7;border-radius:5px;white-space:nowrap}code{overflow-wrap:anywhere;background:#e9eddf;padding:2px 5px;border-radius:4px}table{border-collapse:collapse;width:100%;background:#fffdf7;font-size:14px}th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#e1e9dc;font-size:12px;letter-spacing:.05em}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}.flow{display:flex;align-items:center;justify-content:center;gap:22px;padding:26px;background:#e4eddf;border-radius:8px;margin:20px 0;text-align:center}.flow b{font-size:19px}.two{grid-template-columns:1fr 1fr}ul{padding-left:22px}li{margin:6px 0}details{background:#fffdf7;border:1px solid var(--line);border-radius:8px;padding:17px 21px;margin:10px 0}summary{font-weight:700;cursor:pointer}details p{margin:15px 0 3px}footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:12px}.sources{font-size:12px;color:var(--muted)}@media(max-width:700px){.wrap{padding:0 19px}.hero{padding:24px 0}.grid,.two{grid-template-columns:1fr}section{margin-top:43px}.top .wrap{font-size:11px;letter-spacing:.05em}.steps>li{padding:22px 18px 22px 61px}.steps>li:before{left:16px;font-size:21px}.flow{gap:12px;padding:20px 10px}.flow b{font-size:16px}h2{font-size:24px}th,td{padding:12px 10px}.table-wrap table{min-width:520px}}@media print{nav{display:none}.button{background:none;color:inherit;padding:0;text-decoration:underline}body{background:white;font-size:10pt}.hero{padding:15px 0}section{margin-top:26px}.card,.steps>li,details{break-inside:avoid}h1{font-size:32pt}h2{font-size:20pt}a{color:inherit}.wrap{max-width:none}details::details-content{content-visibility:visible}footer{padding-bottom:0}}
+.server-status{display:inline-flex;align-items:center;gap:10px;padding:9px 15px;margin:0 0 20px;border:1px solid var(--line);border-radius:8px;background:#fffdf7;font-size:14px}.server-status strong{color:var(--muted)}.server-status strong::before{content:"";display:inline-block;width:9px;height:9px;margin-right:7px;border-radius:50%;background:currentColor}.server-status[data-state="online"] strong{color:#265f47}.server-status[data-state="offline"] strong{color:#a33730}@media print{.server-status{display:none}}
 </style>
 </head>
 <body>
 
 <div class="hero"><div class="wrap"><h1>UnkoChatサーバー 導入・操作ガイド</h1><p class="lead">Prism Launcherのインストール、サーバーへの接続方法、追加Modの操作を説明します。</p><div class="tags"><span class="tag">Minecraft Java 1.21.1</span><span class="tag">NeoForge 21.1.244</span><span class="tag">Windows向け導入手順</span><span class="tag">2026.09.06版</span></div></div></div>
+<div class="wrap"><div class="server-status" id="server-status" data-state="unknown" role="status" aria-live="polite" aria-atomic="true"><span>サーバー状況</span><strong id="server-status-label">確認できません</strong></div></div>
 <nav aria-label="目次"><div class="wrap"><a href="#install">01 導入方法</a><a href="#first">02 バニラとの違い</a><a href="#keys">03 キー早見表</a><a href="#clutter">04 ブロックの形変更</a><a href="#translation">05 自動翻訳</a><a href="#help">06 困ったとき</a></div></nav>
 <main class="wrap">
 
@@ -72,4 +74,43 @@
 <details><summary>Modを自分で更新してもいい？</summary><p>この環境は起動時に管理者の配布構成へ更新されます。Prismの一括Mod更新や手動の追加・削除を行うと、独自修正版が外れたり、サーバーと構成が合わなくなったりすることがあります。変更したいときは、先に管理者へ相談してください。</p></details>
 <div class="note"><strong>問い合わせ時に伝える情報</strong><p>「どの手順で起きたか」「エラー文や画面のスクリーンショット」「PCの搭載メモリ」。ログを共有する場合は、アカウント情報や認証コードなどが写っていないか確認してください。</p></div></section>
 </main><footer><div class="wrap"><strong>UnkoChatサーバー 導入・操作ガイド</strong><p>2026年9月6日時点の配布ZIP・共有設定をもとに作成。更新後はゲーム内の表示と管理者からの案内を優先してください。初期値は既存の個人設定と異なる場合があります。</p><p>参照：Prism Launcher公式ドキュメント／Clutter No More公式配布ページ／このパックのキーバインド・翻訳・音声設定および独自修正記録。</p><a href="#install">導入方法へ戻る</a></div></footer>
+<script>
+(() => {
+  const badge = document.getElementById('server-status');
+  const label = document.getElementById('server-status-label');
+  // Public Minecraft status API: https://mcstatus.io/docs#java-status
+  const endpoint = 'https://api.mcstatus.io/v2/status/java/133.18.166.158:25565?query=false';
+  let pending = false;
+  function show(state, text) {
+    badge.dataset.state = state;
+    label.textContent = text;
+  }
+  async function refresh() {
+    if (pending || document.hidden) return;
+    pending = true;
+    show('unknown', '確認中…');
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 12000);
+    try {
+      const response = await fetch(endpoint, {signal: controller.signal, credentials: 'omit', referrerPolicy: 'no-referrer'});
+      if (!response.ok) throw new Error('Status unavailable');
+      const result = await response.json();
+      if (typeof result.online !== 'boolean' || !Number.isFinite(result.retrieved_at) || Date.now() - result.retrieved_at > 300000) {
+        throw new Error('Invalid or stale status');
+      }
+      show(result.online ? 'online' : 'offline', result.online ? 'オンライン' : 'オフライン');
+    } catch {
+      show('unknown', '確認できません');
+    } finally {
+      clearTimeout(timeout);
+      pending = false;
+    }
+  }
+  refresh();
+  setInterval(refresh, 60000);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) refresh();
+  });
+})();
+</script>
 </body></html>

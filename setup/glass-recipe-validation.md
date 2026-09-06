@@ -1,6 +1,6 @@
 # Glass recipe validation — 2026-09-06
 
-Status: diagnosis and candidate fix verified locally; not published or deployed.
+Status: verified locally, published in d00b3e1, and deployed on 2026-09-06 at 13:21 JST.
 
 The production CNM shape map treats `minecraft:glass` as a shape of
 `create:framed_glass`. CNM 2.0.6's `RecipeRemover.removeShapeRecipes` discards
@@ -67,3 +67,8 @@ The production service remained active with PID 9018 before and after testing.
 No Prism edits, pack updates, commits, publication, production reload, or
 production restart were performed. Local test JVMs stopped; remote temporary
 input archive was removed.
+
+
+## Production deployment
+
+See the 2026-09-06 glass entry in validation.md. Backup: /opt/reimagined-backups/glass-fix-20260906-131958. Production recipe checks passed for sand and red sand; Minecraft status returned 1.21.1 / protocol 767. Local testing above preceded the authorized production deployment. The scoped deployment script is glass-recipe-deploy.py.

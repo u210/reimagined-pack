@@ -106,3 +106,13 @@ Reliable Removerのrules.json解析エラー、Curios spellbookスロットエ�
 ファイアウォール・ルーター設定は変更していません。
 
 初回ログ: `setup/first-start.log`。最終検証ログ: `setup/verified-start-stop.log`。
+
+## 2026-09-06 ガラス精錬のCNM修正
+
+- `d00b3e1`で `kubejs/data/reimagined/shape_map/glass_validation.json` を公開。通常ガラスをCNMの形変換グループから外し、Create枠付きガラスの派生扱いによる精錬レシピ削除を回避。
+- ローカル候補で砂からガラスの実生成を検証。本番は全Modのハッシュが検証構成と一致することを確認し、ガラス定義だけを追加する限定反映を実施。未公開のMPI/Xaero等の変更を上書きしていない。
+- ワールドを稼働中・停止後の2段階でバックアップし、停止後のlevel.datハッシュを照合。成功バックアップ: `/opt/reimagined-backups/glass-fix-20260906-131958`。
+- 初回はserver.propertiesの起動日時コメント更新がバイト照合に引っかかり自動復旧。変更が日時コメントだけであることを元ハッシュ再現で確認し、設定値を厳密比較する方式で再反映。
+- 13:21:43の新起動でガラスの親がminecraft:glass、通常ガラスレシピあり、砂・赤い砂ともにminecraft:glassへ一致。診断用の一時スクリプトは削除済み。
+- Minecraft 1.21.1 / protocol 767の応答をSSH alias経由の一時トンネルから確認。PID 24096、音声UDP25566・Sable UDP25565、全Modハッシュ、Sawmill sort_recipes=false、MPI設定、server.propertiesの設定値を維持。chunky-idleも再開済み。
+- Prism原本は未変更。今後の同期で修正が削除されないよう、同期スクリプトで今回のリポジトリ管理ファイルを保護。

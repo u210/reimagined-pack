@@ -90,6 +90,9 @@ Get-ChildItem -LiteralPath $packRoot -Recurse -File -Filter '*.pw.toml' | ForEac
     }
 }
 
+# Repository-owned recipe hotfix: preserve it when the administrator input lacks it.
+[void]$managedDestinations.Add('kubejs/data/reimagined/shape_map/glass_validation.json')
+
 $trackedRoots = @(
     'config',
     'configureddefaults',

@@ -174,6 +174,7 @@ modpackMode = false
   # Allows empty arrays
   # Array size must be greater 2147483647
   entityWhitelist = [
+    "minecraft:player",
     "minecraft:ghast",
     "minecraft:ender_dragon",
     "iceandfire:all",

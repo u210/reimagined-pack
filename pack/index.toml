@@ -778,7 +778,7 @@ hash = "13fac7ab2025bc4ada007db2a05822bfefa1bcc4b685505ad528e981ad31525c"
 
 [[files]]
 file = "config/chloride-client.toml"
-hash = "1b5059ed01f965efbf26bb284e9e4b16d9a9b7423fc0dc2b30ddd56edc64fda7"
+hash = "4ad9d56ede46f3f8accf3190e8f00de3b5e1024b0df8184bd7fdd180aeed19a8"
 
 [[files]]
 file = "config/chloride-client.toml_backup1"

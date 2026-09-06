@@ -2977,6 +2977,10 @@ file = "kubejs/config/web_server.json"
 hash = "5ebdf75462e9c1e53f8932c206202b74c14b545f4019815ccc80653bf7c0ab0e"
 
 [[files]]
+file = "kubejs/data/reimagined/shape_map/glass_validation.json"
+hash = "d428a8a5ab4175cb79e6c2a8ca5a589aabb727dd77dede3db2fc538ba0a3499f"
+
+[[files]]
 file = "kubejs/readme.txt"
 hash = "989f3737ae4621b8ff6730bce4cbeeee756921e7e510e0c281c8a350501d98af"
 

@@ -30,3 +30,14 @@ setup/*
 !setup/sawmill-fix.md
 !setup/reimagined.service
 tools/
+
+!development/
+!development/chappy/
+!development/chappy/**
+development/chappy/.gradle/
+development/chappy/build/
+development/chappy/runtime/
+development/chappy/.env
+
+!setup/mpi-patch/
+!setup/mpi-patch/**

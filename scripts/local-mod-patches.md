@@ -1,5 +1,11 @@
 # Reimagined local patches (2026-09-06)
 
+MPI VPS hotfix: `dist/files/Multiplayer-Isolation-2.1-reimagined-2.jar` fixes
+the second-player `NoSuchFieldException: entries` while retaining the existing
+log suppression. Build, verification and publication status are documented in
+`setup/mpi-patch/README.md`. Do not overwrite this VPS hotfix with reimagined-1
+on the next pack deployment; publish updated metadata first when authorized.
+
 The two versioned JARs in `dist/files` are served by Pages. Their existing
 packwiz metafiles retain original installation filenames and side classifications
 (Clutter No More: both; Multiplayer Isolation: server). Upstream auto-update

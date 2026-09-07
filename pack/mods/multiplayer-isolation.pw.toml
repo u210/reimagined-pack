@@ -4,6 +4,6 @@ side = "server"
 
 [download]
 hash-format = "sha256"
-hash = "d75039cbdbae5e24f565822b200d44a43d785087c320cfea3b2c785e00e52149"
+hash = "c38eef229818c7be589c7e02781605967865c29188790d3bc17095d486467a8e"
 mode = "url"
-url = "https://u210.github.io/reimagined-pack/downloads/files/Multiplayer-Isolation-2.1-reimagined-1.jar"
+url = "https://u210.github.io/reimagined-pack/downloads/files/Multiplayer-Isolation-2.1-reimagined-2.jar"

@@ -1,0 +1,9 @@
+name = "Chappy"
+filename = "chappy-0.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha256"
+hash = "a95c36b7456cbbb74c3825ca1b4704164c171a1d8e9b369753c33124900757ef"
+mode = "url"
+url = "https://u210.github.io/reimagined-pack/downloads/files/chappy-0.1.0.jar"

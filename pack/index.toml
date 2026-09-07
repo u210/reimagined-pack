@@ -2894,7 +2894,11 @@ hash = "184e654fa1fc8ad09943c97c4e65ab78acb5b3cfca22417a831513d1b6d9bbc6"
 
 [[files]]
 file = "config/xaero/minimap/server_profiles/default.cfg"
-hash = "d438aea41ca41e93697e059f523686935c0add482f6abe96b532bbf10c6ed80a"
+hash = "4f413debde07cf57fef6027411236d431dabd2deb8e26aef8d8b9aedd4b4e89a"
+
+[[files]]
+file = "config/xaero/minimap/server_profiles/entity_radar_categories/default.cfg.json"
+hash = "8cfb3a06e1eecc1b7cff928e793bb9420aacea32a8bd7ce09b34d4e02072836c"
 
 [[files]]
 file = "config/xaero/world-map/client.cfg"
@@ -2910,7 +2914,7 @@ hash = "5422abf9c83fedef6509144293fad20f588d4bb6ce0cf1af78cbcd2bcd0d2ccf"
 
 [[files]]
 file = "config/xaero/world-map/server_profiles/default.cfg"
-hash = "d438aea41ca41e93697e059f523686935c0add482f6abe96b532bbf10c6ed80a"
+hash = "19af3700ca6390f799c7214100af408a263183bf461c8742f83e90139c69cae3"
 
 [[files]]
 file = "config/xaerohud.txt"
@@ -3212,6 +3216,11 @@ hash = "1cb3db95dbf424de74a4572994d7b32fc8560dc31e0495d10825f195b2103462"
 metafile = true
 
 [[files]]
+file = "mods/chappy.pw.toml"
+hash = "c5d55006995066cce41b770ec8c55209aa282f967c7d6e4baea57edf16673007"
+metafile = true
+
+[[files]]
 file = "mods/chat-bubbles-neoforge.pw.toml"
 hash = "ba2980bb9aa6f8db311f12b4f933c46a322d0f6e38abd8a828a5e00b599d649c"
 metafile = true
@@ -3489,6 +3498,11 @@ metafile = true
 [[files]]
 file = "mods/explorers-compass.pw.toml"
 hash = "e206e53e79c196615bebfc9f5dfa943c11c1361e1c7dc4f8f952c86b95e0f0ca"
+metafile = true
+
+[[files]]
+file = "mods/exposure.pw.toml"
+hash = "ad128e3eed1193f0f6c1f68a81e0c8e14ff3a3511f2694214c742890e9e59419"
 metafile = true
 
 [[files]]
@@ -3838,7 +3852,7 @@ metafile = true
 
 [[files]]
 file = "mods/multiplayer-isolation.pw.toml"
-hash = "9616ab14d88052312fe1a52b0efd24e58ef6aef832a20a096c9a72602abb575f"
+hash = "026014ee8964fa71e207bfb3e3da0c7f0240f7f409b550657e2195be5f080f4a"
 metafile = true
 
 [[files]]
@@ -4288,12 +4302,12 @@ metafile = true
 
 [[files]]
 file = "mods/xaeros-minimap.pw.toml"
-hash = "cb214059678b43fbfcc7266cc1345cdf577afbc1a0b7baeeecf284ea10b02269"
+hash = "03b30d68893aff0507d36044ab3b43e586f4412274b5de0abe193b9f4a754905"
 metafile = true
 
 [[files]]
 file = "mods/xaeros-world-map.pw.toml"
-hash = "4fdab0d580a8e20ef23d74513e1f5ddbb46e56d379a6fabab9e5d4bbf9846329"
+hash = "210cce3a74344d8ccbe0023ea0399b5573c5e622ae970d0cf81b753b18f1fc3f"
 metafile = true
 
 [[files]]

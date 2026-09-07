@@ -53,8 +53,6 @@ paths = [
   "mods/super-resolution.pw.toml",
   "mods/too-many-entities.pw.toml",
   "mods/tooltip-overhaul.pw.toml",
-  "mods/xaeros-minimap.pw.toml",
-  "mods/xaeros-world-map.pw.toml",
   "resourcepacks/aether-regenerated.pw.toml",
   "resourcepacks/cataclysm-reimagined.pw.toml",
   "resourcepacks/coquet.pw.toml",
@@ -83,6 +81,10 @@ paths = [
 
 [metafiles.both]
 paths = [
+  "mods/chappy.pw.toml",
+  "mods/exposure.pw.toml",
+  "mods/xaeros-minimap.pw.toml",
+  "mods/xaeros-world-map.pw.toml",
   "mods/a-better-fishing.pw.toml",
   "mods/abridged.pw.toml",
   "mods/accessories-compat-layer.pw.toml",

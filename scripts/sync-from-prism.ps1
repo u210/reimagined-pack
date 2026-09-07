@@ -2,7 +2,8 @@
 param(
     [string]$InstancePath = 'C:\Users\emb20\AppData\Roaming\PrismLauncher\instances\Reimagined',
     [switch]$DetectCurseForge,
-    [switch]$OptionsOnly
+    [switch]$OptionsOnly,
+    [string[]]$ConfigPaths
 )
 
 $ErrorActionPreference = 'Stop'
@@ -68,6 +69,23 @@ function Invoke-PackwizRefresh {
     finally {
         Pop-Location
     }
+}
+
+if ($ConfigPaths) {
+    if ($OptionsOnly -or $DetectCurseForge) { throw 'ConfigPaths cannot be combined with other sync modes' }
+    foreach ($relative in $ConfigPaths) {
+        if ($relative -notmatch '^xaero/[a-zA-Z0-9_./-]+$' -or $relative.Contains('..')) { throw "Invalid scoped config path: $relative" }
+        $source = Join-Path $gameRoot "config/$relative"
+        if (-not (Test-Path -LiteralPath $source -PathType Leaf)) { throw "Missing config: $source" }
+    }
+    foreach ($relative in $ConfigPaths) {
+        $destination = Join-Path $packRoot "config/$relative"
+        New-Item -ItemType Directory -Force (Split-Path $destination -Parent) | Out-Null
+        Copy-Item -LiteralPath (Join-Path $gameRoot "config/$relative") -Destination $destination -Force
+    }
+    Invoke-PackwizRefresh
+    Write-Output "Scoped Xaero config sync complete: copied=$($ConfigPaths.Count)"
+    return
 }
 
 if ($OptionsOnly) {

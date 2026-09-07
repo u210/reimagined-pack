@@ -10,7 +10,7 @@ bootstrap_url="https://github.com/packwiz/packwiz-installer-bootstrap/releases/d
 bootstrap_sha256="a8fbb24dc604278e97f4688e82d3d91a318b98efc08d5dbfcbcbcab6443d116c"
 sawmill_original_sha256="7a685707b9393868e2a55affd5ebedfd80665f8c3f4c82310bf1d697c94ccdbe"
 sawmill_patched_sha256="85eebbec566b9322a4a70223e3b9f53399d606f7a9b763ccced4f7d4a73844f8"
-expected_server_mods=217
+expected_server_mods=221
 force_players=0
 
 if [[ "${1:-}" == "--force" ]]; then
@@ -33,6 +33,22 @@ fi
 if [[ ! -d "$server_dir/world" || ! -d "$server_dir/mods" ]]; then
     echo "Production server layout is incomplete: $server_dir" >&2
     exit 1
+fi
+
+# Shared with the idle generator: no resume during staging, backup or restart.
+touch "$server_dir/.maintenance.lock"
+chown minecraft:minecraft "$server_dir/.maintenance.lock"
+exec 9>"$server_dir/.maintenance.lock"
+flock -w 15 9 || { echo "Another maintenance operation is running." >&2; exit 1; }
+if systemctl is-active --quiet chunky-idle.service; then
+    systemctl stop chunky-idle.service
+    idle_was_active=1
+else
+    idle_was_active=0
+fi
+trap 'if (( idle_was_active == 1 )); then systemctl start chunky-idle.service; fi' EXIT
+if [[ -f /usr/local/lib/reimagined/chunky-idle.py ]] && systemctl is-active --quiet "$service_name"; then
+    python3 -c 'import runpy; print(runpy.run_path("/usr/local/lib/reimagined/chunky-idle.py")["pause"]())'
 fi
 
 managed_roots=(
@@ -63,7 +79,7 @@ restore_backup() {
     for root in "${managed_roots[@]}"; do
         if grep -Fxq "$root" "$backup/existing-roots.txt"; then
             mkdir -p "$server_dir/$root"
-            rsync -a --delete "$backup/managed/$root/" "$server_dir/$root/"
+            rsync -a --delete --exclude='/chunky/' "$backup/managed/$root/" "$server_dir/$root/"
         else
             rm -rf -- "$server_dir/$root"
         fi
@@ -247,7 +263,8 @@ echo "Deploying candidate. Backup: $backup"
 for root in "${managed_roots[@]}"; do
     if [[ -d "$candidate/$root" ]]; then
         mkdir -p "$server_dir/$root"
-        rsync -a --delete "$candidate/$root/" "$server_dir/$root/"
+        # Preserve live generation config/progress, including changes after staging.
+        rsync -a --delete --exclude='/chunky/' "$candidate/$root/" "$server_dir/$root/"
     fi
 done
 for file in "${state_files[@]}"; do

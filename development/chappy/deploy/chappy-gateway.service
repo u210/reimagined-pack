@@ -1,0 +1,32 @@
+[Unit]
+Description=Chappy Minecraft guide gateway and Codex App Server
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=chappy
+Group=chappy
+WorkingDirectory=/opt/chappy
+EnvironmentFile=/etc/chappy/gateway.env
+ExecStart=/opt/chappy/node /opt/chappy/gateway/server.mjs
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=20
+KillMode=control-group
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/chappy
+InaccessiblePaths=-/opt/reimagined/world -/opt/reimagined/config -/opt/reimagined/server.properties -/opt/reimagined/logs -/opt/reimagined-backups -/opt/reimagined-deploy
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+MemoryHigh=512M
+MemoryMax=768M
+TasksMax=128
+
+[Install]
+WantedBy=multi-user.target

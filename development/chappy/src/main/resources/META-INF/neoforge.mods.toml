@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+[[mods]]
+modId="chappy"
+version="0.1.0"
+displayName="チャッピー / Chappy"
+description='''Private in-game guide for Reimagined.'''
+[[dependencies.chappy]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.244,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.chappy]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.21.2)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.chappy]]
+modId="exposure"
+type="optional"
+versionRange="[1.9.18,1.9.19)"
+ordering="AFTER"
+side="BOTH"

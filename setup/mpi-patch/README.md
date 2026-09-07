@@ -35,10 +35,10 @@ backs up the world before and after a clean stop, and restores the old JAR on
 startup failure. Startup detection is scoped to the systemd invocation ID.
 It is a one-time hotfix script expecting the exact reimagined-1 input hash.
 
-This is a VPS hotfix, not a Pages publication. The published packwiz metadata
-still refers to reimagined-1; before the next normal pack deployment, update
-the MPI metadata to reimagined-2, refresh/test the pack, and publish when
-authorized. Otherwise the normal deployment would replace this hotfix.
+The hotfix was initially deployed only to the VPS. Commit `9e5d39e` published
+the reimagined-2 JAR and updated packwiz metadata on 2026-09-07 alongside
+Chappy. Normal pack deployments now retain reimagined-2; do not revert that
+metadata to reimagined-1. The one-time hotfix script is historical.
 
 Deployment on 2026-09-06 (JST): the patched server reached `Done` and responded
 to a Minecraft status request through an SSH tunnel using `kagoya-minecraft`

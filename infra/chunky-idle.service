@@ -1,0 +1,20 @@
+[Unit]
+Description=Reimagined idle-only Chunky controller
+After=reimagined.service
+
+[Service]
+Type=simple
+User=minecraft
+Group=minecraft
+ExecStart=/usr/bin/python3 /usr/local/lib/reimagined/chunky-idle.py
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=20
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/reimagined
+
+[Install]
+WantedBy=multi-user.target

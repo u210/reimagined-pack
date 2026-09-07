@@ -1,0 +1,14 @@
+[Unit]
+Description=Reimagined JVM and OS memory sample
+After=reimagined.service
+
+[Service]
+Type=oneshot
+User=minecraft
+Group=minecraft
+ExecStart=/usr/bin/python3 /usr/local/lib/reimagined/memory-sample.py
+TimeoutStartSec=25
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/reimagined/logs

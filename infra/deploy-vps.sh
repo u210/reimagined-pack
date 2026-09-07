@@ -10,7 +10,7 @@ bootstrap_url="https://github.com/packwiz/packwiz-installer-bootstrap/releases/d
 bootstrap_sha256="a8fbb24dc604278e97f4688e82d3d91a318b98efc08d5dbfcbcbcab6443d116c"
 sawmill_original_sha256="7a685707b9393868e2a55affd5ebedfd80665f8c3f4c82310bf1d697c94ccdbe"
 sawmill_patched_sha256="85eebbec566b9322a4a70223e3b9f53399d606f7a9b763ccced4f7d4a73844f8"
-expected_server_mods=221
+expected_server_mods=222
 force_players=0
 
 if [[ "${1:-}" == "--force" ]]; then
@@ -217,7 +217,7 @@ grep -Eq '^port = 25566$' "$candidate/config/plasmovoice/server/config.toml"
 grep -Eq '^[[:space:]]*sort_recipes = false$' "$candidate/config/sawmill-common.toml"
 
 echo "Candidate validated with $candidate_mods server Mod JARs."
-if (( force_players == 0 )) && ss -Htn state established '( sport = :25565 )' | grep -q .; then
+if (( force_players == 0 )) && [[ -n "$(ss -Htn state established '( sport = :25565 )')" ]]; then
     echo "Players are connected to TCP 25565; refusing to stop the server." >&2
     echo "Run with --force only after confirming downtime with players." >&2
     exit 1
@@ -228,6 +228,12 @@ if systemctl is-active --quiet "$service_name"; then
 fi
 echo "Creating live world safety copy."
 rsync -a --delete "$server_dir/world/" "$backup/live-world/"
+
+# A player may have joined while the live-world copy was running.
+if (( force_players == 0 )) && [[ -n "$(ss -Htn state established '( sport = :25565 )')" ]]; then
+    echo "Players connected during backup; refusing to stop the server." >&2
+    exit 1
+fi
 
 if (( service_was_active == 1 )); then
     echo "Stopping $service_name"
@@ -240,6 +246,7 @@ fi
 
 mkdir -p "$backup/world" "$backup/managed" "$backup/state"
 rsync -a --delete "$server_dir/world/" "$backup/world/"
+cmp -- "$server_dir/world/level.dat" "$backup/world/level.dat"
 : > "$backup/existing-roots.txt"
 : > "$backup/existing-state-files.txt"
 for root in "${managed_roots[@]}"; do

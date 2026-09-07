@@ -17,6 +17,7 @@ $errors = [Collections.Generic.List[string]]::new()
 $metafiles = Get-ChildItem -LiteralPath $packRoot -Recurse -File -Filter '*.pw.toml'
 $metaByPath = @{}
 $managedModNames = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
+$serverOnlyModNames = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
 
 foreach ($meta in $metafiles) {
     $relative = Get-RelativePackPath $meta.FullName
@@ -28,6 +29,9 @@ foreach ($meta in $metafiles) {
     $metaByPath[$relative] = $sideMatch.Groups[1].Value
     if ($relative.StartsWith('mods/', [StringComparison]::OrdinalIgnoreCase)) {
         [void]$managedModNames.Add($filenameMatch.Groups[1].Value)
+        if ($sideMatch.Groups[1].Value -eq 'server') {
+            [void]$serverOnlyModNames.Add($filenameMatch.Groups[1].Value)
+        }
     }
 }
 
@@ -69,7 +73,9 @@ foreach ($name in $activeMods) {
     if (-not $managedModNames.Contains($name)) { $errors.Add("Active Prism mod missing from pack: $name") }
 }
 foreach ($name in $managedModNames) {
-    if ($name -notin $activeMods) { $errors.Add("Pack mod is not active in Prism: $name") }
+    if ($name -notin $activeMods -and -not $serverOnlyModNames.Contains($name)) {
+        $errors.Add("Pack mod is not active in Prism: $name")
+    }
 }
 
 $forbidden = @(

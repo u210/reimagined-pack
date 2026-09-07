@@ -1,5 +1,34 @@
 # 構築・検証記録（2026-09-05 JST）
 
+## DH生成負荷の抑制試験（2026-09-06 03:34 JST）
+
+- 1人プレイ中に6 vCPUがほぼ100%、DH-World GenスレッドがCPU上位、2〜9秒のCan't keep upと移動速度警告を確認。Chunkyは停止中。
+- `/opt/reimagined-backups/dh-threads-20260906-033412` に大小文字両方のDH設定を退避し、RCON `dh config threading.numberOfThreads 2` で12→2へ変更。再起動なしで反映され、実際に使用される `config/DistantHorizons.toml` に2が保存された。小文字の配布用 `distanthorizons.toml` は12のままで、今回はPrism・packwizを変更していない。
+- 変更直後のCPUは全体約40〜70%、Javaの短時間平均約298%（6コア合計600%基準）に低下。全体MSPTは最初の再測定で12.454、20 TPS。プレイ内容による差もあるため継続的な体感確認は必要。
+- 元へ戻す場合はRCON `dh config threading.numberOfThreads 12`。当面VPSでは2を維持する。今後DH設定を配布・再構築するときは管理用PCの12スレッド設定をVPSへ無条件に適用しないこと。
+
+## 指定seedで新ワールド開始（2026-09-06 03:12 JST）
+
+- ユーザー指定seed `5768409083084640829` をserver.propertiesへ設定し、新しいworldを生成。level.dat内WorldGenSettings.seedとRCON seedの双方で一致を確認。
+- 旧ワールド・旧Chunkyタスク・旧server.propertiesは `/opt/reimagined-backups/seed-reset-20260906-031019` に退避。旧level.datのSHA-256一致を確認し、退避データは保持。
+- 現起動のDoneを03:11:57に確認。RCON応答、TCP25565待受、20 TPS / 全体4.211 ms/tickを確認。save-all flush後のスポーンは(0,135,0)。
+- Chunkyを中心(0,0)、円形半径4096、処理数0の新しい保存タスクへ置き換え、reload tasksを実行。監視サービスをenable/startしてholdを解除し、0人・healthy・通常300秒待機を確認。
+
+## ワールド厳選のため停止（2026-09-06 03:05 JST）
+
+- ユーザー依頼でChunkyをholdし、`chunky-idle.service`をdisable/stop、続いて`reimagined.service`を正常停止。両方inactive、Minecraft MainPID=0を確認。
+- ユーザーはシングルでワールドを厳選し、後でseedを指定して新ワールドで再開する予定。現ワールドは削除予定だが、今回は削除せず保持した。
+- 次回の新ワールド作成時には旧 `config/chunky/tasks/` の進捗と中心座標も引き継がず、新ワールドに合わせて初期化・再設定する。Chunky自動制御は現在無効かつhold中。
+
+## 無人時Chunky自動生成（2026-09-06 JST）
+
+- `chunky-idle.service` をVPSに導入し、自動起動を有効化。Minecraft本体は再起動せず、NeoForge 21.1.244 / Chunky 1.4.23と既存のlocalhost RCONを使用。
+- 0人300秒で既存のオーバーワールド円形半径4096（中心-144,-320）タスクを再開、約1秒ごとに人数確認。120秒生成・60秒休止、TPS/MSPT・メモリ・ディスク条件で停止。手動holdを永続化。
+- 導入前に `/opt/reimagined-backups/chunky-idle-20260906-024555` へworld.tarと設定・旧デプロイスクリプトを保存。save-off/save-all flush後に退避し、level.datのSHA-256を照合してsave-on復帰を確認。
+- 方針テスト4件成功。短時間の実機生成では37353→37754チャンク、休止・再開・模擬人数1で停止を確認。実プレイヤー入退室試験は未実施。終了後は20 TPS、全体1.929 ms/tick。
+- デプロイとの排他ロック、手動hold/resume、rsyncによるChunky進捗保護を検証。configコピー後に進んだタスクを古い候補で上書きしないようにした。
+- 通常の300秒待機設定へ戻してサービスactive/enabledを確認。Modpackの同期・公開・Git pushは実施していない。運用は `setup/chunky-idle.md` を参照。
+
 ## 既定サーバー一覧追加（2026-09-06 02:18 JST）
 
 - 管理用PrismにDesired Servers 1.6.0（CurseForge project 397292 / file 6013349）を追加した。公式配布JARと配置後JARのSHA-1は `4b669511628a866b147a4f32c972f0602352f1f2` で一致。NeoForge 21.0.143以上・Minecraft 1.21以上1.22未満の依存定義とクライアント初期化処理をJAR内で確認し、packwizと `distribution.toml` でclient専用に分類した。
@@ -106,6 +135,16 @@ Reliable Removerのrules.json解析エラー、Curios spellbookスロットエ�
 ファイアウォール・ルーター設定は変更していません。
 
 初回ログ: `setup/first-start.log`。最終検証ログ: `setup/verified-start-stop.log`。
+
+## VPSヒープ上限5GiBの試行（2026-09-06 08:54 JST）
+
+- ユーザー依頼で、無人確認後にVPSの `/opt/reimagined/user_jvm_args.txt` を `-Xms2G -Xmx6G` から `-Xms2G -Xmx5G` へ変更して再起動。
+- バックアップ：`/opt/reimagined-backups/heap5g-20260906-084938`。旧JVM引数と、save-off / save-all flush中に取得したworld.tarを保存。tar一覧を検証し、save-onを復旧。
+- 比較前：OS MemAvailable約430MiB、Java RSS約6.53GiB、Javaスワップ約916MiB。ヒープ確保6GiBに対し使用約2.70GiB。無人20 TPS・1.247ms/tickで、Chunkyはメモリ条件により停止していた。
+- 5GiB起動後、監視の人数・負荷ガードを維持し、試験プロセス内だけWAIT=2に短縮して120秒生成。観測は140秒。MemAvailableは2937→2515MiB、ヒープ使用2331〜3226MiB。生成中20 TPS、全体9.8〜12.5ms/tick。観測中フルGC 0回、young GC累積時間増分約1.51秒。システムswap使用556MiBで観測中増加なし。
+- Chunky処理数164465→168251（+3786）。通常のchunky-idle.serviceへ復旧し、無人300秒待機・120秒生成/60秒休止を維持。holdなし、healthy=true。
+- 新起動のDoneログ、Minecraft status（TCP 25565）、Minecraft本体と監視サービスactiveを確認。
+- 今回は短時間比較であり、長時間生成でのメモリ再圧迫・通常プレイの余裕は未確認。再起動効果も含まれるため、改善をヒープ上限変更だけの効果とは断定しない。Prism・配布パック・ローカルサーバーのJVM引数は変更していない。
 
 ## 2026-09-06 ガラス精錬のCNM修正
 

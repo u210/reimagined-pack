@@ -4256,6 +4256,11 @@ hash = "f0770e8df6212a00fcea3dcd72bdcaa344fa745593abc867b7e499fb493556b6"
 metafile = true
 
 [[files]]
+file = "mods/unloaded-activity.pw.toml"
+hash = "04435399dacb70eebb8e1a348b475830fd3cc5b9dee51e91f2fcae6fb4c7d2a0"
+metafile = true
+
+[[files]]
 file = "mods/upgrade-aquatic.pw.toml"
 hash = "a82b72fa04d704408f6c294a41e28e3e9ee6dac43dcdd268990e04f8e67881c9"
 metafile = true

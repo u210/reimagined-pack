@@ -11,7 +11,7 @@
 ## Safety rules
 
 - Perform all remote Minecraft server inspection and operations for this project through the SSH alias `kagoya-minecraft`. Do not substitute the raw IP address or another SSH destination unless the user explicitly changes the server mapping.
-- Treat the Prism instance as administrator input. Do not delete or rewrite files in it.
+- Treat the Prism instance as administrator input and keep it read-only by default. When the user explicitly requests a specific Prism change, back up every affected file first, then make only the requested change while preserving unrelated state.
 - Run `scripts/sync-from-prism.ps1` to copy selected pack content into `pack`.
 - Do not publish worlds, logs, screenshots, caches, player data, `options.txt`, `servers.dat`, or authentication data.
 - Preserve the server-only Sawmill patch documented in `setup/sawmill-fix.md`; a client sync must not replace the patched server JAR.

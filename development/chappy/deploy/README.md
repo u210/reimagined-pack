@@ -25,3 +25,5 @@ Deploy Minecraft through the guarded repository wrapper, preserving Sawmill, MPI
 Rollback after a failed startup restores the backed-up managed files automatically. Once players have used new Mod content, restoring a world snapshot is a separate decision that loses newer play; never perform it silently.
 
 Chappy and Exposure are both required on clients. Packwiz updates install both, then clients must restart Minecraft. Administrator Prism additions are backed up and applied separately from the public pack.
+
+Release worktree on the administrator PC: `C:/Users/emb20/Documents/ChatGPT/260905_mc_server_chappy_release`, branch `codex/chappy-production`. Production publication uses this isolated worktree so unrelated pending work in the original checkout remains intact. Do not publish from the old checkout without reconciling its branch and the current remote main.

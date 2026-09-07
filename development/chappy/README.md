@@ -1,4 +1,4 @@
-# チャッピー — ローカル統合検証版
+# チャッピー
 
 Minecraft 1.21.1 / NeoForge 21.1.244 / Java 21。Codex App ServerへChatGPTログインで接続。
 現在のモデルはユーザー指定の `gpt-5.6-luna` / `max`。
@@ -27,7 +27,7 @@ Minecraft 1.21.1 / NeoForge 21.1.244 / Java 21。Codex App ServerへChatGPTロ�
 | Reimaginedのコピー | Chappy Reimagined 統合検証 | `127.0.0.1:25578` |
 
 コピーのインスタンスIDは `Chappy-Dev` と `Chappy-Dev-Reimagined`。
-管理用Reimagined、packwiz、VPS本番は変更していない。
+本番の構成・認証更新・配布方法は `deploy/README.md` を参照。
 統合用サーバーは通常のNeoForge起動を使う。Sinytra ConnectorがGradle開発起動に対応しないため、
 `start-integration.ps1`から起動する。既存SawmillサーバーパッチとMPI修正版を保持。
 統合環境のPlasmo VoiceはループバックUDP 25587。

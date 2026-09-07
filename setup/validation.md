@@ -116,3 +116,15 @@ Reliable Removerのrules.json解析エラー、Curios spellbookスロットエ�
 - 13:21:43の新起動でガラスの親がminecraft:glass、通常ガラスレシピあり、砂・赤い砂ともにminecraft:glassへ一致。診断用の一時スクリプトは削除済み。
 - Minecraft 1.21.1 / protocol 767の応答をSSH alias経由の一時トンネルから確認。PID 24096、音声UDP25566・Sable UDP25565、全Modハッシュ、Sawmill sort_recipes=false、MPI設定、server.propertiesの設定値を維持。chunky-idleも再開済み。
 - Prism原本は未変更。今後の同期で修正が削除されないよう、同期スクリプトで今回のリポジトリ管理ファイルを保護。
+## 2026-09-07 Chappy production deployment
+
+- Published commit `9e5d39e623718e0ca0fa0924e481b701fd2bc458`; Pages run `34121488478` succeeded. Public pack, index, Chappy/Exposure metadata and both versioned local artifacts matched their local SHA-256 bytes.
+- Guarded deployment used SSH alias `kagoya-minecraft`, no force option, candidate count 221 (previously 219). Retained backup: `/opt/reimagined-backups/20260907-212302`; stopped `world/level.dat` checksum verified. Candidate directory was cleaned after success.
+- Current startup reached `Done (` at 21:25:46 JST. A Minecraft status query from the administrator machine through the SSH alias returned Minecraft 1.21.1, protocol 767, 0/10 players and the expected MOTD.
+- Chappy SHA-256: `a95c36b7456cbbb74c3825ca1b4704164c171a1d8e9b369753c33124900757ef`. Exposure: NeoForge 1.21.1, version 1.9.18, exact Modrinth SHA-512 verified. Both are classified `both`.
+- Preserved deployed MPI reimagined-2 (`c38eef229818c7be589c7e02781605967865c29188790d3bc17095d486467a8e`), Sawmill (`85eebbec566b9322a4a70223e3b9f53399d606f7a9b763ccced4f7d4a73844f8`), `sort_recipes=false`, Xaero restrictions, UDP 25566, and Chunky config/state. Chunky idle service resumed.
+- Gateway is a supervised service under Unix user `chappy`, loopback 18765. ChatGPT device login completed on the VPS, model `gpt-5.6-luna`, effort `max`; Node 24.13.1 and Codex 0.144.1 are pinned. Credentials remain private on the VPS; no test world/player memory was copied.
+- Production knowledge export: 14,755 items, 11,090 recipes, 0 unreadable recipes. Real AI inventory/Globe query returned successfully in 71.4 seconds using this snapshot. Some recipe/tag warnings predate this release.
+- Administrator Reimagined received only the two new Mod JARs, with prior absence/backups recorded locally. Pack validation covers 271 active mods; no raw JARs in pack/mods. Clients must restart Minecraft after updating.
+- Game UI/photo/book/memory behaviors were verified in local integration before rollout; production in-game interaction remains a player acceptance check.
+- Real AI recipe query also succeeded in 20.9 seconds and returned the production `minecraft:crafting_table` recipe, four planks in a 2x2 layout. Gateway remained active without automatic restarts; measured memory was about 404 MiB during the smoke test.

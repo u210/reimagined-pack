@@ -1,13 +1,9 @@
-name = "Unloaded Activity"
+name = "Unloaded Activity (Reimagined NeoForge packaging fix)"
 filename = "unloadedactivity-0.7.2+mc1.21-1.21.1.jar"
 side = "server"
 
 [download]
-hash-format = "sha512"
-hash = "ea515cbf6decc91c246043eb83f4c719b0879e45f972a6516c9bf9ac91e7df19f572a9653cf6accbfa33b01641c6439d58ebc7d8afdec232b4d2637393b9f8a9"
+hash-format = "sha256"
+hash = "46a55e01fa9ea8e221955c6a5830facb44d20e80e89c585efe66993d98e04120"
 mode = "url"
-url = "https://cdn.modrinth.com/data/Oo4rJCDP/versions/op8NMoDl/unloadedactivity-0.7.2%2Bmc1.21-1.21.1.jar"
-
-[update.modrinth]
-mod-id = "Oo4rJCDP"
-version = "op8NMoDl"
+url = "https://u210.github.io/reimagined-pack/downloads/files/unloadedactivity-0.7.2%2Bmc1.21-1.21.1-reimagined-1.jar"

@@ -1,5 +1,10 @@
 # Reimagined local patches (2026-09-06)
 
+Unloaded Activity 0.7.2 has a server-only NeoForge packaging correction in
+`dist/files/unloadedactivity-0.7.2+mc1.21-1.21.1-reimagined-1.jar`.
+Only three mixin configuration references change; all Java class files remain
+upstream-identical. Reproduction and source are in `setup/unloaded-activity.md`.
+
 MPI VPS hotfix: `dist/files/Multiplayer-Isolation-2.1-reimagined-2.jar` fixes
 the second-player `NoSuchFieldException: entries` while retaining the existing
 log suppression. Build, verification and publication status are documented in

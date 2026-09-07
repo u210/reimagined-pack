@@ -1,5 +1,47 @@
 # 構築・検証記録（2026-09-05 JST）
 
+## 2026-09-07 Unloaded Activity and checkout reconciliation
+
+- Reconciled the main checkout with published commits `9e5d39e` / `1c7d28d`.
+  Chappy and Exposure were already deployed and published; the missing local
+  metadata was caused by the older checkout. Previously untracked duplicate
+  source files matched the published blobs. Original local state is retained
+  in the named reconciliation Git stash.
+- Published `16eb635` (Pages run `34130447983`, success), then `e926bf9`
+  (Pages run `34131088367`, success). Public pack, index, final mod metadata,
+  and patched artifact hashes match the local files. Pack validation covers
+  271 active Prism mods, 290 metafiles, 2,935 index entries, no raw pack JARs.
+  Sides: both 219, client 68, server 3; server Mod count is 222.
+- Official Unloaded Activity 0.7.2 started successfully but its NeoForge
+  mixin list selected three Fabric classes. Corrected only those references
+  to the existing `_neoforge` implementations; all other JAR entries are
+  byte-identical. Reproduction produces the same SHA-256. Details and
+  reproducible script are in `setup/unloaded-activity.md`.
+- Final guarded deployment through `kagoya-minecraft` completed at 23:09:52
+  JST with current-startup `Done (35.260s)`, PID 225820. No forced player
+  disconnects. The three missing-target warnings are absent after correction.
+  Observed 20 TPS; actual crop/furnace/animal catch-up behavior still needs
+  in-game acceptance testing. Mod-specific blocks outside upstream support
+  are not guaranteed to simulate.
+- Final backup: `/opt/reimagined-backups/20260907-230709`; stopped-world
+  `level.dat` checksum verified. Initial unpatched deployment backup
+  `/opt/reimagined-backups/20260907-230012` is also retained. No candidate
+  directories remain. Deployment now rechecks players after the live-world
+  copy and compares stopped production/backup `level.dat` bytes before use.
+- All 221 existing Mod JARs stayed byte-identical, including Chappy, Exposure,
+  MPI reimagined-2 and patched Sawmill. Only Unloaded Activity was added,
+  final SHA-256 `46a55e01fa9ea8e221955c6a5830facb44d20e80e89c585efe66993d98e04120`.
+  JVM args, DistantHorizons, MPI, Chappy and Xaero settings are byte-identical
+  to preflight. Sawmill `sort_recipes=false` and voice UDP 25566 are preserved.
+- Minecraft status from the administrator machine through an SSH-alias tunnel
+  returned Minecraft 1.21.1, protocol 767, 0/10 players and expected MOTD.
+  Minecraft, Chunky idle control, Chappy gateway and memory timer are active.
+  Operational controller sources match deployed hashes; five idle-policy
+  tests pass and the updated deploy script passes `bash -n`.
+- Prism remains unchanged; Unloaded Activity is server-only and does not
+  require a client update. Historical MPI/Xaero publication notes are updated
+  to reflect the already-published fixes.
+
 ## DH生成負荷の抑制試験（2026-09-06 03:34 JST）
 
 - 1人プレイ中に6 vCPUがほぼ100%、DH-World GenスレッドがCPU上位、2〜9秒のCan't keep upと移動速度警告を確認。Chunkyは停止中。

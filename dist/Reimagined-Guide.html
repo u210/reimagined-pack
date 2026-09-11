@@ -1,115 +1,1021 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>UnkoChatサーバー 導入・操作ガイド</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reimagined サーバー 導入・プレイガイド | Unko Chat サーバー</title>
 <style>
-:root{--paper:#f4f2e9;--ink:#20352d;--muted:#596960;--green:#265f47;--line:#d4dbcf;--gold:#f3d481}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Yu Gothic UI","Meiryo",sans-serif;line-height:1.85}a{color:var(--green);text-underline-offset:4px}a:hover{color:#8b521b}a:focus-visible,summary:focus-visible{outline:3px solid #b67c20;outline-offset:5px}.wrap{max-width:1080px;margin:auto;padding:0 28px}.top{background:#20352d;color:#edf3e9;padding:15px 0;font-size:13px;letter-spacing:.13em}.top .wrap{display:flex;justify-content:space-between;gap:20px}.hero{padding:30px 0 22px;border-bottom:1px solid var(--line)}.eyebrow{font-size:12px;letter-spacing:.17em;font-weight:700;color:var(--green)}h1{font-size:clamp(25px,4vw,34px);line-height:1.5;margin:0 0 12px}h1 span{color:var(--green)}.lead{max-width:760px;font-size:15px}.tags{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}.tag{padding:0 14px 0 0;font-size:13px}.button{display:inline-block;background:var(--green);color:white;padding:11px 22px;border-radius:6px;text-decoration:none;font-weight:700}.button:hover{background:#1d4936;color:white}.small{font-size:13px;color:var(--muted)}nav{position:sticky;top:0;z-index:5;background:#f4f2e9f5;border-bottom:1px solid var(--line)}nav .wrap{display:flex;gap:25px;overflow-x:auto;padding-top:13px;padding-bottom:13px}nav a{white-space:nowrap;font-size:13px;text-decoration:none;font-weight:700}main{padding-bottom:60px}section{margin-top:40px}h2{font-size:28px;letter-spacing:-.03em;margin:8px 0 23px;line-height:1.5}h3{font-size:18px;margin:0 0 10px}p{margin:8px 0 15px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:23px;border:1px solid var(--line);border-radius:10px;background:#fffdf7}.card p:last-child{margin-bottom:0}.quick kbd{font-size:20px}.quick h3{margin-top:13px}.note{padding:18px 22px;border-left:4px solid #ba8a37;background:#f5ead0;border-radius:0 7px 7px 0;margin:22px 0}.note p:last-child{margin-bottom:0}.steps{list-style:none;padding:0;counter-reset:step}.steps>li{counter-increment:step;position:relative;padding:25px 26px 25px 80px;background:#fffdf7;border:1px solid var(--line);border-radius:9px;margin:13px 0}.steps>li:before{content:counter(step,decimal-leading-zero);position:absolute;left:23px;top:25px;color:var(--green);font-size:24px;font-weight:800}kbd{display:inline-block;font-family:inherit;font-size:.9em;font-weight:700;line-height:1.5;background:#fff;padding:2px 8px;border:1px solid #b9c5b7;border-bottom:3px solid #b9c5b7;border-radius:5px;white-space:nowrap}code{overflow-wrap:anywhere;background:#e9eddf;padding:2px 5px;border-radius:4px}table{border-collapse:collapse;width:100%;background:#fffdf7;font-size:14px}th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#e1e9dc;font-size:12px;letter-spacing:.05em}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}.flow{display:flex;align-items:center;justify-content:center;gap:22px;padding:26px;background:#e4eddf;border-radius:8px;margin:20px 0;text-align:center}.flow b{font-size:19px}.two{grid-template-columns:1fr 1fr}ul{padding-left:22px}li{margin:6px 0}details{background:#fffdf7;border:1px solid var(--line);border-radius:8px;padding:17px 21px;margin:10px 0}summary{font-weight:700;cursor:pointer}details p{margin:15px 0 3px}footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:12px}.sources{font-size:12px;color:var(--muted)}@media(max-width:700px){.wrap{padding:0 19px}.hero{padding:24px 0}.grid,.two{grid-template-columns:1fr}section{margin-top:43px}.top .wrap{font-size:11px;letter-spacing:.05em}.steps>li{padding:22px 18px 22px 61px}.steps>li:before{left:16px;font-size:21px}.flow{gap:12px;padding:20px 10px}.flow b{font-size:16px}h2{font-size:24px}th,td{padding:12px 10px}.table-wrap table{min-width:520px}}@media print{nav{display:none}.button{background:none;color:inherit;padding:0;text-decoration:underline}body{background:white;font-size:10pt}.hero{padding:15px 0}section{margin-top:26px}.card,.steps>li,details{break-inside:avoid}h1{font-size:32pt}h2{font-size:20pt}a{color:inherit}.wrap{max-width:none}details::details-content{content-visibility:visible}footer{padding-bottom:0}}
-.hero-meta{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:22px}.hero-meta .tags{margin:0}.server-status{--status-color:#596960;--status-tint:#edf0e9;display:inline-flex;align-items:center;gap:14px;padding:10px 16px;border:1px solid #c9d4c6;border-radius:12px;background:linear-gradient(135deg,#fffdf7,var(--status-tint));box-shadow:0 3px 10px #20352d0a,inset 0 1px 0 #ffffffb3;font-size:14px;white-space:nowrap}.server-status>span{font-size:12px;font-weight:700;color:var(--muted);padding-right:14px;border-right:1px solid #20352d20}.server-status strong{display:inline-flex;align-items:center;gap:9px;color:var(--status-color)}.server-status strong::before{content:"";width:9px;height:9px;border-radius:50%;background:currentColor;box-shadow:0 0 0 4px var(--status-tint)}.server-status[data-state="online"]{--status-color:#265f47;--status-tint:#e4efdf;border-color:#b9ceb0}.server-status[data-state="offline"]{--status-color:#a33730;--status-tint:#f7e5df;border-color:#dfbeb3}@media print{.server-status{display:none}}
+:root {
+  --bg-main: #f5f2eb;
+  --bg-card: #ffffff;
+  --bg-card-alt: #fbf9f4;
+  --text-main: #1f332a;
+  --text-muted: #53645b;
+  --primary: #215a42;
+  --primary-hover: #174230;
+  --primary-light: #e6efe8;
+  --accent: #b87a28;
+  --accent-light: #faf0da;
+  --border: #d7ded2;
+  --border-light: #e9eee4;
+  --shadow-sm: 0 2px 6px rgba(31, 51, 42, 0.05);
+  --shadow-md: 0 6px 18px rgba(31, 51, 42, 0.08);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Yu Gothic UI", Meiryo, sans-serif;
+  line-height: 1.8;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+a:focus-visible, summary:focus-visible, button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header & Hero */
+.hero {
+  background: linear-gradient(180deg, #182e24 0%, #213c30 100%);
+  color: #f0f5ee;
+  padding: 44px 0 36px;
+  border-bottom: 3px solid #2f5644;
+}
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #9ed6b8;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.hero h1 {
+  font-size: clamp(26px, 4.5vw, 36px);
+  line-height: 1.35;
+  margin: 0 0 12px;
+  font-weight: 800;
+}
+.hero h1 span { color: #88dbae; }
+.hero-lead {
+  font-size: 16px;
+  color: #c9d8cb;
+  max-width: 780px;
+  margin: 0 0 24px;
+  line-height: 1.7;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tag {
+  background: rgba(255, 255, 255, 0.12);
+  color: #e4eee2;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Server Status Badge */
+.server-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 13px;
+  backdrop-filter: blur(4px);
+}
+.server-status .indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #88998f;
+  box-shadow: 0 0 0 3px rgba(136, 153, 143, 0.25);
+  transition: all 0.3s ease;
+}
+.server-status[data-state="online"] .indicator {
+  background: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.35);
+}
+.server-status[data-state="offline"] .indicator {
+  background: #f87171;
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.35);
+}
+.server-status strong { color: #ffffff; font-weight: 700; }
+.server-status .players { color: #b7cfc0; font-size: 12px; }
+
+/* Quick Connect Card */
+.quick-connect-banner {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin: -24px auto 32px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+.qc-info { display: flex; flex-direction: column; gap: 4px; }
+.qc-label { font-size: 12px; font-weight: 700; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; }
+.qc-value {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary);
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+.qc-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #ffffff !important;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  text-decoration: none !important;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+.btn:hover { background: var(--primary-hover); transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn-secondary {
+  background: #f0ede1;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+.btn-secondary:hover { background: #e6e2d3; }
+.btn-sm { padding: 6px 14px; font-size: 13px; }
+
+/* Sticky Nav */
+nav.toc {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(245, 242, 235, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+nav.toc .wrap {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 12px 24px;
+  scrollbar-width: thin;
+}
+nav.toc a {
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+nav.toc a:hover {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* Sections & Typography */
+main { padding: 16px 0 60px; }
+section { margin-top: 56px; }
+h2 {
+  font-size: 24px;
+  margin: 0 0 18px;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: -0.01em;
+}
+h2 .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 800;
+}
+h3 { font-size: 17px; margin: 0 0 8px; color: var(--text-main); }
+p { margin: 8px 0 16px; }
+
+/* Steps */
+.step-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.step-item {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 22px 24px 22px 72px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.step-item:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #bac8b5;
+}
+.step-badge {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  width: 38px;
+  height: 38px;
+  background: var(--primary);
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-item h3 { font-size: 17px; margin-top: 0; margin-bottom: 8px; }
+.step-item p:last-child { margin-bottom: 0; }
+.step-subinfo {
+  background: var(--bg-card-alt);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-top: 10px;
+  font-size: 13.5px;
+}
+
+/* Callouts / Notes */
+.note {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin: 22px 0;
+}
+.note strong { color: #7a4f10; display: block; margin-bottom: 4px; }
+.note p:last-child { margin-bottom: 0; }
+
+.tip {
+  background: var(--primary-light);
+  border-left: 4px solid var(--primary);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin: 22px 0;
+}
+.tip strong { color: var(--primary-hover); display: block; margin-bottom: 4px; }
+.tip p:last-child { margin-bottom: 0; }
+
+/* Grids & Cards */
+.grid { display: grid; gap: 16px; margin: 20px 0; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  box-shadow: var(--shadow-sm);
+}
+.card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--primary);
+}
+.card p:last-child { margin-bottom: 0; }
+.card-highlight {
+  border-color: #bad3c2;
+  background: #fcfefc;
+}
+
+/* Kbd & Code */
+kbd {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 0.88em;
+  font-weight: 700;
+  line-height: 1.4;
+  background: #ffffff;
+  color: var(--text-main);
+  padding: 2px 7px;
+  border: 1px solid #b5c4b4;
+  border-bottom: 3px solid #9fb09d;
+  border-radius: 5px;
+  white-space: nowrap;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
+}
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  background: #e6ede2;
+  color: #173827;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  margin: 20px 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th, td {
+  padding: 12px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+th {
+  background: #eaf0e6;
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #fafcfa; }
+.col-category {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Accordion Details */
+details {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin: 12px 0;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+details[open] {
+  border-color: #bad3c2;
+  box-shadow: var(--shadow-md);
+}
+summary {
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--text-main);
+  position: relative;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after {
+  content: "+";
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  transition: transform 0.2s;
+}
+details[open] summary::after {
+  content: "−";
+  transform: rotate(0deg);
+}
+details p { margin: 12px 0 4px; }
+details ul { margin: 8px 0; padding-left: 20px; }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  background: #e8ede3;
+  padding: 36px 0 50px;
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-top: 60px;
+}
+footer a { color: var(--text-muted); }
+footer a:hover { color: var(--primary); }
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .wrap { padding: 0 16px; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .quick-connect-banner { flex-direction: column; align-items: flex-start; }
+  .qc-actions { width: 100%; justify-content: flex-start; }
+  .step-item { padding: 20px 18px 20px 64px; }
+  .step-badge { left: 16px; width: 34px; height: 34px; font-size: 16px; }
+  h2 { font-size: 21px; }
+  nav.toc .wrap { padding: 10px 16px; gap: 14px; }
+}
+
+@media print {
+  nav.toc, .qc-actions, .server-status { display: none; }
+  body { background: #fff; font-size: 11pt; color: #000; }
+  .hero { background: none; color: #000; border-bottom: 2px solid #000; padding: 10px 0; }
+  .hero h1 { color: #000; font-size: 22pt; }
+  .hero h1 span { color: #000; }
+  .hero-lead { color: #333; }
+  .card, .step-item, details { break-inside: avoid; border: 1px solid #ccc; box-shadow: none; }
+  details[open] summary::after, details summary::after { display: none; }
+  details > * { display: block !important; }
+}
 </style>
 </head>
 <body>
 
-<div class="hero"><div class="wrap"><h1>UnkoChatサーバー 導入・操作ガイド</h1><p class="lead">Prism Launcherのインストール、サーバーへの接続方法、追加Modの操作を説明します。</p><div class="hero-meta"><div class="tags"><span class="tag">Minecraft Java 1.21.1</span><span class="tag">NeoForge 21.1.244</span><span class="tag">Windows向け導入手順</span><span class="tag">2026.09.06版</span></div><div class="server-status" id="server-status" data-state="unknown" role="status" aria-live="polite" aria-atomic="true"><span>サーバー状況</span><strong id="server-status-label">確認できません</strong></div></div></div></div>
-<nav aria-label="目次"><div class="wrap"><a href="#install">01 導入方法</a><a href="#first">02 バニラとの違い</a><a href="#keys">03 キー早見表</a><a href="#clutter">04 ブロックの形変更</a><a href="#translation">05 自動翻訳</a><a href="#help">06 困ったとき</a></div></nav>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">Minecraft 1.21.1 Dedicated Server</div>
+    <h1>Reimagined サーバー <span>参加・プレイガイド</span></h1>
+    <p class="hero-lead">Prism Launcher を使った簡単セットアップから、近接ボイスチャット、建築・便利機能、AIガイド「チャッピー」の活用法まで、快適に冒険を楽しむための情報を完全網羅しています。</p>
+
+    <div class="hero-meta">
+      <div class="tags">
+        <span class="tag">Minecraft Java 1.21.1</span>
+        <span class="tag">NeoForge 21.1.244</span>
+        <span class="tag">Modpack Reimagined</span>
+        <span class="tag">自動アップデート対応</span>
+      </div>
+      <div class="server-status" id="server-status" data-state="unknown" role="status" aria-live="polite">
+        <div class="indicator"></div>
+        <span>サーバー:</span>
+        <strong id="server-status-label">確認中…</strong>
+        <span class="players" id="server-status-players"></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="quick-connect-banner">
+    <div class="qc-info">
+      <span class="qc-label">サーバー名（表示名）</span>
+      <div style="font-size: 16px; font-weight: 700; color: var(--text-main);">Unko Chat サーバー</div>
+      <span class="qc-label" style="margin-top: 6px;">サーバー接続アドレス (IP:Port)</span>
+      <div class="qc-value" id="server-ip-text">133.18.166.158:25565</div>
+    </div>
+    <div class="qc-actions">
+      <button type="button" class="btn btn-secondary btn-sm" id="copy-ip-btn" onclick="copyServerIP()">アドレスをコピー</button>
+      <a href="#install" class="btn btn-sm">導入手順を見る ↓</a>
+    </div>
+  </div>
+</div>
+
+<nav class="toc" aria-label="目次">
+  <div class="wrap">
+    <a href="#install">01 導入方法</a>
+    <a href="#connect">02 サーバー接続</a>
+    <a href="#rules">03 サーバーの特徴</a>
+    <a href="#features">04 おすすめ便利機能</a>
+    <a href="#keys">05 キー早見表</a>
+    <a href="#clutter">06 建築の形変更</a>
+    <a href="#translation">07 英語の自動翻訳</a>
+    <a href="#chappy">08 AIチャッピー</a>
+    <a href="#faq">09 よくある質問・トラブル</a>
+  </div>
+</nav>
+
 <main class="wrap">
 
-<section id="install"><h2>導入方法</h2>
-<p>必要なもの：<strong>Java版Minecraftを遊べるMicrosoftアカウント</strong>と、インターネット接続。</p>
-<ol class="steps">
-<li><h3>Prismをダウンロード</h3><p><a href="https://prismlauncher.org/download/windows/">Prism公式ダウンロードページ</a>で <strong>Installer (.exe)</strong> を選びます。</p></li>
-<li><h3>Prismをインストール</h3><p>ダウンロードしたexeを開き、画面の案内に沿って進めます。</p></li>
-<li><h3>Microsoftアカウントでログイン</h3><p>Prismを開く →「アカウント」→「アカウントを管理」→「Microsoftを追加」。</p><p>ブラウザーの案内に沿ってログインします。</p></li>
-<li><h3>Javaの自動設定を有効にする</h3><p>Prismの「設定」→「Java」で、次の2つにチェックを入れます。</p><ul><li>Autodetect Java version</li><li>Auto-download Mojang Java</li></ul></li>
-<li><h3>配布ZIPをダウンロード</h3><p><a class="button" href="https://u210.github.io/reimagined-pack/downloads/Reimagined-Packwiz.zip">Reimagined-Packwiz.zip をダウンロード</a></p><p><strong>解凍しないでください。</strong></p></li>
-<li><h3>ZIPをPrismに読み込む</h3><p>左上の「起動構成を追加」→「インポート」→ ダウンロードしたZIPを選択 → 作成。</p><p>一覧に <strong>Reimagined-Packwiz</strong> が追加されます。</p></li>
-<li><h3>Minecraftを起動</h3><p><strong>Reimagined-Packwiz</strong> を選び、「起動」を押します。</p><p>初回はModをダウンロードします。タイトル画面が出るまで待ちます。</p></li>
-<li><h3>サーバーに接続</h3><p>「マルチプレイ」→「Unko Chat サーバー」→ 接続。</p><p>一覧にない場合は、<a href="#connection-help">手動で追加</a>してください。</p></li>
-</ol>
-<p><strong>次回：</strong>Prismで同じインスタンスを起動します。更新は起動時に自動で取得します。</p>
-<details><summary>起動前にメモリ設定を確認したい場合</summary><p>配布値は最小4096MiB・最大10240MiB（10GB）です。PCのメモリに余裕がない場合は、インスタンスを右クリック →「編集」→「設定」で割り当てを変更します。<a href="#memory-help">メモリ不足の対処</a>を参照してください。</p></details>
-</section>
-<section aria-labelledby="remember"><h2 id="remember">主な操作</h2><div class="grid quick"><article class="card"><kbd>Tab</kbd><h3>地図を開く</h3><p>周囲や探索した場所を確認できます。</p></article><article class="card"><kbd>L</kbd><h3>クエストを見る</h3><p>パックの遊び方や目標を確認できます。</p></article><article class="card"><kbd>F8</kbd><h3>原文表示</h3><p>押している間は原文を表示し、離すと翻訳表示に戻ります。</p></article></div></section>
-<section id="first"><h2>バニラとの違い</h2><div class="grid two"><article class="card"><h3>チャット・参加退出表示</h3><p>ゲーム内チャットや、プレイヤーの参加・退出メッセージは、意図的に非表示にしています。不具合ではありません。</p></article><article class="card"><h3>レシピ検索（JEI）</h3><p><kbd>E</kbd> でインベントリを開くと、JEIのアイテム一覧と検索欄が使えます。アイテムにカーソルを合わせて <kbd>R</kbd> で作り方、<kbd>U</kbd> で使い道。バニラの知識と違ったら、このパック内の表示を確認してください。</p></article><article class="card"><h3>クエスト（FTB Quests）</h3><p><kbd>L</kbd> でクエスト画面へ。探索、農業、Create、魔法などの章があります。各章で関連するModの説明や課題を確認できます。</p></article><article class="card"><h3>戦闘・ロール</h3><p>Better CombatやCombat Rollが入っています。武器によって攻撃の動きが変わり、<kbd>R</kbd> でロールできます。操作は安全な場所で確認してください。</p></article><article class="card"><h3>バックパック・アクセサリー</h3><p>Sophisticated Backpacksのバックパックや、Accessoriesの装備画面が使えます。バックパックは入手・装備などの条件を満たしてから <kbd>B</kbd>、アクセサリー画面は <kbd>H</kbd>。バックパックは別途入手する必要があります。</p></article><article class="card"><h3>死亡時の荷物回収（Corpse）</h3><p>Corpseが導入されており、死亡時の荷物を遺体から回収する仕組みがあります。死亡位置を確認し、装備を整えて回収に向かってください。地形や死亡状況によって回収の難しさは変わります。</p></article><article class="card"><h3>ボイスチャット（Plasmo Voice）</h3><p><kbd>G</kbd> でPlasmo Voiceの設定を開き、自分のマイクと出力先を選びます。配布されるプッシュ・トゥ・トークのキーは <kbd>V</kbd>。押して話す操作を確認し、音量や入力方式も設定画面で調整してください。</p></article></div></section>
-<section id="keys"><h2>キーバインド早見表</h2><div class="table-wrap"><table><thead><tr><th scope="col">キー</th><th scope="col">操作</th><th scope="col">使う場面・補足</th></tr></thead><tbody>
-<tr><td><kbd>W A S D</kbd> / <kbd>Space</kbd></td><td>移動 / ジャンプ</td><td>基本操作はバニラと同じ。左Shiftでしゃがみ、左Ctrlでダッシュ。</td></tr>
-<tr><td><kbd>E</kbd></td><td>インベントリ</td><td>持ち物・JEIの検索を開く。</td></tr>
-<tr><td><kbd>Tab</kbd></td><td>ワールドマップ</td><td>探索した場所を確認する。</td></tr>
+  <!-- 01 導入方法 -->
+  <section id="install">
+    <h2><span class="num">1</span> 導入方法（Prism Launcherのセットアップ）</h2>
+    <p>このサーバーでは、Modの導入や自動更新を安全に行うため、無料の高機能ランチャー <strong>Prism Launcher</strong> の利用を推奨しています。</p>
 
-<tr><td><kbd>L</kbd></td><td>クエスト</td><td>FTB Questsを開く。</td></tr>
-<tr><td><kbd>F8</kbd> 長押し</td><td>翻訳の原文を表示</td><td>離すと翻訳へ戻る。下の説明も参照。</td></tr>
-<tr><td><kbd>左Alt</kbd> ＋ ホイール</td><td>ブロックの形を変更</td><td>形変更に対応するブロックで使用。</td></tr>
-<tr><td><kbd>R</kbd> / <kbd>U</kbd></td><td>レシピ / 使い道</td><td>インベントリなどでアイテムにカーソルを合わせる。</td></tr>
-<tr><td><kbd>A</kbd></td><td>JEIのブックマーク</td><td>アイテムにカーソルを合わせる。</td></tr>
-<tr><td><kbd>Ctrl</kbd> ＋ <kbd>F</kbd></td><td>JEI検索欄へ</td><td>インベントリなど、JEIが表示される画面内。</td></tr>
-<tr><td><kbd>Ctrl</kbd> ＋ <kbd>O</kbd></td><td>JEI一覧の表示切替</td><td>アイテム一覧が消えたときにも確認。</td></tr>
-<tr><td><kbd>R</kbd></td><td>ロール</td><td>ワールド内。レシピ表示とは場面が違う。</td></tr>
-<tr><td><kbd>B</kbd> / <kbd>H</kbd></td><td>バックパック / アクセサリー画面</td><td>バックパックは所持・装備などの条件あり。</td></tr>
-<tr><td><kbd>N</kbd></td><td>Tom’s Storageのターミナルを開く</td><td>対応する端末や接続条件を満たす必要あり。</td></tr>
-<tr><td><kbd>G</kbd> / <kbd>V</kbd></td><td>音声設定 / 押して話す</td><td>Vの音声キーはPlasmo Voice内で設定。</td></tr>
-<tr><td>ホイールクリック</td><td>対応する収納の整理</td><td>Sophisticated系の整理キー。全画面共通ではない。</td></tr>
-<tr><td><kbd>F2</kbd> / <kbd>F5</kbd> / <kbd>F11</kbd></td><td>スクリーンショット / 視点 / 全画面</td><td>バニラ同様。</td></tr>
-</tbody></table></div><div class="note"><strong>キーが重複している場合</strong><p>配布設定には、B（バックパック・建築系など）、V（音声・装備やメイド系など）、F8（原文表示・SeeU設定）といった重複が残っています。場面によって同じキーを使い分けますが、支障がある場合は使わない側を未割り当てにするか別キーへ変更してください。原文表示にF8を使う場合は、重複する側を変更してください。</p><p>ノートPCでFキーが音量などの操作になる場合は、<kbd>Fn</kbd> ＋ <kbd>F8</kbd> なども確認してください。</p></div></section>
-<section id="clutter"><h2>ブロックの形変更</h2>
-<p>階段やハーフなど、同じ素材の形違いはある程度まとめて扱われます。使うときに形を切り替えられます。</p>
-<ol><li>ブロックを手に持つか、インベントリでブロックにカーソルを合わせます。</li><li><kbd>左Alt</kbd> を押したまま、マウスホイールで形を選びます。</li><li>Altを離して、選んだ形で使います。</li></ol>
-<p>階段・ハーフ・縦ハーフなどに切り替えられます。選べる形は素材によって異なります。</p>
-<p>拾ったり整理したりして形が変わった場合も、同じ操作で選び直せます。すべてのブロックが対象ではなく、別の色への変更はできません。</p>
-</section>
-<section id="translation"><h2>英語テキストの自動翻訳</h2>
-<p><strong>大体の英語テキストは、自動で日本語に翻訳されます。</strong>アイテム名や説明、クエストの文章などが対象です。</p>
-<p>初めて表示する文章は、翻訳されるまで少し時間がかかることがあります。一部は英語のまま残る場合もあります。</p>
-<h3>原文を確認したいとき</h3><p><kbd>F8</kbd> を押している間は原文を表示します。離すと翻訳表示に戻ります。訳が分かりにくいときや、英語のアイテム名を調べたいときに使えます。</p>
-<p class="small">翻訳のためにChromeが最小化状態で起動することがあります。</p>
-</section>
-<section id="help"><h2>トラブル対処</h2>
-<details><summary>ZIPを開いてもインストールが始まらない</summary><p>エクスプローラーでZIPを開くだけでは導入できません。Prismの「インスタンスを追加」→「インポート」からZIPを選びます。中のJARを直接実行する必要はありません。</p></details>
-<details><summary>初回起動が長い／ダウンロードが止まった</summary><p>初回は多くのファイルを取得します。Prismのログやダウンロード進捗を確認し、動いていれば待ちます。エラー終了したら接続状況を確認して再起動。それでも失敗する場合は、エラー画面と失敗したファイル名を管理者へ伝えてください。起動前の更新コマンドは削除しないでください。</p></details>
-<details><summary>Javaのエラーで起動できない</summary><p>PrismのJava自動検出・自動ダウンロードを確認します。インスタンスの「編集」→「設定」→「Java」で古いJavaを指定している場合は、Java 21を選び直してください。このパックはJava 8や17では起動できません。</p></details>
-<details id="memory-help"><summary>メモリ不足／カクつく</summary><p>まず他のアプリを閉じ、PCの空きメモリを確認します。配布値の最大10GBが大きすぎるPCでは割り当てを下げてください。ゲーム側では描画距離を下げ、シェーダーが有効ならオフにして比較します。Minecraftへの割り当て不足が原因のエラーなら、PCに余裕がある範囲で増やします。OSまで重い場合、むやみに増やすと逆効果です。</p></details>
-<details id="connection-help"><summary>サーバーが出ない／接続できない</summary><p>「サーバーを追加」で <code>133.18.166.158:25565</code> を登録してください。「Modが一致しない」などの表示なら、一度ゲームを終了して同じPrismインスタンスを起動し直し、更新完了を確認します。タイムアウトやメンテナンス表示が続く場合は管理者に状況を確認してください。</p></details>
-<details><summary>ガイドのキーを押しても違う動作になる</summary><p>既存のキー設定は、配布初期値に強制的には置き換わりません。「設定」→「操作設定」→「キー割り当て」で対象機能と重複を確認してください。検索欄などに入力中は、画面を閉じてから試します。音声のVキーはGで開くPlasmo Voice設定も確認してください。</p></details>
-<details><summary>ボイスチャットで声が入らない</summary><p>Gで設定を開き、入力デバイスに自分のマイクを指定します。ミュート、入力方式、Vのプッシュ・トゥ・トーク割り当て、Windows側のマイク許可を確認してください。ゲーム接続と音声通信は別なので、全員が聞こえない場合は管理者へ連絡してください。</p></details>
-<details><summary>Modを自分で更新してもいい？</summary><p>この環境は起動時に管理者の配布構成へ更新されます。Prismの一括Mod更新や手動の追加・削除を行うと、独自修正版が外れたり、サーバーと構成が合わなくなったりすることがあります。変更したいときは、先に管理者へ相談してください。</p></details>
-<div class="note"><strong>問い合わせ時に伝える情報</strong><p>「どの手順で起きたか」「エラー文や画面のスクリーンショット」「PCの搭載メモリ」。ログを共有する場合は、アカウント情報や認証コードなどが写っていないか確認してください。</p></div></section>
-</main><footer><div class="wrap"><strong>UnkoChatサーバー 導入・操作ガイド</strong><p>2026年9月6日時点の配布ZIP・共有設定をもとに作成。更新後はゲーム内の表示と管理者からの案内を優先してください。初期値は既存の個人設定と異なる場合があります。</p><p>参照：Prism Launcher公式ドキュメント／Clutter No More公式配布ページ／このパックのキーバインド・翻訳・音声設定および独自修正記録。</p><a href="#install">導入方法へ戻る</a></div></footer>
+    <div class="tip">
+      <strong>必要な環境・準備</strong>
+      <ul>
+        <li>Java版Minecraftをプレイ可能な <strong>Microsoftアカウント</strong></li>
+        <li>Windows PC（推奨メモリ8GB以上、空き容量5GB以上）</li>
+      </ul>
+    </div>
+
+    <ol class="step-list">
+      <li class="step-item">
+        <div class="step-badge">1</div>
+        <h3>Prism Launcher をダウンロード＆インストール</h3>
+        <p><a href="https://prismlauncher.org/download/windows/" target="_blank" rel="noopener">Prism Launcher 公式ダウンロードページ</a> を開き、<strong>Installer (.exe)</strong> をダウンロードしてインストールします。画面の案内に沿って進めるだけで完了します。</p>
+      </li>
+
+      <li class="step-item">
+        <div class="step-badge">2</div>
+        <h3>Microsoftアカウントでログイン</h3>
+        <p>Prism Launcher を起動し、画面右上の「<strong>アカウント</strong>」→「<strong>アカウントを管理</strong>」→「<strong>Microsoftを追加</strong>」をクリックします。ブラウザが自動で開くので、Minecraftを購入しているMicrosoftアカウントで認証を完了させてください。</p>
+      </li>
+
+      <li class="step-item">
+        <div class="step-badge">3</div>
+        <h3>Java 21 の自動設定（推奨）</h3>
+        <p>上部メニュー「<strong>設定</strong>」→「<strong>Java</strong>」を開き、以下の2項目にチェックが入っていることを確認します（PrismがMinecraft 1.21.1に必要な Java 21 を自動取得してくれます）。</p>
+        <div class="step-subinfo">
+          ✔ <strong>Autodetect Java version（Javaのバージョンを自動検出）</strong><br>
+          ✔ <strong>Auto-download Mojang Java（MojangのJavaを自動ダウンロード）</strong>
+        </div>
+      </li>
+
+      <li class="step-item">
+        <div class="step-badge">4</div>
+        <h3>配布ZIPをダウンロード＆Prismへ読み込み</h3>
+        <p>以下のボタンから最新の起動設定ZIPをダウンロードします。</p>
+        <p style="margin: 12px 0;">
+          <a class="btn" href="https://u210.github.io/reimagined-pack/downloads/Reimagined-Packwiz.zip" download>
+            📦 Reimagined-Packwiz.zip をダウンロード
+          </a>
+        </p>
+        <div class="note">
+          <strong>⚠️ ZIPファイルは解凍しないでください！</strong>
+          ダウンロードした <code>Reimagined-Packwiz.zip</code> は解凍せず、そのまま <strong>Prism Launcher の画面内にドラッグ＆ドロップ</strong> するか、左上の「<strong>インスタンスを追加</strong>」→「<strong>インポート</strong>」からZIPファイルを選択して「OK」を押します。
+        </div>
+      </li>
+
+      <li class="step-item">
+        <div class="step-badge">5</div>
+        <h3>Minecraftの起動（初回ダウンロード）</h3>
+        <p>Prismの一覧に追加されたインスタンス（<strong>Reimagined Auto Update</strong>）を選択し、「<strong>起動</strong>」をクリックします。</p>
+        <div class="step-subinfo">
+          <strong>⏳ 初回起動時の注意:</strong><br>
+          初回起動時は packwiz により、サーバーと一致する約260個のModが自動ダウンロードされます。インターネット環境によりますが <strong>3〜10分程度</strong> かかります。黒いコンソール画面が表示されても止まっているわけではありませんので、タイトル画面が表示されるまでゆっくりお待ちください。
+        </div>
+      </li>
+    </ol>
+
+    <details>
+      <summary>PCのメモリ容量に合わせたメモリ割り当て調整（カクつく・重い場合）</summary>
+      <p>このパックの初期値は最大10GB（10240MiB）に設定されています。お使いのPCの搭載メモリが8GBや16GBの場合、メモリを割り当てすぎるとPC全体が重くなる原因になります。</p>
+      <ul>
+        <li><strong>搭載メモリ 16GB の場合:</strong> 最小 4096 MiB / 最大 6144〜8192 MiB が最適です。</li>
+        <li><strong>搭載メモリ 8GB の場合:</strong> 最小 3072 MiB / 最大 4096〜5120 MiB に設定してください。</li>
+      </ul>
+      <p>設定手順: Prismでインスタンスを右クリック →「<strong>編集</strong>」→ 左メニュー「<strong>設定</strong>」→「<strong>メモリ</strong>」の項目で変更できます。</p>
+    </details>
+  </section>
+
+  <!-- 02 サーバー接続 -->
+  <section id="connect">
+    <h2><span class="num">2</span> サーバーへの接続</h2>
+    <p>タイトル画面が表示されたら、「<strong>マルチプレイ</strong>」を選択します。</p>
+
+    <div class="grid grid-2">
+      <div class="card card-highlight">
+        <h3>初回から登録されている場合</h3>
+        <p>配布構成には <code>Unko Chat サーバー</code> があらかじめ登録されています。一覧から選択して「<strong>サーバーに接続</strong>」を押すだけで入れます。</p>
+      </div>
+      <div class="card">
+        <h3>一覧に表示されていない場合</h3>
+        <p>画面下の「<strong>サーバーを追加</strong>」を押し、以下を入力して「完了」を押してください。</p>
+        <ul style="padding-left: 18px; margin: 8px 0;">
+          <li>サーバー名: <code>Unko Chat サーバー</code>（自由）</li>
+          <li>サーバーアドレス: <code>133.18.166.158:25565</code></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tip">
+      <strong>次回以降のプレイ・アップデートについて</strong><br>
+      以降はPrismで同じインスタンスを「起動」するだけで自動的に最新状態に更新されます。手動でModを個別にアップデート・追加する必要はありません。
+    </div>
+  </section>
+
+  <!-- 03 サーバーの特徴 -->
+  <section id="rules">
+    <h2><span class="num">3</span> このサーバーの特徴・仕様（バニラとの違い）</h2>
+    <p>当サーバーでは、プレイヤーの没入感とサバイバルの緊張感を最大限に高めるため、あえて独自の仕様やModを導入しています。不具合ではありませんのでご確認ください。</p>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>全体チャット・参加退出ログの非表示</h3>
+        <p>広大な世界での探索感・サバイバルの孤独感を演出するため、<strong>ゲーム内全体テキストチャットや、プレイヤーの参加・退出メッセージ、Tabキーのプレイヤーリストを意図的に非表示</strong>（Multiplayer Isolation）にしています。会話は後述の近接ボイスチャットで行います。</p>
+      </div>
+
+      <div class="card">
+        <h3>近接ボイスチャット（Plasmo Voice）</h3>
+        <p>プレイヤー同士の距離や障害物によって声の反響・減衰が変わるリアルな3Dボイスチャットを導入しています。近づくと声が聞こえ、離れると小さくなります。<kbd>G</kbd> キーで設定を開き、マイク設定をご確認ください（デフォルト通話キー: <kbd>V</kbd>）。</p>
+      </div>
+
+      <div class="card">
+        <h3>死亡時の遺体保護（Corpse）</h3>
+        <p>バニラのように「死んで5分経つとアイテムが消滅する（デスポーン）」ことはありません。死亡地点にプレイヤーの「遺体」が残り、アイテムが永遠に安全に保管されます。装備を整えて落ち着いて回収に向かうことができます。</p>
+      </div>
+
+      <div class="card">
+        <h3>戦闘モーション＆回避ロール</h3>
+        <p><strong>Better Combat</strong> により、武器ごとに独自のコンボ攻撃や薙ぎ払いアクションが発生します。また、<strong>Combat Roll</strong> により <kbd>R</kbd> キーでローリング回避が可能です。強力な敵の攻撃を華麗にかわしましょう。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 おすすめ主要機能 -->
+  <section id="features">
+    <h2><span class="num">4</span> おすすめ便利機能＆導入Mod</h2>
+    <p>バニラにはない冒険・生活を支える便利Modがたくさん導入されています。</p>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>📜 クエスト（FTB Quests）</h3>
+        <p><kbd>L</kbd> キーでクエストを開きます。初心者ガイドから、農業、魔法、工業（Create）、異世界（Aether）など、パックの遊び方が分かりやすく章立てされています。</p>
+      </div>
+
+      <div class="card">
+        <h3>🔍 レシピ検索（JEI）</h3>
+        <p><kbd>E</kbd> でインベントリを開くと右側にアイテム一覧が出ます。アイテムにカーソルを合わせて <kbd>R</kbd> で作り方、<kbd>U</kbd> で使い道を瞬時に確認できます。</p>
+      </div>
+
+      <div class="card">
+        <h3>🗺️ 全体地図（Xaero's Map）</h3>
+        <p>右上のミニマップに加え、<kbd>Tab</kbd> キーで歩いたエリアの全体マップを開けます。ウェイポイント（ピン）を打って拠点や目印を保存できます。</p>
+      </div>
+
+      <div class="card">
+        <h3>🎒 バックパック</h3>
+        <p><strong>Sophisticated Backpacks</strong> により、大容量かつ自動整理や圧縮機能がついたバックパックが作成可能。装備して <kbd>B</kbd> キーでいつでも開けます。</p>
+      </div>
+
+      <div class="card">
+        <h3>📦 一括倉庫（Tom’s Storage）</h3>
+        <p>チェストや樽を連結し、1つの端末から全チェストの中身を検索・出し入れできるスマート倉庫Mod。端末を作れば <kbd>N</kbd> キーで直接開くことも可能です。</p>
+      </div>
+
+      <div class="card">
+        <h3>💍 装飾品スロット（Accessories）</h3>
+        <p><kbd>H</kbd> キーで開くアクセサリ専用インベントリ。指輪やチャーム、マントなどを通常装備とは別枠で装備して能力を強化できます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 キー早見表 -->
+  <section id="keys">
+    <h2><span class="num">5</span> キーバインド早見表</h2>
+    <p>Reimagined パックでよく使う重要操作の一覧です。</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col" style="width: 110px;">分類</th>
+            <th scope="col" style="width: 170px;">操作キー</th>
+            <th scope="col" style="width: 200px;">機能</th>
+            <th scope="col">補足・使い方</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="col-category">メニュー・地図</span></td>
+            <td><kbd>Tab</kbd></td>
+            <td>ワールドマップを開く</td>
+            <td>探索した地域の全体地図を開閉します（Xaero's World Map）。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">メニュー・地図</span></td>
+            <td><kbd>L</kbd></td>
+            <td>クエスト画面を開く</td>
+            <td>目標やMod解説、報酬を受け取るFTB Quests画面を開きます。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">レシピ・検索</span></td>
+            <td>アイテム上で <kbd>R</kbd></td>
+            <td>レシピ（作り方）表示</td>
+            <td>JEIのアイテム欄やインベントリでカーソルを合わせて押します。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">レシピ・検索</span></td>
+            <td>アイテム上で <kbd>U</kbd></td>
+            <td>使い道（用途）表示</td>
+            <td>そのアイテムから何が作れるかを一覧表示します。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">レシピ・検索</span></td>
+            <td>アイテム上で <kbd>A</kbd></td>
+            <td>JEI お気に入り登録</td>
+            <td>よく作るアイテムを画面左側のお気に入り一覧にピン留めします。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">レシピ・検索</span></td>
+            <td><kbd>Ctrl</kbd> ＋ <kbd>F</kbd></td>
+            <td>JEI 検索バーにフォーカス</td>
+            <td>インベントリを開いた状態で直接検索欄に入力開始できます。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">レシピ・検索</span></td>
+            <td><kbd>Ctrl</kbd> ＋ <kbd>O</kbd></td>
+            <td>JEI 表示/非表示切替</td>
+            <td>アイテムリストが邪魔なときや消えてしまった際に切り替えます。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">戦闘・アクション</span></td>
+            <td><kbd>R</kbd>（フィールド上）</td>
+            <td>緊急回避（ロール）</td>
+            <td>向いている方向へローリング回避を行います（Combat Roll）。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">建築・装飾</span></td>
+            <td><kbd>左Alt</kbd> ＋ ホイール</td>
+            <td>ブロックの形状変更</td>
+            <td>階段、ハーフ、縦ハーフなどを瞬時に切り替えます（後述）。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">インベントリ</span></td>
+            <td><kbd>B</kbd></td>
+            <td>バックパックを開く</td>
+            <td>バックパックを背中またはスロットに装備中に開きます。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">インベントリ</span></td>
+            <td><kbd>H</kbd></td>
+            <td>アクセサリー画面</td>
+            <td>指輪やネックレスなどの専用装備スロット画面を開きます。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">インベントリ</span></td>
+            <td><kbd>N</kbd></td>
+            <td>Tom’s Storage 倉庫端末</td>
+            <td>ワイヤレスターミナルなどの条件を満たしている場合に開きます。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">ボイスチャット</span></td>
+            <td><kbd>G</kbd></td>
+            <td>ボイスチャット設定</td>
+            <td>マイクの入力先、スピーカー出力、音量調整画面を開きます。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">ボイスチャット</span></td>
+            <td><kbd>V</kbd>（長押し）</td>
+            <td>プッシュ・トゥ・トーク</td>
+            <td>押している間だけマイクの音声を送信します（Plasmo Voice）。</td>
+          </tr>
+          <tr>
+            <td><span class="col-category">翻訳・システム</span></td>
+            <td><kbd>F8</kbd>（長押し）</td>
+            <td>原文（英語）を表示</td>
+            <td>押している間だけ日本語翻訳前の英文を表示します（後述）。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <strong>💡 キーの重複・競合について</strong><br>
+      多くのModが入っているため、一部キー（<kbd>B</kbd> や <kbd>V</kbd>、<kbd>F8</kbd> など）は場面によって挙動が分かれています。もし意図しない動作になる場合は、ゲーム内「<strong>設定</strong>」→「<strong>操作設定</strong>」→「<strong>キー割り当て</strong>」で、使わない側の機能を未割り当てにするか、別のキーへ変更してください。
+    </div>
+  </section>
+
+  <!-- 06 ブロックの形変更 -->
+  <section id="clutter">
+    <h2><span class="num">6</span> 建築便利機能（Clutter No More）</h2>
+    <p>建築好き必見の機能！同じ木材や石材の「ブロック・階段・ハーフブロック・縦ハーフ・柵」などを、作業台で作ることなく <strong>手元で自由に変形</strong> できます。</p>
+
+    <div class="card card-highlight">
+      <h3>形状変更の操作手順</h3>
+      <ol style="margin: 8px 0; padding-left: 20px;">
+        <li>変更したいブロックを手に持つか、インベントリ内でそのブロックにマウスカーソルを合わせます。</li>
+        <li><strong><kbd>左Alt</kbd> キーを押したまま、マウスホイールを上下に回転</strong> させます。</li>
+        <li>ブロックの形（フルブロック → ハーフ → 階段 → 縦ハーフなど）が切り替わるので、好きな形でAltを離します。</li>
+      </ol>
+      <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 10px;">
+        ※インベントリが様々な形状のブロックで圧迫されるのを防げます。拾い直して形が変わった場合も、同じ操作ですぐに戻せます。
+      </p>
+    </div>
+  </section>
+
+  <!-- 07 英語の自動翻訳 -->
+  <section id="translation">
+    <h2><span class="num">7</span> 英語テキストの自動日本語化</h2>
+    <p>このパックでは翻訳Modにより、<strong>海外製Modのアイテム名・説明文・クエスト文章の大部分が自動的に日本語化</strong> されます。</p>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>初めて見るアイテムの翻訳ラグ</h3>
+        <p>まだ辞書にない新しい文章は、表示されてから数秒後に日本語へ変換されます。初回起動時などに一時的にバックグラウンド処理（最小化ブラウザやキャッシュ通信）が動く場合がありますが、翻訳APIの正常な動作ですのでご安心ください。</p>
+      </div>
+
+      <div class="card">
+        <h3>原文（英語）を確認したいとき</h3>
+        <p>日本語訳が不自然なときや、Modの英語Wiki・攻略サイトで調べたいときは、<strong><kbd>F8</kbd> キーを長押し</strong> してください。押している間だけオリジナルの英語が表示され、キーを離すと日本語表示に戻ります。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 AIチャッピー -->
+  <section id="chappy">
+    <h2><span class="num">8</span> 自作AIアシスタント「チャッピー」</h2>
+    <p>サーバー内で分からないことがあったら、専属AIコンパニオン「チャッピー」に何でも質問できます！</p>
+
+    <div class="card card-highlight">
+      <h3>チャッピーの使い方</h3>
+      <ul>
+        <li><strong>召喚方法:</strong> ゲーム内チャット欄（<kbd>T</kbd> または <kbd>/</kbd>）を開き、<code>/chappy summon</code> と入力して実行します。</li>
+        <li><strong>質問する:</strong> 目の前に現れたチャッピーを <strong>右クリック</strong> すると質問入力画面が開きます。「このアイテムの作り方は？」「このModの設定はどうなってる？」など、日本語で自由に質問して「送信」を押します。</li>
+        <li><strong>回答の確認:</strong> 調査完了後、<strong>質問者本人だけに</strong> チャット形式で回答が届きます（他のプレイヤーのチャットを邪魔しません）。</li>
+        <li><strong>高度な機能:</strong> 手に持っているアイテムや周囲の機械設備を認識して答えてくれます。また、Exposure Modで撮影・現像した「写真」を添付して施設の配置相談をすることも可能です。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 09 よくある質問 -->
+  <section id="faq">
+    <h2><span class="num">9</span> よくある質問・トラブルシューティング</h2>
+
+    <details>
+      <summary>ZIPをダウンロードしたのにインストールが始まらない</summary>
+      <p>エクスプローラー等でZIPを直接ダブルクリックして解凍してもゲームは起動しません。必ず <strong>Prism Launcher の画面内にZIPファイルをそのままドラッグ＆ドロップ</strong> するか、左上の「インスタンスを追加」→「インポート」からZIPを選択してください。</p>
+    </details>
+
+    <details>
+      <summary>初回起動で止まったように見える／進まない</summary>
+      <p>初回起動時は packwiz が260個以上のModファイルを一括ダウンロードするため、数分間画面が変わらないことがあります。Prismのログウィンドウでダウンロードが進んでいれば正常です。もし赤い文字のエラーで終了した場合は、インターネット接続を確認して再度「起動」を押してください。</p>
+    </details>
+
+    <details>
+      <summary>Javaのエラー（Java 21 required等）で起動できない</summary>
+      <p>Minecraft 1.21.1 / NeoForge は <strong>Java 21</strong> が必須です。Prismの「設定」→「Java」で「MojangのJavaを自動ダウンロード」が有効になっているか確認してください。古いJava 8や17が指定されている場合は、自動検出から Java 21 を選択してください。</p>
+    </details>
+
+    <details>
+      <summary>画面がカクつく／メモリ不足でゲームが落ちる</summary>
+      <p>ブラウザやDiscordなど他の重いアプリを一度閉じ、PCの空きメモリを確認してください。インスタンス設定でメモリ最大割り当てを <strong>6GB (6144MiB)</strong> または <strong>4GB (4096MiB)</strong> 程度に抑えると安定することがあります。また、ゲーム内設定の「描画距離」を8〜10チャンク程度に下げてみてください。</p>
+    </details>
+
+    <details>
+      <summary>サーバーが見つからない／「Modが一致しません」と言われる</summary>
+      <p>マルチプレイ画面で「サーバーを追加」を押し、アドレス <code>133.18.166.158:25565</code> を登録してください。「Modリストが一致しない」というエラーが出る場合は、配布構成のアップデートが行われた可能性があります。一度ゲームを終了し、Prismから再度起動して自動更新を完了させてください。</p>
+    </details>
+
+    <details>
+      <summary>ボイスチャットで自分の声が入らない／相手の声が聞こえない</summary>
+      <p><kbd>G</kbd> キーで Plasmo Voice の設定を開き、「入力デバイス」にお使いのマイクが正しく選択されているか確認してください。また、Windowsの「プライバシー設定」でマイクへのアクセスが許可されているかもご確認ください。初期設定の通話キーは <kbd>V</kbd>（長押し）です。</p>
+    </details>
+
+    <details>
+      <summary>自分でModを追加・更新してもいいですか？</summary>
+      <p>このサーバーインスタンスは、起動時にサーバー側の公式構成へ自動同期されます。手動でModを追加・更新・削除すると、サーバーとの通信エラーや独自パッチの破損が発生する恐れがあります。Modの追加要望がある場合は、あらかじめ管理者へご相談ください。</p>
+    </details>
+
+    <div class="note">
+      <strong>管理者への問い合わせ・不具合報告について</strong><br>
+      解決しない場合は、「発生した手順」「エラー画面のスクリーンショット」「エラーログ」を添えてDiscord等で管理者へご相談ください。※ログを共有する際は、パスワードやトークン等の個人情報が含まれていないかご確認ください。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-content">
+    <div>
+      <div style="font-weight: 800; font-size: 15px; color: var(--text-main); margin-bottom: 6px;">Unko Chat サーバー 導入・プレイガイド</div>
+      <p style="margin: 0;">Reimagined 1.21.50 (Minecraft 1.21.1 / NeoForge 21.1.244) 対応</p>
+      <p style="font-size: 12px; margin-top: 4px; color: var(--text-muted);">本サーバーは非公式のプライベートサーバーです。Mojang Studios とは一切関係ありません。</p>
+    </div>
+    <div style="text-align: right;">
+      <a href="#install" class="btn btn-secondary btn-sm">↑ ページトップへ戻る</a>
+    </div>
+  </div>
+</footer>
+
 <script>
+// サーバーIPのコピー機能
+function copyServerIP() {
+  const ip = "133.18.166.158:25565";
+  const btn = document.getElementById("copy-ip-btn");
+  navigator.clipboard.writeText(ip).then(() => {
+    const originalText = btn.textContent;
+    btn.textContent = "コピーしました！";
+    btn.style.background = "#215a42";
+    btn.style.color = "#ffffff";
+    setTimeout(() => {
+      btn.textContent = originalText;
+      btn.style.background = "";
+      btn.style.color = "";
+    }, 2500);
+  }).catch(() => {
+    prompt("以下のサーバーアドレスをコピーしてください:", ip);
+  });
+}
+
+// サーバー稼働状態のリアルタイム取得
 (() => {
   const badge = document.getElementById('server-status');
   const label = document.getElementById('server-status-label');
-  // Public Minecraft status API: https://mcstatus.io/docs#java-status
+  const playersLabel = document.getElementById('server-status-players');
   const endpoint = 'https://api.mcstatus.io/v2/status/java/133.18.166.158:25565?query=false';
-  let pending = false;
-  function show(state, text) {
-    badge.dataset.state = state;
-    label.textContent = text;
-  }
-  async function refresh() {
-    if (pending || document.hidden) return;
-    pending = true;
-    show('unknown', '確認中…');
+  let isFetching = false;
+
+  async function checkStatus() {
+    if (isFetching || document.hidden) return;
+    isFetching = true;
+
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 12000);
+    const timeout = setTimeout(() => controller.abort(), 10000);
+
     try {
-      const response = await fetch(endpoint, {signal: controller.signal, credentials: 'omit', referrerPolicy: 'no-referrer'});
-      if (!response.ok) throw new Error('Status unavailable');
-      const result = await response.json();
-      if (typeof result.online !== 'boolean' || !Number.isFinite(result.retrieved_at) || Date.now() - result.retrieved_at > 300000) {
-        throw new Error('Invalid or stale status');
+      const res = await fetch(endpoint, {
+        signal: controller.signal,
+        credentials: 'omit',
+        referrerPolicy: 'no-referrer'
+      });
+      if (!res.ok) throw new Error('Status fetch failed');
+      const data = await res.json();
+
+      if (data.online) {
+        badge.dataset.state = 'online';
+        label.textContent = 'オンライン';
+        const onlineCount = data.players?.online ?? 0;
+        const maxCount = data.players?.max ?? 10;
+        playersLabel.textContent = `(${onlineCount} / ${maxCount} 人)`;
+      } else {
+        badge.dataset.state = 'offline';
+        label.textContent = 'オフライン';
+        playersLabel.textContent = '';
       }
-      show(result.online ? 'online' : 'offline', result.online ? 'オンライン' : 'オフライン');
-    } catch {
-      show('unknown', '確認できません');
+    } catch (e) {
+      badge.dataset.state = 'unknown';
+      label.textContent = '確認できません';
+      playersLabel.textContent = '';
     } finally {
       clearTimeout(timeout);
-      pending = false;
+      isFetching = false;
     }
   }
-  refresh();
-  setInterval(refresh, 60000);
+
+  checkStatus();
+  setInterval(checkStatus, 60000); // 1分ごとに更新
   document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) refresh();
+    if (!document.hidden) checkStatus();
   });
 })();
 </script>
-</body></html>
+
+</body>
+</html>
